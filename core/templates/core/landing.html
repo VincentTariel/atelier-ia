@@ -1,0 +1,242 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-white pt-20 pb-24 lg:pt-32 lg:pb-32 overflow-hidden border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-6 border border-blue-100">Consulting en présentiel à Nouméa</span>
+        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl max-w-5xl mx-auto leading-tight">
+            <span class="block">Entrepreneurs Calédoniens :</span>
+            <span class="block text-blue-600 mt-2">Paramétrez les assistants IA sur-mesure de votre entreprise en 3 heures.</span>
+        </h1>
+        <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-500 sm:text-xl md:mt-8">
+            Ne perdez plus de temps avec des théories abstraites. Venez travailler sur vos dossiers réels avec un expert à vos côtés et créez l'architecture "cerveau" de votre entreprise.
+        </p>
+        <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+            <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                <a href="#programme" class="flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 shadow-sm md:py-4 md:text-lg md:px-10 transition">
+                    Découvrir le programme
+                </a>
+                <a href="#lead-magnet" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm md:py-4 md:text-lg md:px-10 transition">
+                    Télécharger le support gratuit
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Programme -->
+<section id="programme" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-base font-semibold text-blue-600 tracking-wide uppercase">Le Cursus</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                Devenez une entreprise augmentée
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                Un cursus intensif, 100% pratique et taillé pour répondre à vos problématiques de terrain.
+            </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
+            
+            <!-- Niveau 1 -->
+            <div class="bg-white rounded-2xl shadow-lg px-8 py-10 border border-gray-100 transition hover:shadow-xl">
+                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600 mb-6">
+                    <span class="text-2xl font-bold">1</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">L'Atelier IA (3 Heures)</h3>
+                <p class="text-gray-600 mb-6">
+                    Du consulting en groupe pour construire l'architecture de votre entreprise. Vous paramétrez avec l'expert des assistants (Projets Claude ou GPTs) avec votre propre contexte d'entreprise et des rôles bien précis : RH, Commercial, Service Client, etc. (Tarif : 30 000 XPF)
+                </p>
+                <ul class="space-y-3 text-sm text-gray-500 font-medium">
+                    <li class="flex items-center">
+                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Travail sur VOS dossiers réels
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Création d'assistants sur-mesure (Projets / GPTs)
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        ROI visible immédiatement en sortant
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Niveau 2 -->
+            <div class="bg-white rounded-2xl shadow-lg px-8 py-10 border border-gray-100 transition hover:shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-gray-50 rounded-full opacity-50"></div>
+                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-100 text-gray-600 mb-6 relative z-10">
+                    <span class="text-2xl font-bold">2</span>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 relative z-10">L'Automatisation (n8n)</h3>
+                <p class="text-gray-600 mb-6 relative z-10">
+                    Passez à la vitesse supérieure en connectant les outils que vous utilisez tous les jours. Laissez n8n exécuter les tâches répétitives à votre place.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-500 font-medium relative z-10">
+                    <li class="flex items-center">
+                        <svg class="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Automatisation des process (Emails, Sheets, CRM)
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Conception de workflows sans coder
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Section Lead Magnet (Formulaire) -->
+<section id="lead-magnet" class="py-20 bg-white border-t border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden lg:flex">
+            
+            <!-- Partie Texte du Lead Magnet -->
+            <div class="px-8 py-12 lg:w-5/12 lg:p-12 bg-gray-50 flex flex-col justify-center">
+                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
+                    Passez à l'action.
+                </h3>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Téléchargez gratuitement le support de présentation complet (PDF) de notre Atelier Niveau 1 et découvrez comment structurer les assistants de votre entreprise.
+                </p>
+                <div class="flex items-center text-sm font-medium text-green-600 bg-green-50 py-2 px-3 rounded-md w-max border border-green-100">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Envoi instantané par email
+                </div>
+            </div>
+            
+            <!-- Partie Formulaire -->
+            <div class="px-8 py-12 lg:w-7/12 lg:p-12">
+                <form action="{% url 'landing_page' %}" method="POST" class="space-y-6">
+                    {% csrf_token %}
+                    
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div>
+                            <label for="{{ form.prenom.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Prénom *</label>
+                            {{ form.prenom }}
+                            {% if form.prenom.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.prenom.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <label for="{{ form.nom.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Nom *</label>
+                            {{ form.nom }}
+                            {% if form.nom.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.nom.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="{{ form.email.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Adresse email *</label>
+                        {{ form.email }}
+                        {% if form.email.errors %}
+                            <p class="mt-1 text-sm text-red-600">{{ form.email.errors.0 }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div>
+                        <label for="{{ form.entreprise.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Entreprise</label>
+                        {{ form.entreprise }}
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div>
+                            <label for="{{ form.telephone.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Téléphone</label>
+                            {{ form.telephone }}
+                        </div>
+                        
+                        <div>
+                            <label for="{{ form.formation_interessee.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Formation souhaitée *</label>
+                            {{ form.formation_interessee }}
+                            {% if form.formation_interessee.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.formation_interessee.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-lg shadow-md text-base font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                            Recevoir le support de l'Atelier 1 par email
+                        </button>
+                    </div>
+                    <p class="text-xs text-center text-gray-400 mt-4">
+                        Vos données sont sécurisées et resteront confidentielles.
+                    </p>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Section Témoignages -->
+<section id="temoignages" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+                Ils l'ont fait pour leur entreprise
+            </h2>
+            <p class="mt-4 text-xl text-gray-500">
+                Des gains de temps réels observés dès la sortie de l'atelier.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
+            
+            <!-- Témoignage 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg">
+                        M
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-bold text-gray-900">Marc A.</h4>
+                        <p class="text-sm text-gray-500">Entrepreneur - Nouméa</p>
+                    </div>
+                </div>
+                <blockquote class="text-gray-700 italic flex-grow">
+                    "Je pensais ne pas avoir 3 heures à consacrer à une formation. Mais dès le lendemain de l'atelier, mon nouvel 'Assistant Communication' m'a rédigé tous mes posts de la semaine en 10 minutes, avec mon ton exact. Les 30 000 F ont été rentabilisés en une seule matinée de travail gagnée. C'est le meilleur investissement de mon année."
+                </blockquote>
+                <div class="mt-6 flex text-yellow-400">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                <div class="flex items-center mb-6">
+                    <div class="flex-shrink-0 h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg">
+                        S
+                    </div>
+                    <div class="ml-4">
+                        <h4 class="text-lg font-bold text-gray-900">Sandra L.</h4>
+                        <p class="text-sm text-gray-500">Responsable Marketing</p>
+                    </div>
+                </div>
+                <blockquote class="text-gray-700 italic flex-grow">
+                    "J'avais abandonné ChatGPT car je passais mon temps à lui réexpliquer mon métier, et les textes faisaient très 'robot'. Grâce à la méthode du Document Maître vue pendant l'atelier, mon IA connaît parfaitement ma cible calédonienne et mes offres. Je ne fais plus de prompts à rallonge, j'appuie sur un bouton et elle pond un texte qui ressemble à 100% à mon entreprise."
+                </blockquote>
+                <div class="mt-6 flex text-yellow-400">
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

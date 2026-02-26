@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier IA - Assistants Sur-Mesure en Nouvelle-Calédonie</title>
+    
+    <!-- Intégration de Tailwind CSS via CDN pour le MVP -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration personnalisée de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- En-tête -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-gray-900 tracking-tight">Atelier<span class="text-blue-600">IA</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#programme" class="text-gray-500 hover:text-gray-900 font-medium transition">Programme</a>
+                <a href="#temoignages" class="text-gray-500 hover:text-gray-900 font-medium transition">Avis</a>
+                <a href="#lead-magnet" class="text-blue-600 hover:text-blue-800 font-medium transition">Recevoir le support gratuit</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Zone d'affichage des messages Django -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="p-4 mb-4 rounded-md {% if message.tags == 'success' %}bg-green-50 text-green-800 border border-green-200{% elif message.tags == 'error' %}bg-red-50 text-red-800 border border-red-200{% else %}bg-blue-50 text-blue-800 border border-blue-200{% endif %}" role="alert">
+                    <p class="text-sm font-medium">{{ message }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- Contenu principal -->
+    <main class="flex-grow">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+            <span class="text-2xl font-bold text-white tracking-tight mb-4">Atelier<span class="text-blue-500">IA</span></span>
+            <p class="text-base">&copy; {% now "Y" %} Atelier IA Nouméa. Tous droits réservés.</p>
+            <p class="text-sm mt-2 text-gray-500">Formations présentielles pour les entrepreneurs calédoniens.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
