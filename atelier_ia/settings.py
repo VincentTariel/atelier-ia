@@ -69,6 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'atelier_ia.wsgi.application'
 
+ALLOWED_HOSTS = ["51.161.32.145", "localhost", "127.0.0.1"]
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
