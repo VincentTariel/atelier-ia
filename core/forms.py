@@ -16,15 +16,15 @@ class LeadForm(forms.ModelForm):
         widgets = {
             'prenom': forms.TextInput(attrs={
                 'class': base_input_classes,
-                'placeholder': 'Jean'
+                'placeholder': 'Anjelai'
             }),
             'nom': forms.TextInput(attrs={
                 'class': base_input_classes,
-                'placeholder': 'Dupont'
+                'placeholder': 'Calonne'
             }),
             'email': forms.EmailInput(attrs={
                 'class': base_input_classes,
-                'placeholder': 'jean.dupont@entreprise.nc'
+                'placeholder': 'anjelai.calonne@entreprise.nc'
             }),
             'entreprise': forms.TextInput(attrs={
                 'class': base_input_classes,
