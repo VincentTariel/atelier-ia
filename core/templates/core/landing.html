@@ -1,241 +1,662 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="bg-white pt-20 pb-24 lg:pt-32 lg:pb-32 overflow-hidden border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-6 border border-blue-100">Consulting en présentiel à Nouméa</span>
-        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl max-w-5xl mx-auto leading-tight">
-            <span class="block">Entrepreneurs Calédoniens :</span>
-            <span class="block text-blue-600 mt-2">Paramétrez les assistants IA sur-mesure de votre entreprise en 3 heures.</span>
-        </h1>
-        <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-500 sm:text-xl md:mt-8">
-            Ne perdez plus de temps avec des théories abstraites. Venez travailler sur vos dossiers réels avec un expert à vos côtés et créez l'architecture "cerveau" de votre entreprise.
-        </p>
-        <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-            <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                <a href="#programme" class="flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 shadow-sm md:py-4 md:text-lg md:px-10 transition">
-                    Découvrir le programme
-                </a>
-                <a href="#lead-magnet" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm md:py-4 md:text-lg md:px-10 transition">
-                    Télécharger le support gratuit
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Section Programme -->
-<section id="programme" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-            <h2 class="text-base font-semibold text-blue-600 tracking-wide uppercase">Le Cursus</h2>
-            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                Devenez une entreprise augmentée
-            </p>
-            <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                Un cursus intensif, 100% pratique et taillé pour répondre à vos problématiques de terrain.
-            </p>
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="relative pt-16 lg:pt-24 pb-24 lg:pb-32 overflow-hidden">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <!-- Dateline -->
+        <div class="rise rise-1 flex items-center justify-between mono text-[11px] uppercase tracking-[0.22em] text-ink-mid mb-12 lg:mb-20">
+            <span>Nº&nbsp;01&nbsp;·&nbsp;Édition {% now "Y" %}</span>
+            <span class="hidden sm:inline">Nouméa&nbsp;·&nbsp;UTC+11</span>
+            <span>{% now "d.m.Y" %}</span>
         </div>
 
-        <div class="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
-            
-            <!-- Niveau 1 -->
-            <div class="bg-white rounded-2xl shadow-lg px-8 py-10 border border-gray-100 transition hover:shadow-xl">
-                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-blue-100 text-blue-600 mb-6">
-                    <span class="text-2xl font-bold">1</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">L'Atelier IA (3 Heures)</h3>
-                <p class="text-gray-600 mb-6">
-                    Du consulting en groupe pour construire l'architecture de votre entreprise. Vous paramétrez avec l'expert des assistants (Projets Claude ou GPTs) avec votre propre contexte d'entreprise et des rôles bien précis : RH, Commercial, Service Client, etc. (Tarif : 30 000 XPF)
-                </p>
-                <ul class="space-y-3 text-sm text-gray-500 font-medium">
-                    <li class="flex items-center">
-                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Travail sur VOS dossiers réels
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Création d'assistants sur-mesure (Projets / GPTs)
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        ROI visible immédiatement en sortant
-                    </li>
-                </ul>
-            </div>
+        <!-- Top rule -->
+        <div class="rise rise-1 rule-thick mb-10"></div>
 
-            <!-- Niveau 2 -->
-            <div class="bg-white rounded-2xl shadow-lg px-8 py-10 border border-gray-100 transition hover:shadow-xl relative overflow-hidden">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-gray-50 rounded-full opacity-50"></div>
-                <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-gray-100 text-gray-600 mb-6 relative z-10">
-                    <span class="text-2xl font-bold">2</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-4 relative z-10">L'Automatisation (n8n)</h3>
-                <p class="text-gray-600 mb-6 relative z-10">
-                    Passez à la vitesse supérieure en connectant les outils que vous utilisez tous les jours. Laissez n8n exécuter les tâches répétitives à votre place.
-                </p>
-                <ul class="space-y-3 text-sm text-gray-500 font-medium relative z-10">
-                    <li class="flex items-center">
-                        <svg class="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Automatisation des process (Emails, Sheets, CRM)
-                    </li>
-                    <li class="flex items-center">
-                        <svg class="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        Conception de workflows sans coder
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
-</section>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
 
-<!-- Section Lead Magnet (Formulaire) -->
-<section id="lead-magnet" class="py-20 bg-white border-t border-b border-gray-100">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden lg:flex">
-            
-            <!-- Partie Texte du Lead Magnet -->
-            <div class="px-8 py-12 lg:w-5/12 lg:p-12 bg-gray-50 flex flex-col justify-center">
-                <h3 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-4">
-                    Passez à l'action.
-                </h3>
-                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    Téléchargez gratuitement le support de présentation complet (PDF) de notre Atelier Niveau 1 et découvrez comment structurer les assistants de votre entreprise.
-                </p>
-                <div class="flex items-center text-sm font-medium text-green-600 bg-green-50 py-2 px-3 rounded-md w-max border border-green-100">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    Envoi instantané par email
-                </div>
-            </div>
-            
-            <!-- Partie Formulaire -->
-            <div class="px-8 py-12 lg:w-7/12 lg:p-12">
-                <form action="{% url 'landing_page' %}" method="POST" class="space-y-6">
-                    {% csrf_token %}
-                    
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                        <div>
-                            <label for="{{ form.prenom.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Prénom *</label>
-                            {{ form.prenom }}
-                            {% if form.prenom.errors %}
-                                <p class="mt-1 text-sm text-red-600">{{ form.prenom.errors.0 }}</p>
-                            {% endif %}
-                        </div>
-                        <div>
-                            <label for="{{ form.nom.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Nom *</label>
-                            {{ form.nom }}
-                            {% if form.nom.errors %}
-                                <p class="mt-1 text-sm text-red-600">{{ form.nom.errors.0 }}</p>
-                            {% endif %}
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="{{ form.email.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Adresse email *</label>
-                        {{ form.email }}
-                        {% if form.email.errors %}
-                            <p class="mt-1 text-sm text-red-600">{{ form.email.errors.0 }}</p>
-                        {% endif %}
-                    </div>
-
-                    <div>
-                        <label for="{{ form.entreprise.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Entreprise</label>
-                        {{ form.entreprise }}
-                    </div>
-
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                        <div>
-                            <label for="{{ form.telephone.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Téléphone</label>
-                            {{ form.telephone }}
-                        </div>
-                        
-                        <div>
-                            <label for="{{ form.formation_interessee.id_for_label }}" class="block text-sm font-semibold text-gray-700 mb-1">Formation souhaitée *</label>
-                            {{ form.formation_interessee }}
-                            {% if form.formation_interessee.errors %}
-                                <p class="mt-1 text-sm text-red-600">{{ form.formation_interessee.errors.0 }}</p>
-                            {% endif %}
-                        </div>
-                    </div>
-
-                    <div class="pt-4">
-                        <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-lg shadow-md text-base font-bold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
-                            Recevoir le support de l'Atelier 1 par email
-                        </button>
-                    </div>
-                    <p class="text-xs text-center text-gray-400 mt-4">
-                        Vos données sont sécurisées et resteront confidentielles.
+            <!-- Side annotation -->
+            <aside class="rise rise-2 lg:col-span-3 lg:pt-3 order-2 lg:order-1">
+                <div class="lg:sticky lg:top-28">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-3">
+                        Nota bene&nbsp;·&nbsp;01
                     </p>
-                </form>
+                    <p class="font-sans text-[15px] leading-relaxed text-ink-mid max-w-xs">
+                        Vincent Tariel — <span class="display-italic">PhD École Polytechnique</span>,
+                        Agrégé de mathématiques, fondateur 3×.
+                        Vingt ans à transformer des ruptures techniques en produits qui marchent.
+                    </p>
+                    <div class="mt-6 mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
+                        ≈ 8&nbsp;min de lecture
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Hero title block -->
+            <div class="lg:col-span-9 order-1 lg:order-2">
+
+                <p class="rise rise-2 mono text-[11px] uppercase tracking-[0.22em] text-cinabre mb-6">
+                    Manifesto&nbsp;—&nbsp;avril&nbsp;2026
+                </p>
+
+                <h1 class="rise rise-2 display text-[2.7rem] sm:text-[3.8rem] lg:text-[5.4rem] xl:text-[6.4rem] font-light text-ink">
+                    L’<span class="display-italic font-light">intelligence&nbsp;artificielle</span><br>
+                    ne remplace pas<br>
+                    l’expertise<span class="text-cinabre">.</span><br>
+                    <span class="display-italic font-light text-ink-mid">Elle l’amplifie.</span>
+                </h1>
+
+                <div class="rise rise-3 mt-12 max-w-2xl">
+                    <p class="font-sans text-lg lg:text-xl leading-relaxed text-ink-soft">
+                        Je suis <span class="display-italic text-ink">Vincent Tariel</span> — AI Engineer,
+                        PhD École Polytechnique, 3× fondateur. J’aide les entreprises et les équipes tech
+                        à adopter l’IA comme un véritable levier de productivité.
+                        <span class="text-ink-mid">Pas une démo. Un livrable.</span>
+                    </p>
+                </div>
+
+                <!-- CTAs -->
+                <div class="rise rise-4 mt-12 flex flex-wrap items-center gap-4">
+                    <a href="#services"
+                       class="group inline-flex items-center gap-3 bg-ink text-bone-100 px-7 py-4 mono text-[12px] uppercase tracking-[0.18em] hover:bg-cinabre transition">
+                        Découvrir mes services
+                        <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="#contact"
+                       class="group inline-flex items-center gap-3 border border-ink text-ink px-7 py-4 mono text-[12px] uppercase tracking-[0.18em] hover:bg-ink hover:text-bone-100 transition">
+                        Me contacter
+                        <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                </div>
+
+                <!-- Tag row -->
+                <div class="rise rise-5 mt-12 pt-6 border-t border-ink/20 flex flex-wrap gap-x-8 gap-y-3 mono text-[11px] uppercase tracking-[0.2em] text-ink-mid">
+                    <span><span class="text-cinabre">●</span>&nbsp;Remote depuis Nouméa</span>
+                    <span><span class="text-cinabre">●</span>&nbsp;Missions sur site</span>
+                    <span><span class="text-cinabre">●</span>&nbsp;Formation &amp; Consulting</span>
+                </div>
+
             </div>
-            
         </div>
+
     </div>
 </section>
 
-<!-- Section Témoignages -->
-<section id="temoignages" class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                Ils l'ont fait pour leur entreprise
-            </h2>
-            <p class="mt-4 text-xl text-gray-500">
-                Des gains de temps réels observés dès la sortie de l'atelier.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
-            
-            <!-- Témoignage 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
-                <div class="flex items-center mb-6">
-                    <div class="flex-shrink-0 h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg">
-                        M
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-gray-900">Marc A.</h4>
-                        <p class="text-sm text-gray-500">Entrepreneur - Nouméa</p>
-                    </div>
-                </div>
-                <blockquote class="text-gray-700 italic flex-grow">
-                    "Je pensais ne pas avoir 3 heures à consacrer à une formation. Mais dès le lendemain de l'atelier, mon nouvel 'Assistant Communication' m'a rédigé tous mes posts de la semaine en 10 minutes, avec mon ton exact. Les 30 000 F ont été rentabilisés en une seule matinée de travail gagnée. C'est le meilleur investissement de mon année."
-                </blockquote>
-                <div class="mt-6 flex text-yellow-400">
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                </div>
+<!-- ============================================================ -->
+<!-- MANIFESTO / POURQUOI MOI -->
+<!-- ============================================================ -->
+<section id="manifesto" class="bg-bone-200/60 border-y border-ink/15 py-24 lg:py-32 relative">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <!-- Section header -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+            <div class="lg:col-span-3">
+                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">I.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
+                    Crédibilité
+                </p>
             </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
+                    Pas un <span class="line-through text-ink-faint">prompt&nbsp;engineer</span>.<br>
+                    Un <span class="display-italic">ingénieur</span> qui comprend l’IA<br>
+                    depuis les <span class="display-italic">mathématiques</span><span class="text-cinabre">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
+                    Vingt ans à construire des systèmes intelligents — d’abord avec la morphologie mathématique
+                    et la vision par ordinateur, aujourd’hui avec les LLM et l’orchestration d’agents de code.
+                    Le vocabulaire change, la rigueur reste la même.
+                </p>
+            </div>
+        </div>
+
+        <!-- Credentials grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/15">
+
+            <!-- 01 -->
+            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
+                <div class="flex items-baseline justify-between mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">01 / Formation</span>
+                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M3 9l9-5 9 5-9 5-9-5z"/>
+                        <path d="M7 11v5l5 3 5-3v-5"/>
+                    </svg>
+                </div>
+                <h3 class="display text-2xl text-ink leading-tight">
+                    PhD <span class="display-italic">École&nbsp;Polytechnique</span>
+                </h3>
+                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
+                    Vision par ordinateur &amp; morphologie mathématique. Doctorat soutenu sur les
+                    fondations algébriques du traitement d’image — bien avant que “IA” ne devienne un slogan.
+                </p>
+                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
+                    Agrégé de mathématiques
+                </p>
+            </div>
+
+            <!-- 02 -->
+            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
+                <div class="flex items-baseline justify-between mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">02 / Fondations</span>
+                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M5 21V7l8-4v18"/>
+                        <path d="M19 21V11l-6-4"/>
+                        <path d="M9 9h.01M9 13h.01M9 17h.01"/>
+                    </svg>
+                </div>
+                <h3 class="display text-2xl text-ink leading-tight">
+                    3× <span class="display-italic">fondateur</span>
+                </h3>
+                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
+                    Caméléon (langage de traitement d’image, référencé sur Wikipedia),
+                    AlphaNumeric&#8209;Vision (OCR industriel), CommeUnJeu (plateforme éducative).
+                    Trois entreprises, trois ruptures de marché.
+                </p>
+                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
+                    Recherche → produit → marché
+                </p>
+            </div>
+
+            <!-- 03 -->
+            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
+                <div class="flex items-baseline justify-between mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">03 / Pivots</span>
+                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M21 12a9 9 0 1 1-3-6.7"/>
+                        <path d="M21 4v5h-5"/>
+                    </svg>
+                </div>
+                <h3 class="display text-2xl text-ink leading-tight">
+                    2 <span class="display-italic">pivots</span> majeurs
+                </h3>
+                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
+                    <span class="mono text-[11px] text-ink">2011 ·</span> Bascule deep&nbsp;learning.
+                    <span class="mono text-[11px] text-ink">2024 ·</span> Bascule LLM &amp; agents de code.
+                    Le pattern&nbsp;: détecter la rupture, pivoter sans nostalgie, livrer en production.
+                </p>
+                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
+                    Détecter · pivoter · livrer
+                </p>
+            </div>
+
+            <!-- 04 -->
+            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
+                <div class="flex items-baseline justify-between mb-8">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">04 / Livraison</span>
+                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M12 2v20M2 12h20"/>
+                        <circle cx="12" cy="12" r="9"/>
+                    </svg>
+                </div>
+                <h3 class="display text-2xl text-ink leading-tight">
+                    Livré <span class="display-italic">avec</span> l’IA
+                </h3>
+                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
+                    Une app mobile sur Play&nbsp;Store et iOS, un pipeline vidéo automatisé (30+ cours sur YouTube),
+                    une plateforme web full-stack. Seul. En production. Avec des agents de code.
+                </p>
+                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
+                    Solo · production · 2024–2026
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVICES -->
+<!-- ============================================================ -->
+<section id="services" class="py-24 lg:py-32 relative">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+            <div class="lg:col-span-3">
+                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">II.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
+                    Services
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
+                    Comment je peux<br>
+                    <span class="display-italic">vous aider</span><span class="text-cinabre">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
+                    Trois portes d’entrée, un seul fil rouge&nbsp;:
+                    transformer une intuition “on devrait faire de l’IA”
+                    en quelque chose qui tourne, mesurable, défendable.
+                </p>
+            </div>
+        </div>
+
+        <!-- Service rows -->
+        <div class="border-t border-ink/30">
+
+            <!-- Service 01 -->
+            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">01</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
+                        Développement <span class="display-italic">produit IA</span>
+                    </h3>
+                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
+                        Fractional CTO ou Lead Engineer pour startups et scale-ups.
+                        J’architecture, je développe et je livre des produits IA de bout en bout.
+                        MVP, structuration technique pré-levée, accélération produit.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right space-y-2">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
+                    <p class="font-sans text-sm text-ink-mid">Startups · Scale-ups<br>Fondateurs non-techs<br>CTOs sous l’eau</p>
+                </div>
+            </article>
+
+            <!-- Service 02 -->
+            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">02</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
+                        Design de <span class="display-italic">workflows IA</span>
+                    </h3>
+                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
+                        Audit de vos processus actuels → conception de workflows augmentés
+                        (Claude Code, Codex, Copilot, orchestration multi-LLM) → implémentation →
+                        formation de l’équipe. Pas une démo de deux heures&nbsp;: un vrai accompagnement.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right space-y-2">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
+                    <p class="font-sans text-sm text-ink-mid">Équipes tech<br>Cabinets d’ingénierie<br>Entreprises productisées</p>
+                </div>
+            </article>
+
+            <!-- Service 03 -->
+            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">03</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
+                        Formation &amp; <span class="display-italic">acculturation</span>
+                    </h3>
+                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
+                        Ateliers pratiques pour équipes et organisations.
+                        Les participants livrent quelque chose de concret avant la fin de la session.
+                        Disponible en présentiel (Nouméa, métropole) ou en remote.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right space-y-2">
+                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
+                    <p class="font-sans text-sm text-ink-mid">Équipes mixtes<br>Comités de direction<br>Organisations en transition</p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Footnote / pricing -->
+        <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mono text-[11px] uppercase tracking-[0.2em] text-ink-mid">
+            <span>† Tarification sur devis · Cadrage initial offert</span>
+            <a href="#contact" class="text-ink underline-grow">
+                Demander un cadrage&nbsp;→
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TRAVAUX / PREUVES -->
+<!-- ============================================================ -->
+<section id="realisations" class="bg-ink text-bone-100 py-24 lg:py-32 relative overflow-hidden">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+            <div class="lg:col-span-3">
+                <div class="roman text-7xl lg:text-8xl text-cinabre-light leading-none">III.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-bone-100/60">
+                    Travaux
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-bone-100 leading-[1.02]">
+                    Ce que j’ai <span class="display-italic">livré</span><br>
+                    avec l’IA<span class="text-cinabre-light">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-bone-100/70">
+                    Pas des screenshots. Des produits en production, accessibles, vérifiables.
+                    Cliquez, téléchargez, jugez par vous-même.
+                </p>
+            </div>
+        </div>
+
+        <!-- Works grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-bone-100/15">
+
+            <!-- W1 -->
+            <a href="https://play.google.com/store/apps/details?id=org.commeunjeu.mobile"
+               target="_blank" rel="noopener"
+               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition lg:col-span-2">
+                <div class="flex items-baseline justify-between mb-10">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;01 · App mobile</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
+                        Play&nbsp;Store&nbsp;↗
+                    </span>
+                </div>
+                <h3 class="display text-3xl lg:text-5xl text-bone-100 leading-tight">
+                    CommeUnJeu — l’<span class="display-italic">app&nbsp;mobile</span>
+                </h3>
+                <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-bone-100/70 max-w-2xl">
+                    Application cross-platform livrée seul avec des agents de code IA — zéro expérience
+                    mobile préalable. Disponible sur Play Store · version iOS en cours de publication.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 mono text-[10px] uppercase tracking-[0.18em] text-bone-100/40">
+                    <span>Play&nbsp;Store · live</span><span>·</span><span>iOS · in&nbsp;progress</span><span>·</span><span>Agents de code</span>
+                </div>
+            </a>
+
+            <!-- W2 -->
+            <a href="https://www.youtube.com/playlist?list=PL2j9TbGSjX0yb0JmLoAOeRtuvWOE6AVCc"
+               target="_blank" rel="noopener"
+               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
+                <div class="flex items-baseline justify-between mb-10">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;02 · Pipeline</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
+                        YouTube&nbsp;↗
+                    </span>
+                </div>
+                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
+                    Pipeline <span class="display-italic">vidéo</span>
+                </h3>
+                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
+                    Automatisé&nbsp;: LaTeX → storyboard → vidéo animée → YouTube.
+                    Plus de 30 cours produits.
+                </p>
+            </a>
+
+            <!-- W3 -->
+            <a href="https://commeunjeu.org/mobile"
+               target="_blank" rel="noopener"
+               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
+                <div class="flex items-baseline justify-between mb-10">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;03 · Web</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
+                        commeunjeu.org&nbsp;↗
+                    </span>
+                </div>
+                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
+                    Plateforme <span class="display-italic">éducative</span>
+                </h3>
+                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
+                    Full-stack Django. Curriculum structuré, exercices interactifs,
+                    contenus bilingues.
+                </p>
+            </a>
+
+            <!-- W4 -->
+            <a href="https://en.wikipedia.org/wiki/Cameleon_(programming_language)"
+               target="_blank" rel="noopener"
+               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
+                <div class="flex items-baseline justify-between mb-10">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;04 · Langage</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
+                        Wikipedia&nbsp;↗
+                    </span>
+                </div>
+                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
+                    <span class="display-italic">Caméléon</span>
+                </h3>
+                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
+                    Langage de programmation pour le traitement d’images en C++.
+                    Référencé sur Wikipedia.
+                </p>
+            </a>
+
+            <!-- W5 -->
+            <a href="https://www.linkedin.com/in/vincent-tariel/"
+               target="_blank" rel="noopener"
+               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
+                <div class="flex items-baseline justify-between mb-10">
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;05 · Profil</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
+                        LinkedIn&nbsp;↗
+                    </span>
+                </div>
+                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
+                    Le <span class="display-italic">parcours</span>
+                </h3>
+                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
+                    Vingt ans de carrière, vérifiables ligne à ligne.
+                    Recommandations, postes, publications.
+                </p>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TÉMOIGNAGES -->
+<!-- ============================================================ -->
+<section id="temoignages" class="py-24 lg:py-32 relative">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+            <div class="lg:col-span-3">
+                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">IV.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
+                    Voix
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
+                    Ils ont <span class="display-italic">essayé</span>.<br>
+                    Voici ce qu’ils en disent<span class="text-cinabre">.</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-6xl">
+
+            <!-- Témoignage 1 -->
+            <figure class="border-t-2 border-ink pt-8">
+                <div class="display text-7xl text-cinabre leading-none mb-4" aria-hidden="true">“</div>
+                <blockquote class="display text-2xl lg:text-3xl text-ink leading-snug">
+                    Je pensais ne pas avoir 3 heures à consacrer à une formation.
+                    Mais dès le lendemain, mon nouvel “Assistant Communication” m’a rédigé tous mes posts
+                    de la semaine en 10 minutes, avec mon ton exact. <span class="display-italic">Le meilleur investissement de mon année.</span>
+                </blockquote>
+                <figcaption class="mt-8 flex items-baseline justify-between">
+                    <div>
+                        <p class="mono text-[12px] uppercase tracking-[0.2em] text-ink">Marc&nbsp;A.</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mt-1">Entrepreneur · Nouméa</p>
+                    </div>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre">Réf.&nbsp;01</span>
+                </figcaption>
+            </figure>
 
             <!-- Témoignage 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
-                <div class="flex items-center mb-6">
-                    <div class="flex-shrink-0 h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-lg">
-                        S
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-gray-900">Sandra L.</h4>
-                        <p class="text-sm text-gray-500">Responsable Marketing</p>
-                    </div>
-                </div>
-                <blockquote class="text-gray-700 italic flex-grow">
-                    "J'avais abandonné ChatGPT car je passais mon temps à lui réexpliquer mon métier, et les textes faisaient très 'robot'. Grâce à la méthode du Document Maître vue pendant l'atelier, mon IA connaît parfaitement ma cible calédonienne et mes offres. Je ne fais plus de prompts à rallonge, j'appuie sur un bouton et elle pond un texte qui ressemble à 100% à mon entreprise."
+            <figure class="border-t-2 border-ink pt-8">
+                <div class="display text-7xl text-cinabre leading-none mb-4" aria-hidden="true">“</div>
+                <blockquote class="display text-2xl lg:text-3xl text-ink leading-snug">
+                    J’avais abandonné ChatGPT car je passais mon temps à lui réexpliquer mon métier.
+                    Avec la méthode du Document Maître, mon IA connaît parfaitement ma cible et mes offres.
+                    <span class="display-italic">J’appuie sur un bouton et elle pond un texte qui ressemble à 100% à mon entreprise.</span>
                 </blockquote>
-                <div class="mt-6 flex text-yellow-400">
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <figcaption class="mt-8 flex items-baseline justify-between">
+                    <div>
+                        <p class="mono text-[12px] uppercase tracking-[0.2em] text-ink">Sandra&nbsp;L.</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mt-1">Responsable marketing</p>
+                    </div>
+                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre">Réf.&nbsp;02</span>
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CONTACT -->
+<!-- ============================================================ -->
+<section id="contact" class="bg-bone-200/60 border-t border-ink/15 py-24 lg:py-32 relative">
+
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+            <div class="lg:col-span-3">
+                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">V.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
+                    Contact
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
+                    Discutons de<br>
+                    <span class="display-italic">votre projet</span><span class="text-cinabre">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
+                    Décrivez votre besoin et je vous recontacte sous 24&nbsp;heures.
+                    Ou écrivez-moi directement à
+                    <a href="mailto:tariel.vincent@gmail.com" class="text-ink underline-grow font-medium">
+                        tariel.vincent@gmail.com
+                    </a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+            <!-- Side: contact details -->
+            <aside class="lg:col-span-4 lg:pt-4">
+                <div class="border-t-2 border-ink pt-6 space-y-8">
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Email</p>
+                        <a href="mailto:tariel.vincent@gmail.com" class="display text-xl text-ink underline-grow break-all">
+                            tariel.vincent@gmail.com
+                        </a>
+                    </div>
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Téléphone</p>
+                        <p class="display text-xl text-ink">+687&nbsp;95&nbsp;07&nbsp;86</p>
+                    </div>
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Fuseau</p>
+                        <p class="display text-xl text-ink">Nouméa <span class="display-italic">·</span> UTC+11</p>
+                    </div>
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Mode</p>
+                        <p class="font-sans text-sm text-ink-mid leading-relaxed">
+                            Remote pour l’international.<br>
+                            Présentiel à Nouméa et déplacements ponctuels en métropole.
+                        </p>
+                    </div>
                 </div>
+            </aside>
+
+            <!-- Form -->
+            <div class="lg:col-span-8">
+                <form id="contact-form" action="{% url 'landing_page' %}" method="POST"
+                      class="border-t-2 border-ink pt-8 space-y-10">
+                    {% csrf_token %}
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
+
+                        <div>
+                            <label for="{{ form.prenom.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                01 &nbsp;Prénom *
+                            </label>
+                            {{ form.prenom }}
+                            {% if form.prenom.errors %}
+                                <p class="mt-2 mono text-[11px] text-red-700">{{ form.prenom.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
+                        <div>
+                            <label for="{{ form.nom.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                02 &nbsp;Nom *
+                            </label>
+                            {{ form.nom }}
+                            {% if form.nom.errors %}
+                                <p class="mt-2 mono text-[11px] text-red-700">{{ form.nom.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <label for="{{ form.email.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                03 &nbsp;Email *
+                            </label>
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <p class="mt-2 mono text-[11px] text-red-700">{{ form.email.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <label for="{{ form.entreprise.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                04 &nbsp;Entreprise
+                            </label>
+                            {{ form.entreprise }}
+                        </div>
+
+                        <div>
+                            <label for="{{ form.telephone.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                05 &nbsp;Téléphone
+                            </label>
+                            {{ form.telephone }}
+                        </div>
+
+                        <div>
+                            <label for="{{ form.formation_interessee.id_for_label }}"
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                06 &nbsp;Sujet *
+                            </label>
+                            {{ form.formation_interessee }}
+                            {% if form.formation_interessee.errors %}
+                                <p class="mt-2 mono text-[11px] text-red-700">{{ form.formation_interessee.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+                    <div class="pt-6 border-t border-ink/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint max-w-xs">
+                            Vos données restent confidentielles · Réponse sous 24&nbsp;h
+                        </p>
+                        <button type="submit"
+                                class="group inline-flex items-center justify-center gap-3 bg-ink text-bone-100 px-10 py-5 mono text-[12px] uppercase tracking-[0.18em] hover:bg-cinabre transition">
+                            Envoyer ma demande
+                            <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+
+                </form>
             </div>
 
         </div>
+
     </div>
 </section>
 

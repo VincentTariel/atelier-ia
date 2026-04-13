@@ -3,68 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier IA - Assistants Sur-Mesure en Nouvelle-Calédonie</title>
-    
-    <!-- Intégration de Tailwind CSS via CDN pour le MVP -->
+    <title>Vincent Tariel — AI Engineer · PhD École Polytechnique</title>
+    <meta name="description" content="Vincent Tariel — Freelance AI Engineer & Technical Lead. PhD École Polytechnique, 3x fondateur. Architecture, formation et workflows IA pour startups et équipes tech. Remote depuis Nouméa.">
+
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuration personnalisée de Tailwind -->
+
+    <!-- Google Fonts: Fraunces (display serif), IBM Plex Sans (body), IBM Plex Mono (annotations) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            900: '#1e3a8a',
+                        bone: {
+                            50:  '#faf7f0',
+                            100: '#f5f1e8',
+                            200: '#ece6d4',
+                            300: '#ddd3b8',
+                            400: '#c5b791',
+                        },
+                        ink: {
+                            DEFAULT: '#0a0a0a',
+                            soft:    '#1c1c1c',
+                            mid:     '#3f3f46',
+                            faint:   '#71717a',
+                        },
+                        cinabre: {
+                            DEFAULT: '#c2410c',
+                            light:   '#ea580c',
+                            deep:    '#9a3412',
                         }
+                    },
+                    fontFamily: {
+                        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+                        sans:    ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                        mono:    ['IBM Plex Mono', 'ui-monospace', 'monospace'],
                     }
                 }
             }
         }
     </script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- En-tête -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <span class="text-2xl font-bold text-gray-900 tracking-tight">Atelier<span class="text-blue-600">IA</span></span>
-            </div>
-            <nav class="hidden md:flex space-x-8">
-                <a href="#programme" class="text-gray-500 hover:text-gray-900 font-medium transition">Programme</a>
-                <a href="#temoignages" class="text-gray-500 hover:text-gray-900 font-medium transition">Avis</a>
-                <a href="#lead-magnet" class="text-blue-600 hover:text-blue-800 font-medium transition">Recevoir le support gratuit</a>
+    <style>
+        :root {
+            --bone:        #f5f1e8;
+            --bone-deep:   #ece6d4;
+            --ink:         #0a0a0a;
+            --ink-soft:    #1c1c1c;
+            --ink-mid:     #3f3f46;
+            --ink-faint:   #71717a;
+            --cinabre:     #c2410c;
+            --cinabre-deep:#9a3412;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bone);
+            color: var(--ink);
+            font-feature-settings: "ss01", "ss02", "kern", "liga";
+        }
+
+        /* Grain / paper texture overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.35;
+            mix-blend-mode: multiply;
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.06  0 0 0 0 0.05  0 0 0 0 0.03  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+        }
+
+        main, header, footer { position: relative; z-index: 2; }
+
+        /* Display headings — Fraunces with optical sizing */
+        .display {
+            font-family: 'Fraunces', Georgia, serif;
+            font-optical-sizing: auto;
+            font-variation-settings: "SOFT" 30, "WONK" 1;
+            letter-spacing: -0.025em;
+            line-height: 0.95;
+        }
+        .display-italic {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-variation-settings: "SOFT" 50, "WONK" 1;
+            letter-spacing: -0.02em;
+        }
+
+        /* Section number markers — Roman editorial style */
+        .roman {
+            font-family: 'Fraunces', Georgia, serif;
+            font-style: italic;
+            font-feature-settings: "smcp", "onum";
+        }
+
+        /* Mono dateline / annotations */
+        .mono { font-family: 'IBM Plex Mono', monospace; }
+
+        .small-caps {
+            font-variant-caps: all-small-caps;
+            letter-spacing: 0.18em;
+        }
+
+        /* Hairline divider */
+        .hairline { border-color: var(--ink); border-width: 0.5px; }
+
+        /* Marquee underline link */
+        .underline-grow {
+            background-image: linear-gradient(var(--cinabre), var(--cinabre));
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1.5px;
+            transition: background-size 0.4s ease;
+            padding-bottom: 2px;
+        }
+        .underline-grow:hover { background-size: 100% 1.5px; }
+
+        /* Cinabre dot accent */
+        .dot::after {
+            content: "";
+            display: inline-block;
+            width: 0.4em;
+            height: 0.4em;
+            background: var(--cinabre);
+            border-radius: 50%;
+            margin-left: 0.05em;
+            vertical-align: 0.15em;
+        }
+
+        /* Form overrides — kill the bootstrap-blue look */
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form input[type="tel"],
+        #contact-form select {
+            width: 100% !important;
+            background: transparent !important;
+            border: 0 !important;
+            border-bottom: 1px solid var(--ink) !important;
+            border-radius: 0 !important;
+            padding: 0.75rem 0 !important;
+            margin: 0 !important;
+            font-family: 'IBM Plex Sans', sans-serif !important;
+            font-size: 1rem !important;
+            color: var(--ink) !important;
+            box-shadow: none !important;
+            outline: none !important;
+            transition: border-color 0.2s ease;
+        }
+        #contact-form input::placeholder { color: var(--ink-faint); font-style: italic; }
+        #contact-form input:focus,
+        #contact-form select:focus {
+            border-bottom-color: var(--cinabre) !important;
+            border-bottom-width: 2px !important;
+        }
+        #contact-form select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%230a0a0a' d='M6 8L0 0h12z'/></svg>") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 0.25rem center !important;
+            padding-right: 1.5rem !important;
+        }
+
+        /* Card hover — editorial card with subtle slide */
+        .card-edit {
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+        }
+        .card-edit:hover { transform: translateY(-3px); border-color: var(--cinabre); }
+
+        /* Animated reveal on load (no JS) */
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(14px); }
+            to   { opacity: 1; transform: translateY(0);     }
+        }
+        .rise { animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .rise-1 { animation-delay: 0.05s; }
+        .rise-2 { animation-delay: 0.18s; }
+        .rise-3 { animation-delay: 0.32s; }
+        .rise-4 { animation-delay: 0.48s; }
+        .rise-5 { animation-delay: 0.62s; }
+
+        /* Marquee / running rule */
+        .rule-thick { border-top: 2px solid var(--ink); }
+        .rule-thin  { border-top: 1px solid var(--ink); }
+
+        /* Selection */
+        ::selection { background: var(--cinabre); color: var(--bone); }
+
+        /* Reduce motion respect */
+        @media (prefers-reduced-motion: reduce) {
+            .rise { animation: none; }
+            html  { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-bone-100/85 backdrop-blur-md border-b border-ink/15">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-5 flex items-center justify-between gap-6">
+            <a href="/" class="flex items-baseline gap-3 group">
+                <span class="display text-[1.75rem] font-medium text-ink leading-none">
+                    Vincent<span class="display-italic font-normal">·</span>Tariel<span class="text-cinabre">.</span>
+                </span>
+                <span class="hidden sm:inline mono text-[10px] uppercase tracking-[0.2em] text-ink-faint border-l border-ink/30 pl-3">
+                    AI&nbsp;Engineer
+                </span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 mono text-[11px] uppercase tracking-[0.18em]">
+                <a href="#manifesto"     class="text-ink hover:text-cinabre transition">§&nbsp;Manifesto</a>
+                <a href="#services"      class="text-ink hover:text-cinabre transition">§&nbsp;Services</a>
+                <a href="#realisations"  class="text-ink hover:text-cinabre transition">§&nbsp;Travaux</a>
+                <a href="#temoignages"   class="text-ink hover:text-cinabre transition">§&nbsp;Voix</a>
+                <a href="#contact"       class="ml-2 px-4 py-2 bg-ink text-bone-100 hover:bg-cinabre transition">Contact&nbsp;→</a>
             </nav>
+
+            <a href="#contact" class="md:hidden mono text-[10px] uppercase tracking-[0.18em] px-3 py-2 bg-ink text-bone-100">Contact&nbsp;→</a>
         </div>
     </header>
 
-    <!-- Zone d'affichage des messages Django -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
-        {% if messages %}
-            {% for message in messages %}
-                <div class="p-4 mb-4 rounded-md {% if message.tags == 'success' %}bg-green-50 text-green-800 border border-green-200{% elif message.tags == 'error' %}bg-red-50 text-red-800 border border-red-200{% else %}bg-blue-50 text-blue-800 border border-blue-200{% endif %}" role="alert">
-                    <p class="text-sm font-medium">{{ message }}</p>
-                </div>
-            {% endfor %}
-        {% endif %}
+    <!-- Django messages -->
+    {% if messages %}
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 mt-6 w-full">
+        {% for message in messages %}
+            <div class="border-l-2 px-4 py-3 mb-3 mono text-sm
+                {% if message.tags == 'success' %}border-cinabre bg-bone-200 text-ink
+                {% elif message.tags == 'error' %}border-red-700 bg-red-50 text-red-900
+                {% else %}border-ink bg-bone-200 text-ink{% endif %}" role="alert">
+                <span class="small-caps text-[10px] mr-2">
+                    {% if message.tags == 'success' %}Note ·{% elif message.tags == 'error' %}Erreur ·{% else %}Info ·{% endif %}
+                </span>
+                {{ message }}
+            </div>
+        {% endfor %}
     </div>
+    {% endif %}
 
-    <!-- Contenu principal -->
+    <!-- Main content -->
     <main class="flex-grow">
         {% block content %}
         {% endblock %}
     </main>
 
-    <!-- Pied de page -->
-    <footer class="bg-gray-900 text-gray-300 py-12 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-            <span class="text-2xl font-bold text-white tracking-tight mb-4">Atelier<span class="text-blue-500">IA</span></span>
-            <p class="text-base">&copy; {% now "Y" %} Atelier IA Nouméa. Tous droits réservés.</p>
-            <p class="text-sm mt-2 text-gray-500">Formations présentielles pour les entrepreneurs calédoniens.</p>
+    <!-- Footer -->
+    <footer class="bg-ink text-bone-100 mt-32">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                <div class="md:col-span-5">
+                    <div class="display text-3xl text-bone-100 leading-none">
+                        Vincent<span class="display-italic font-normal">·</span>Tariel<span class="text-cinabre">.</span>
+                    </div>
+                    <p class="mt-4 mono text-xs uppercase tracking-[0.18em] text-bone-100/60">
+                        AI&nbsp;Engineering · Formation · Consulting
+                    </p>
+                    <p class="mt-2 mono text-xs uppercase tracking-[0.18em] text-bone-100/60">
+                        Remote&nbsp;·&nbsp;Nouméa&nbsp;·&nbsp;UTC+11
+                    </p>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4 class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre-light mb-4">Plan</h4>
+                    <ul class="space-y-2 font-sans text-sm text-bone-100/80">
+                        <li><a href="#manifesto"    class="hover:text-cinabre-light transition">Manifesto</a></li>
+                        <li><a href="#services"     class="hover:text-cinabre-light transition">Services</a></li>
+                        <li><a href="#realisations" class="hover:text-cinabre-light transition">Travaux</a></li>
+                        <li><a href="#temoignages"  class="hover:text-cinabre-light transition">Voix</a></li>
+                        <li><a href="#contact"      class="hover:text-cinabre-light transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4 class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre-light mb-4">Joindre</h4>
+                    <ul class="space-y-2 font-sans text-sm text-bone-100/80">
+                        <li>
+                            <a href="mailto:tariel.vincent@gmail.com" class="hover:text-cinabre-light transition">
+                                tariel.vincent@gmail.com
+                            </a>
+                        </li>
+                        <li class="mono text-xs">+687&nbsp;95&nbsp;07&nbsp;86</li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vincent-tariel/" target="_blank" rel="noopener" class="hover:text-cinabre-light transition">
+                                LinkedIn&nbsp;↗
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://commeunjeu.org/mobile" target="_blank" rel="noopener" class="hover:text-cinabre-light transition">
+                                CommeUnJeu&nbsp;↗
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-6 border-t border-bone-100/15 flex flex-col md:flex-row justify-between gap-3 mono text-[11px] uppercase tracking-[0.18em] text-bone-100/50">
+                <span>© {% now "Y" %} Vincent Tariel · Tous droits réservés</span>
+                <span>Édition {% now "Y" %} · Composé en Fraunces &amp; Plex</span>
+            </div>
         </div>
     </footer>
 
