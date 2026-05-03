@@ -2,29 +2,29 @@ from django.db import models
 
 class Lead(models.Model):
     """
-    Modèle représentant un prospect (Lead) ayant rempli le formulaire 
-    pour recevoir le support de l'Atelier Niveau 1.
+    Prospect ayant rempli le formulaire de la landing Atelier IA.
+    Source unique pour l'inbound — voir CLAUDE.md §6 (stratégie CRM).
     """
     FORMATION_CHOICES = [
-        ('niveau1', "Niveau 1 : Les Assistants IA"),
-        ('niveau2', "Niveau 2 : L'Automatisation"),
-        ('les_deux', "Les deux niveaux"),
+        ('decouverte', "Découvrir Claude Desktop pour mon métier"),
+        ('cas_precis', "J'ai un cas précis en tête"),
+        ('guide_pdf',  "Je veux juste recevoir le guide PDF"),
     ]
 
     prenom = models.CharField(max_length=100, verbose_name="Prénom")
     nom = models.CharField(max_length=100, verbose_name="Nom")
     email = models.EmailField(verbose_name="Adresse Email")
-    
+
     # Champs optionnels pour qualifier le prospect B2B
     entreprise = models.CharField(max_length=200, blank=True, null=True, verbose_name="Entreprise")
     telephone = models.CharField(max_length=20, blank=True, null=True, verbose_name="Téléphone")
-    
-    # Nouveau champ pour le choix de la formation
+
+    # Sujet d'intérêt sélectionné dans le formulaire de contact
     formation_interessee = models.CharField(
         max_length=20,
         choices=FORMATION_CHOICES,
-        default='niveau1',
-        verbose_name="Formation intéressée"
+        default='decouverte',
+        verbose_name="Sujet d'intérêt"
     )
     
     # Horodatage automatique lors de la création

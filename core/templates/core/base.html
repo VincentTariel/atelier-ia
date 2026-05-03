@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Tariel — AI Engineer · PhD École Polytechnique</title>
-    <meta name="description" content="Vincent Tariel — Freelance AI Engineer & Technical Lead. PhD École Polytechnique, 3x fondateur. Architecture, formation et workflows IA pour startups et équipes tech. Remote depuis Nouméa.">
+    <title>Atelier IA — Coaching individuel Claude Desktop · Nouméa</title>
+    <meta name="description" content="Coaching individuel à Nouméa pour intégrer Claude Desktop dans votre quotidien professionnel. Sans coder, sur vos vrais dossiers. Vincent Tariel — Docteur École Polytechnique.">
+    <meta name="theme-color" content="#f5efe2">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Atelier IA — Coaching Claude Desktop · Nouméa">
+    <meta property="og:description" content="Claude Desktop dans votre quotidien. Sans coder. Coaching individuel à Nouméa.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Fraunces (display serif), IBM Plex Sans (body), IBM Plex Mono (annotations) -->
+    <!-- Google Fonts: Instrument Serif (display), Newsreader (body), JetBrains Mono (mono) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 
     <!-- Tailwind config -->
     <script>
@@ -20,29 +27,33 @@
             theme: {
                 extend: {
                     colors: {
-                        bone: {
-                            50:  '#faf7f0',
-                            100: '#f5f1e8',
-                            200: '#ece6d4',
-                            300: '#ddd3b8',
-                            400: '#c5b791',
+                        velin: {
+                            DEFAULT: '#f5efe2',
+                            soft:    '#f9f4e9',
+                            deep:    '#ece4d2',
+                            warm:    '#e3d8bf',
                         },
-                        ink: {
-                            DEFAULT: '#0a0a0a',
-                            soft:    '#1c1c1c',
-                            mid:     '#3f3f46',
-                            faint:   '#71717a',
+                        encre: {
+                            DEFAULT: '#1a1614',
+                            soft:    '#3d362f',
+                            mid:     '#5d544a',
+                            faint:   '#8a8077',
+                            ghost:   '#b5ab9e',
                         },
-                        cinabre: {
-                            DEFAULT: '#c2410c',
-                            light:   '#ea580c',
-                            deep:    '#9a3412',
+                        bordeaux: {
+                            DEFAULT: '#7a2e2a',
+                            deep:    '#5a1f1c',
+                            light:   '#9a3e3a',
                         }
                     },
                     fontFamily: {
-                        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
-                        sans:    ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                        mono:    ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+                        display: ['"Instrument Serif"', 'Georgia', 'serif'],
+                        serif:   ['Newsreader', 'Georgia', 'serif'],
+                        mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+                    },
+                    maxWidth: {
+                        'page': '1280px',
+                        'reading': '640px',
                     }
                 }
             }
@@ -51,194 +62,322 @@
 
     <style>
         :root {
-            --bone:        #f5f1e8;
-            --bone-deep:   #ece6d4;
-            --ink:         #0a0a0a;
-            --ink-soft:    #1c1c1c;
-            --ink-mid:     #3f3f46;
-            --ink-faint:   #71717a;
-            --cinabre:     #c2410c;
-            --cinabre-deep:#9a3412;
+            --velin:        #f5efe2;
+            --velin-soft:   #f9f4e9;
+            --velin-deep:   #ece4d2;
+            --velin-warm:   #e3d8bf;
+            --encre:        #1a1614;
+            --encre-soft:   #3d362f;
+            --encre-mid:    #5d544a;
+            --encre-faint:  #8a8077;
+            --encre-ghost:  #b5ab9e;
+            --bordeaux:     #7a2e2a;
+            --bordeaux-deep:#5a1f1c;
+            --bordeaux-light:#9a3e3a;
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
         body {
-            background-color: var(--bone);
-            color: var(--ink);
-            font-feature-settings: "ss01", "ss02", "kern", "liga";
+            background-color: var(--velin);
+            color: var(--encre);
+            font-family: 'Newsreader', Georgia, serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-feature-settings: "kern", "liga", "onum";
         }
 
-        /* Grain / paper texture overlay */
+        /* --------- Vélin texture overlay --------- */
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             pointer-events: none;
             z-index: 1;
-            opacity: 0.35;
+            opacity: 0.5;
             mix-blend-mode: multiply;
-            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.06  0 0 0 0 0.05  0 0 0 0 0.03  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+            background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' seed='3'/><feColorMatrix type='matrix' values='0 0 0 0 0.10  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0.12 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
         }
-
+        /* Subtle vertical paper grain */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.025;
+            background:
+                repeating-linear-gradient(
+                    to right,
+                    transparent 0,
+                    transparent 2px,
+                    rgba(26, 22, 20, 0.5) 2px,
+                    rgba(26, 22, 20, 0.5) 3px
+                );
+        }
         main, header, footer { position: relative; z-index: 2; }
 
-        /* Display headings — Fraunces with optical sizing */
+        /* --------- Display typography --------- */
         .display {
-            font-family: 'Fraunces', Georgia, serif;
-            font-optical-sizing: auto;
-            font-variation-settings: "SOFT" 30, "WONK" 1;
-            letter-spacing: -0.025em;
-            line-height: 0.95;
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: -0.012em;
+            line-height: 0.98;
         }
         .display-italic {
-            font-family: 'Fraunces', Georgia, serif;
+            font-family: 'Instrument Serif', Georgia, serif;
             font-style: italic;
-            font-variation-settings: "SOFT" 50, "WONK" 1;
-            letter-spacing: -0.02em;
+            font-weight: 400;
+            letter-spacing: -0.005em;
         }
 
-        /* Section number markers — Roman editorial style */
+        /* Roman numerals — section markers */
         .roman {
-            font-family: 'Fraunces', Georgia, serif;
+            font-family: 'Instrument Serif', Georgia, serif;
             font-style: italic;
+            font-weight: 400;
             font-feature-settings: "smcp", "onum";
+            line-height: 1;
         }
 
-        /* Mono dateline / annotations */
-        .mono { font-family: 'IBM Plex Mono', monospace; }
+        /* Mono — datelines, annotations, labels */
+        .mono { font-family: 'JetBrains Mono', monospace; }
 
         .small-caps {
             font-variant-caps: all-small-caps;
-            letter-spacing: 0.18em;
+            letter-spacing: 0.22em;
         }
 
-        /* Hairline divider */
-        .hairline { border-color: var(--ink); border-width: 0.5px; }
+        /* --------- Hairlines & dividers --------- */
+        .hairline { background: var(--encre); height: 1px; width: 100%; }
+        .hairline-thick { background: var(--encre); height: 2px; width: 100%; }
+        .hairline-faint { background: var(--encre-ghost); height: 1px; width: 100%; }
 
-        /* Marquee underline link */
+        /* --------- Drop cap --------- */
+        .drop-cap::first-letter {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-weight: 400;
+            font-size: 4.5em;
+            float: left;
+            line-height: 0.85;
+            margin: 0.05em 0.08em 0 -0.04em;
+            color: var(--bordeaux);
+        }
+
+        /* --------- Pull quote --------- */
+        .pull-quote {
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        /* --------- Underline-grow link --------- */
         .underline-grow {
-            background-image: linear-gradient(var(--cinabre), var(--cinabre));
+            background-image: linear-gradient(var(--bordeaux), var(--bordeaux));
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 1px;
+            transition: background-size 0.35s ease;
+            padding-bottom: 2px;
+        }
+        .underline-grow:hover { background-size: 100% 2px; }
+
+        .underline-reveal {
+            background-image: linear-gradient(var(--bordeaux), var(--bordeaux));
             background-position: 0 100%;
             background-repeat: no-repeat;
             background-size: 0% 1.5px;
             transition: background-size 0.4s ease;
             padding-bottom: 2px;
         }
-        .underline-grow:hover { background-size: 100% 1.5px; }
+        .underline-reveal:hover { background-size: 100% 1.5px; }
 
-        /* Cinabre dot accent */
-        .dot::after {
-            content: "";
-            display: inline-block;
-            width: 0.4em;
-            height: 0.4em;
-            background: var(--cinabre);
-            border-radius: 50%;
-            margin-left: 0.05em;
-            vertical-align: 0.15em;
-        }
-
-        /* Form overrides — kill the bootstrap-blue look */
+        /* --------- Form (editorial / hairline only) --------- */
         #contact-form input[type="text"],
         #contact-form input[type="email"],
         #contact-form input[type="tel"],
-        #contact-form select {
+        #contact-form select,
+        #contact-form textarea {
             width: 100% !important;
             background: transparent !important;
             border: 0 !important;
-            border-bottom: 1px solid var(--ink) !important;
+            border-bottom: 1px solid var(--encre) !important;
             border-radius: 0 !important;
-            padding: 0.75rem 0 !important;
+            padding: 0.85rem 0 0.6rem 0 !important;
             margin: 0 !important;
-            font-family: 'IBM Plex Sans', sans-serif !important;
-            font-size: 1rem !important;
-            color: var(--ink) !important;
+            font-family: 'Newsreader', Georgia, serif !important;
+            font-size: 1.0625rem !important;
+            font-weight: 400 !important;
+            color: var(--encre) !important;
             box-shadow: none !important;
             outline: none !important;
-            transition: border-color 0.2s ease;
+            transition: border-color 0.2s ease, padding-bottom 0.2s ease;
         }
-        #contact-form input::placeholder { color: var(--ink-faint); font-style: italic; }
+        #contact-form input::placeholder,
+        #contact-form textarea::placeholder {
+            color: var(--encre-ghost);
+            font-style: italic;
+            font-family: 'Instrument Serif', Georgia, serif;
+            font-size: 1.0625rem;
+        }
         #contact-form input:focus,
-        #contact-form select:focus {
-            border-bottom-color: var(--cinabre) !important;
+        #contact-form select:focus,
+        #contact-form textarea:focus {
+            border-bottom-color: var(--bordeaux) !important;
             border-bottom-width: 2px !important;
+            padding-bottom: calc(0.6rem - 1px) !important;
         }
         #contact-form select {
             appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%230a0a0a' d='M6 8L0 0h12z'/></svg>") !important;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%231a1614' d='M5 6L0 0h10z'/></svg>") !important;
             background-repeat: no-repeat !important;
             background-position: right 0.25rem center !important;
             padding-right: 1.5rem !important;
+            cursor: pointer;
+        }
+        #contact-form select option {
+            background: var(--velin);
+            color: var(--encre);
+            font-family: 'Newsreader', serif;
         }
 
-        /* Card hover — editorial card with subtle slide */
-        .card-edit {
-            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+        /* --------- Buttons --------- */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.75rem;
+            background: var(--encre);
+            color: var(--velin);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 400;
+            border: 1px solid var(--encre);
+            transition: all 0.25s ease;
+            text-decoration: none;
         }
-        .card-edit:hover { transform: translateY(-3px); border-color: var(--cinabre); }
+        .btn-primary:hover {
+            background: var(--bordeaux);
+            border-color: var(--bordeaux);
+        }
+        .btn-primary .arrow { transition: transform 0.25s ease; display: inline-block; }
+        .btn-primary:hover .arrow { transform: translateX(0.25rem); }
 
-        /* Animated reveal on load (no JS) */
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.75rem;
+            background: transparent;
+            color: var(--encre);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 400;
+            border: 1px solid var(--encre);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+        .btn-ghost:hover {
+            background: var(--encre);
+            color: var(--velin);
+        }
+        .btn-ghost .arrow { transition: transform 0.25s ease; display: inline-block; }
+        .btn-ghost:hover .arrow { transform: translateX(0.25rem); }
+
+        /* --------- Reveal animation --------- */
         @keyframes rise {
-            from { opacity: 0; transform: translateY(14px); }
+            from { opacity: 0; transform: translateY(18px); }
             to   { opacity: 1; transform: translateY(0);     }
         }
-        .rise { animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+        .rise { animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
         .rise-1 { animation-delay: 0.05s; }
         .rise-2 { animation-delay: 0.18s; }
-        .rise-3 { animation-delay: 0.32s; }
-        .rise-4 { animation-delay: 0.48s; }
-        .rise-5 { animation-delay: 0.62s; }
+        .rise-3 { animation-delay: 0.34s; }
+        .rise-4 { animation-delay: 0.52s; }
+        .rise-5 { animation-delay: 0.7s; }
+        .rise-6 { animation-delay: 0.88s; }
 
-        /* Marquee / running rule */
-        .rule-thick { border-top: 2px solid var(--ink); }
-        .rule-thin  { border-top: 1px solid var(--ink); }
+        /* --------- Selection --------- */
+        ::selection { background: var(--bordeaux); color: var(--velin); }
 
-        /* Selection */
-        ::selection { background: var(--cinabre); color: var(--bone); }
-
-        /* Reduce motion respect */
+        /* --------- Reduced motion --------- */
         @media (prefers-reduced-motion: reduce) {
             .rise { animation: none; }
             html  { scroll-behavior: auto; }
+            body::before, body::after { display: none; }
+        }
+
+        /* --------- Mobile refinements --------- */
+        @media (max-width: 640px) {
+            .drop-cap::first-letter {
+                font-size: 3.5em;
+            }
         }
     </style>
 </head>
-<body class="font-sans antialiased flex flex-col min-h-screen">
+<body class="font-serif antialiased flex flex-col min-h-screen">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-bone-100/85 backdrop-blur-md border-b border-ink/15">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-5 flex items-center justify-between gap-6">
-            <a href="/" class="flex items-baseline gap-3 group">
-                <span class="display text-[1.75rem] font-medium text-ink leading-none">
-                    Vincent<span class="display-italic font-normal">·</span>Tariel<span class="text-cinabre">.</span>
-                </span>
-                <span class="hidden sm:inline mono text-[10px] uppercase tracking-[0.2em] text-ink-faint border-l border-ink/30 pl-3">
-                    AI&nbsp;Engineer
-                </span>
-            </a>
+    <!-- ============================================================ -->
+    <!-- HEADER — slim editorial nav with running dateline             -->
+    <!-- ============================================================ -->
+    <header class="sticky top-0 z-50 bg-velin/95 backdrop-blur-sm border-b border-encre/20">
+        <div class="max-w-page mx-auto px-6 lg:px-10">
 
-            <nav class="hidden md:flex items-center gap-8 mono text-[11px] uppercase tracking-[0.18em]">
-                <a href="#manifesto"     class="text-ink hover:text-cinabre transition">§&nbsp;Manifesto</a>
-                <a href="#services"      class="text-ink hover:text-cinabre transition">§&nbsp;Services</a>
-                <a href="#realisations"  class="text-ink hover:text-cinabre transition">§&nbsp;Travaux</a>
-                <a href="#temoignages"   class="text-ink hover:text-cinabre transition">§&nbsp;Voix</a>
-                <a href="#contact"       class="ml-2 px-4 py-2 bg-ink text-bone-100 hover:bg-cinabre transition">Contact&nbsp;→</a>
-            </nav>
+            <!-- Top dateline strip -->
+            <div class="hidden md:flex items-center justify-between py-2 border-b border-encre/10 mono text-[10px] uppercase tracking-[0.22em] text-encre-mid">
+                <span>Atelier&nbsp;IA · Nº&nbsp;01 · Édition&nbsp;{% now "Y" %}</span>
+                <span>Nouméa · Nouvelle-Calédonie · UTC+11</span>
+                <span>{% now "l j F Y" %}</span>
+            </div>
 
-            <a href="#contact" class="md:hidden mono text-[10px] uppercase tracking-[0.18em] px-3 py-2 bg-ink text-bone-100">Contact&nbsp;→</a>
+            <!-- Main nav -->
+            <div class="flex items-center justify-between gap-6 py-5">
+                <a href="/" class="flex items-baseline gap-3 group">
+                    <span class="display text-[1.65rem] text-encre leading-none">
+                        Atelier <span class="display-italic">IA</span><span class="text-bordeaux">.</span>
+                    </span>
+                    <span class="hidden sm:inline mono text-[10px] uppercase tracking-[0.22em] text-encre-faint border-l border-encre/30 pl-3">
+                        Coaching · Nouméa
+                    </span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-7 mono text-[11px] uppercase tracking-[0.18em]">
+                    <a href="#promesse"   class="text-encre hover:text-bordeaux transition">§&nbsp;Promesse</a>
+                    <a href="#methode"    class="text-encre hover:text-bordeaux transition">§&nbsp;Méthode</a>
+                    <a href="#pour-qui"   class="text-encre hover:text-bordeaux transition">§&nbsp;Pour&nbsp;qui</a>
+                    <a href="#formateur"  class="text-encre hover:text-bordeaux transition">§&nbsp;Formateur</a>
+                    <a href="#tarifs"     class="text-encre hover:text-bordeaux transition">§&nbsp;Tarifs</a>
+                    <a href="#questions"  class="text-encre hover:text-bordeaux transition">§&nbsp;Questions</a>
+                </nav>
+
+                <a href="#contact" class="mono text-[10px] uppercase tracking-[0.18em] px-4 py-2.5 bg-encre text-velin hover:bg-bordeaux transition whitespace-nowrap">
+                    Entretien&nbsp;découverte&nbsp;→
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Django messages -->
+    <!-- ============================================================ -->
+    <!-- DJANGO MESSAGES                                               -->
+    <!-- ============================================================ -->
     {% if messages %}
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 mt-6 w-full">
+    <div class="max-w-page mx-auto px-6 lg:px-10 mt-6 w-full">
         {% for message in messages %}
-            <div class="border-l-2 px-4 py-3 mb-3 mono text-sm
-                {% if message.tags == 'success' %}border-cinabre bg-bone-200 text-ink
+            <div class="border-l-2 px-5 py-4 mb-3 mono text-sm
+                {% if message.tags == 'success' %}border-bordeaux bg-velin-deep text-encre
                 {% elif message.tags == 'error' %}border-red-700 bg-red-50 text-red-900
-                {% else %}border-ink bg-bone-200 text-ink{% endif %}" role="alert">
-                <span class="small-caps text-[10px] mr-2">
+                {% else %}border-encre bg-velin-deep text-encre{% endif %}" role="alert">
+                <span class="small-caps text-[10px] mr-2 text-bordeaux">
                     {% if message.tags == 'success' %}Note ·{% elif message.tags == 'error' %}Erreur ·{% else %}Info ·{% endif %}
                 </span>
                 {{ message }}
@@ -247,66 +386,88 @@
     </div>
     {% endif %}
 
-    <!-- Main content -->
+    <!-- ============================================================ -->
+    <!-- MAIN                                                          -->
+    <!-- ============================================================ -->
     <main class="flex-grow">
         {% block content %}
         {% endblock %}
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-ink text-bone-100 mt-32">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+    <!-- ============================================================ -->
+    <!-- FOOTER — encre on velin-deep, editorial colophon              -->
+    <!-- ============================================================ -->
+    <footer class="bg-encre text-velin-soft mt-32 relative z-2">
+        <div class="max-w-page mx-auto px-6 lg:px-10 py-16 lg:py-20">
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16">
+
+                <!-- Brand block -->
                 <div class="md:col-span-5">
-                    <div class="display text-3xl text-bone-100 leading-none">
-                        Vincent<span class="display-italic font-normal">·</span>Tariel<span class="text-cinabre">.</span>
+                    <div class="display text-3xl text-velin-soft leading-none">
+                        Atelier <span class="display-italic">IA</span><span class="text-bordeaux-light">.</span>
                     </div>
-                    <p class="mt-4 mono text-xs uppercase tracking-[0.18em] text-bone-100/60">
-                        AI&nbsp;Engineering · Formation · Consulting
+                    <p class="mt-5 font-serif text-base leading-relaxed text-velin-soft/75 max-w-md">
+                        Coaching individuel pour intégrer Claude Desktop dans le quotidien
+                        des professionnels calédoniens.
                     </p>
-                    <p class="mt-2 mono text-xs uppercase tracking-[0.18em] text-bone-100/60">
-                        Remote&nbsp;·&nbsp;Nouméa&nbsp;·&nbsp;UTC+11
+                    <p class="mt-6 mono text-[11px] uppercase tracking-[0.22em] text-velin-soft/55">
+                        Nouméa · Nouvelle-Calédonie · UTC+11
                     </p>
                 </div>
 
+                <!-- Plan -->
                 <div class="md:col-span-3">
-                    <h4 class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre-light mb-4">Plan</h4>
-                    <ul class="space-y-2 font-sans text-sm text-bone-100/80">
-                        <li><a href="#manifesto"    class="hover:text-cinabre-light transition">Manifesto</a></li>
-                        <li><a href="#services"     class="hover:text-cinabre-light transition">Services</a></li>
-                        <li><a href="#realisations" class="hover:text-cinabre-light transition">Travaux</a></li>
-                        <li><a href="#temoignages"  class="hover:text-cinabre-light transition">Voix</a></li>
-                        <li><a href="#contact"      class="hover:text-cinabre-light transition">Contact</a></li>
+                    <h4 class="mono text-[10px] uppercase tracking-[0.24em] text-bordeaux-light mb-5">Sommaire</h4>
+                    <ul class="space-y-2.5 font-serif text-[15px] text-velin-soft/80">
+                        <li><a href="#promesse"  class="hover:text-bordeaux-light underline-reveal transition">Promesse</a></li>
+                        <li><a href="#methode"   class="hover:text-bordeaux-light underline-reveal transition">Méthode</a></li>
+                        <li><a href="#pour-qui"  class="hover:text-bordeaux-light underline-reveal transition">Pour qui</a></li>
+                        <li><a href="#formateur" class="hover:text-bordeaux-light underline-reveal transition">Formateur</a></li>
+                        <li><a href="#tarifs"    class="hover:text-bordeaux-light underline-reveal transition">Tarifs</a></li>
+                        <li><a href="#questions" class="hover:text-bordeaux-light underline-reveal transition">Questions</a></li>
+                        <li><a href="#contact"   class="hover:text-bordeaux-light underline-reveal transition">Contact</a></li>
                     </ul>
                 </div>
 
+                <!-- Joindre -->
                 <div class="md:col-span-4">
-                    <h4 class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre-light mb-4">Joindre</h4>
-                    <ul class="space-y-2 font-sans text-sm text-bone-100/80">
+                    <h4 class="mono text-[10px] uppercase tracking-[0.24em] text-bordeaux-light mb-5">Joindre</h4>
+                    <ul class="space-y-3 font-serif text-[15px] text-velin-soft/80">
                         <li>
-                            <a href="mailto:tariel.vincent@gmail.com" class="hover:text-cinabre-light transition">
+                            <a href="mailto:tariel.vincent@gmail.com" class="hover:text-bordeaux-light underline-reveal transition">
                                 tariel.vincent@gmail.com
                             </a>
                         </li>
-                        <li class="mono text-xs">+687&nbsp;95&nbsp;07&nbsp;86</li>
+                        <li class="mono text-[13px] tracking-wide">
+                            +687&nbsp;95&nbsp;07&nbsp;86
+                        </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/vincent-tariel/" target="_blank" rel="noopener" class="hover:text-cinabre-light transition">
+                            <a href="https://www.linkedin.com/in/vincent-tariel/" target="_blank" rel="noopener noreferrer"
+                               class="hover:text-bordeaux-light underline-reveal transition">
                                 LinkedIn&nbsp;↗
                             </a>
                         </li>
                         <li>
-                            <a href="https://commeunjeu.org/mobile" target="_blank" rel="noopener" class="hover:text-cinabre-light transition">
+                            <a href="https://commeunjeu.org" target="_blank" rel="noopener noreferrer"
+                               class="hover:text-bordeaux-light underline-reveal transition">
                                 CommeUnJeu&nbsp;↗
                             </a>
+                            <span class="block mono text-[10px] uppercase tracking-[0.2em] text-velin-soft/45 mt-1">
+                                Plateforme pédagogique de l'auteur
+                            </span>
                         </li>
                     </ul>
                 </div>
+
             </div>
 
-            <div class="mt-16 pt-6 border-t border-bone-100/15 flex flex-col md:flex-row justify-between gap-3 mono text-[11px] uppercase tracking-[0.18em] text-bone-100/50">
+            <!-- Colophon -->
+            <div class="mt-16 pt-6 border-t border-velin-soft/15 flex flex-col md:flex-row justify-between gap-3 mono text-[11px] uppercase tracking-[0.18em] text-velin-soft/55">
                 <span>© {% now "Y" %} Vincent Tariel · Tous droits réservés</span>
-                <span>Édition {% now "Y" %} · Composé en Fraunces &amp; Plex</span>
+                <span>Composé en Instrument&nbsp;Serif &amp; Newsreader</span>
             </div>
+
         </div>
     </footer>
 

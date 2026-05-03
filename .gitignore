@@ -21,3 +21,18 @@ staticfiles/
 # Divers
 .env
 .DS_Store
+
+# CRM — données prospects/clients privées (jamais commiter)
+crm/leads/*
+!crm/leads/_gabarit.md
+crm/clients/*
+!crm/clients/_gabarit/
+crm/revues/*
+!crm/revues/_gabarit_revue_hebdo.md
+
+# Vidéo — exclure les rushes et exports lourds
+video/assets/*
+!video/assets/.gitkeep
+
+# Acquisition — fichiers d'envoi datés (logs de campagnes)
+acquisition/sends/

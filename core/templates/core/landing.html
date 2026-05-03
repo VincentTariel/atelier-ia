@@ -3,83 +3,80 @@
 {% block content %}
 
 <!-- ============================================================ -->
-<!-- HERO -->
+<!-- I. HERO — Page de garde                                       -->
 <!-- ============================================================ -->
-<section class="relative pt-16 lg:pt-24 pb-24 lg:pb-32 overflow-hidden">
+<section class="relative pt-12 lg:pt-20 pb-24 lg:pb-32">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
 
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-
-        <!-- Dateline -->
-        <div class="rise rise-1 flex items-center justify-between mono text-[11px] uppercase tracking-[0.22em] text-ink-mid mb-12 lg:mb-20">
-            <span>Nº&nbsp;01&nbsp;·&nbsp;Édition {% now "Y" %}</span>
-            <span class="hidden sm:inline">Nouméa&nbsp;·&nbsp;UTC+11</span>
-            <span>{% now "d.m.Y" %}</span>
+        <!-- Top dateline -->
+        <div class="rise rise-1 flex items-center justify-between mono text-[10px] uppercase tracking-[0.24em] text-encre-mid mb-10 lg:mb-16">
+            <span>Numéro&nbsp;01</span>
+            <span class="hidden sm:inline">Manifeste&nbsp;d'ouverture</span>
+            <span>Édition&nbsp;{% now "Y" %}</span>
         </div>
 
-        <!-- Top rule -->
-        <div class="rise rise-1 rule-thick mb-10"></div>
+        <!-- Top thick rule -->
+        <div class="rise rise-1 hairline-thick mb-12 lg:mb-16"></div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
 
-            <!-- Side annotation -->
-            <aside class="rise rise-2 lg:col-span-3 lg:pt-3 order-2 lg:order-1">
-                <div class="lg:sticky lg:top-28">
-                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-3">
-                        Nota bene&nbsp;·&nbsp;01
+            <!-- Side: kicker + nota bene -->
+            <aside class="rise rise-2 lg:col-span-3 order-2 lg:order-1">
+                <div class="lg:sticky lg:top-32">
+                    <p class="mono text-[10px] uppercase tracking-[0.24em] text-bordeaux mb-4">
+                        Nota bene · 01
                     </p>
-                    <p class="font-sans text-[15px] leading-relaxed text-ink-mid max-w-xs">
-                        Vincent Tariel — <span class="display-italic">PhD École Polytechnique</span>,
-                        Agrégé de mathématiques, fondateur 3×.
-                        Vingt ans à transformer des ruptures techniques en produits qui marchent.
+                    <p class="font-serif text-[15px] leading-[1.55] text-encre-soft max-w-xs">
+                        <span class="display-italic text-encre">Vincent Tariel</span>
+                        — docteur de l'École&nbsp;Polytechnique, fondateur de plusieurs startups en IA, ancien enseignant-chercheur.
+                        Installé à Nouméa depuis 2020.
                     </p>
-                    <div class="mt-6 mono text-[10px] uppercase tracking-[0.18em] text-ink-faint">
-                        ≈ 8&nbsp;min de lecture
+                    <div class="mt-7 mono text-[10px] uppercase tracking-[0.2em] text-encre-faint">
+                        ≈&nbsp;6&nbsp;min de lecture
                     </div>
                 </div>
             </aside>
 
-            <!-- Hero title block -->
+            <!-- Center: title block -->
             <div class="lg:col-span-9 order-1 lg:order-2">
 
-                <p class="rise rise-2 mono text-[11px] uppercase tracking-[0.22em] text-cinabre mb-6">
-                    Manifesto&nbsp;—&nbsp;avril&nbsp;2026
+                <p class="rise rise-2 mono text-[10px] uppercase tracking-[0.24em] text-bordeaux mb-7">
+                    Coaching&nbsp;individuel — Claude&nbsp;Desktop
                 </p>
 
-                <h1 class="rise rise-2 display text-[2.7rem] sm:text-[3.8rem] lg:text-[5.4rem] xl:text-[6.4rem] font-light text-ink">
-                    L’<span class="display-italic font-light">intelligence&nbsp;artificielle</span><br>
-                    ne remplace pas<br>
-                    l’expertise<span class="text-cinabre">.</span><br>
-                    <span class="display-italic font-light text-ink-mid">Elle l’amplifie.</span>
+                <h1 class="rise rise-2 display text-[3.2rem] sm:text-[4.5rem] lg:text-[6.4rem] xl:text-[7.4rem] text-encre">
+                    Claude Desktop<br>
+                    dans votre <span class="display-italic">quotidien</span>.<br>
+                    <span class="text-encre-mid">Sans coder<span class="text-bordeaux">.</span></span>
                 </h1>
 
-                <div class="rise rise-3 mt-12 max-w-2xl">
-                    <p class="font-sans text-lg lg:text-xl leading-relaxed text-ink-soft">
-                        Je suis <span class="display-italic text-ink">Vincent Tariel</span> — AI Engineer,
-                        PhD École Polytechnique, 3× fondateur. J’aide les entreprises et les équipes tech
-                        à adopter l’IA comme un véritable levier de productivité.
-                        <span class="text-ink-mid">Pas une démo. Un livrable.</span>
+                <div class="rise rise-3 mt-12 lg:mt-14 max-w-xl">
+                    <p class="font-serif text-lg lg:text-xl leading-[1.55] text-encre-soft">
+                        Coaching individuel à Nouméa pour intégrer
+                        <span class="display-italic text-encre">Claude</span> — l'intelligence artificielle d'Anthropic —
+                        dans <span class="display-italic">vos vrais dossiers</span>, vos vrais clients, votre vraie expertise.
+                        Pas une formation théorique. Du concret, sur votre poste de travail.
                     </p>
                 </div>
 
                 <!-- CTAs -->
                 <div class="rise rise-4 mt-12 flex flex-wrap items-center gap-4">
-                    <a href="#services"
-                       class="group inline-flex items-center gap-3 bg-ink text-bone-100 px-7 py-4 mono text-[12px] uppercase tracking-[0.18em] hover:bg-cinabre transition">
-                        Découvrir mes services
-                        <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    <a href="#contact" class="btn-primary">
+                        Réserver un entretien découverte
+                        <span class="arrow">→</span>
                     </a>
-                    <a href="#contact"
-                       class="group inline-flex items-center gap-3 border border-ink text-ink px-7 py-4 mono text-[12px] uppercase tracking-[0.18em] hover:bg-ink hover:text-bone-100 transition">
-                        Me contacter
-                        <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                    <a href="#methode" class="btn-ghost">
+                        Voir la méthode
+                        <span class="arrow">↓</span>
                     </a>
                 </div>
 
-                <!-- Tag row -->
-                <div class="rise rise-5 mt-12 pt-6 border-t border-ink/20 flex flex-wrap gap-x-8 gap-y-3 mono text-[11px] uppercase tracking-[0.2em] text-ink-mid">
-                    <span><span class="text-cinabre">●</span>&nbsp;Remote depuis Nouméa</span>
-                    <span><span class="text-cinabre">●</span>&nbsp;Missions sur site</span>
-                    <span><span class="text-cinabre">●</span>&nbsp;Formation &amp; Consulting</span>
+                <!-- Tag row / dateline secondary -->
+                <div class="rise rise-5 mt-12 pt-6 border-t border-encre/15 flex flex-wrap gap-x-8 gap-y-3 mono text-[11px] uppercase tracking-[0.2em] text-encre-mid">
+                    <span><span class="text-bordeaux">●</span>&nbsp;Présentiel à Nouméa</span>
+                    <span><span class="text-bordeaux">●</span>&nbsp;Sur vos vrais dossiers</span>
+                    <span><span class="text-bordeaux">●</span>&nbsp;Sans pré-requis tech</span>
+                    <span><span class="text-bordeaux">●</span>&nbsp;Confidentialité respectée</span>
                 </div>
 
             </div>
@@ -88,456 +85,769 @@
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- MANIFESTO / POURQUOI MOI -->
-<!-- ============================================================ -->
-<section id="manifesto" class="bg-bone-200/60 border-y border-ink/15 py-24 lg:py-32 relative">
 
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+<!-- ============================================================ -->
+<!-- II. PROMESSE — Manifesto + trois piliers                      -->
+<!-- ============================================================ -->
+<section id="promesse" class="bg-velin-deep border-y border-encre/15 py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
 
-        <!-- Section header -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
             <div class="lg:col-span-3">
-                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">I.</div>
-                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
-                    Crédibilité
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">II.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
+                    Promesse
                 </p>
             </div>
             <div class="lg:col-span-9">
-                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
-                    Pas un <span class="line-through text-ink-faint">prompt&nbsp;engineer</span>.<br>
-                    Un <span class="display-italic">ingénieur</span> qui comprend l’IA<br>
-                    depuis les <span class="display-italic">mathématiques</span><span class="text-cinabre">.</span>
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Claude ne <span class="display-italic">remplace pas</span><br>
+                    votre travail.<br>
+                    Il l'<span class="display-italic">augmente</span><span class="text-bordeaux">.</span>
                 </h2>
-                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
-                    Vingt ans à construire des systèmes intelligents — d’abord avec la morphologie mathématique
-                    et la vision par ordinateur, aujourd’hui avec les LLM et l’orchestration d’agents de code.
-                    Le vocabulaire change, la rigueur reste la même.
+                <p class="mt-8 max-w-2xl font-serif text-lg lg:text-xl leading-[1.6] text-encre-soft">
+                    Vous gardez la main, vous gagnez du temps, vous restez focus
+                    sur ce qui fait votre vraie valeur ajoutée. L'outil suit, vous décidez.
                 </p>
             </div>
         </div>
 
-        <!-- Credentials grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/15">
+        <!-- Three pillars - editorial columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t border-encre/30">
+
+            <!-- Pillar 1 -->
+            <div class="py-10 lg:py-14 md:pr-10 lg:pr-14 md:border-r border-encre/30 border-b md:border-b-0">
+                <div class="flex items-baseline justify-between mb-6">
+                    <span class="roman text-3xl text-bordeaux italic">i.</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-encre-faint">Pilier&nbsp;01</span>
+                </div>
+                <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-[1.05]">
+                    Vous gardez<br>la <span class="display-italic">main</span>.
+                </h3>
+                <p class="mt-5 font-serif text-base leading-[1.6] text-encre-soft">
+                    Claude n'écrit pas à votre place. Il propose un brouillon —
+                    vous décidez, vous arbitrez, vous signez. Aucun envoi ne part
+                    sans votre validation.
+                </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="py-10 lg:py-14 md:px-10 lg:px-14 md:border-r border-encre/30 border-b md:border-b-0">
+                <div class="flex items-baseline justify-between mb-6">
+                    <span class="roman text-3xl text-bordeaux italic">ii.</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-encre-faint">Pilier&nbsp;02</span>
+                </div>
+                <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-[1.05]">
+                    Vous gagnez<br>du <span class="display-italic">temps réel</span>.
+                </h3>
+                <p class="mt-5 font-serif text-base leading-[1.6] text-encre-soft">
+                    Sur les tâches répétitives — rédaction d'emails, comptes-rendus,
+                    synthèses, préparation de RDV — l'outil bien configuré coupe
+                    les délais de moitié, parfois davantage.
+                </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="py-10 lg:py-14 md:pl-10 lg:pl-14">
+                <div class="flex items-baseline justify-between mb-6">
+                    <span class="roman text-3xl text-bordeaux italic">iii.</span>
+                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-encre-faint">Pilier&nbsp;03</span>
+                </div>
+                <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-[1.05]">
+                    Sur <span class="display-italic">vos</span> dossiers.<br>
+                    Pas des cas d'école.
+                </h3>
+                <p class="mt-5 font-serif text-base leading-[1.6] text-encre-soft">
+                    Le coaching se fait sur vos vrais documents, vos vrais
+                    courriers, vos vrais clients. Confidentialité respectée,
+                    cadre adapté à votre niveau de sensibilité.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- III. MÉTHODE — Cinq étapes en sommaire                        -->
+<!-- ============================================================ -->
+<section id="methode" class="py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
+            <div class="lg:col-span-3">
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">III.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
+                    Méthode
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Cinq étapes,<br>
+                    <span class="display-italic">de l'audit</span> à l'autonomie<span class="text-bordeaux">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-serif text-lg lg:text-xl leading-[1.6] text-encre-soft">
+                    Une trame éprouvée, ajustée à votre métier et à vos cas réels.
+                    On commence par regarder votre journée type. On finit avec
+                    des workflows qui tournent.
+                </p>
+            </div>
+        </div>
+
+        <!-- Steps - sommaire éditorial -->
+        <ol class="border-t border-encre/30">
+
+            <!-- Step 01 -->
+            <li class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-10 lg:py-14 border-b border-encre/30 hover:bg-velin-soft transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-encre group-hover:text-bordeaux transition">01</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-2xl lg:text-[2rem] text-encre leading-[1.1]">
+                        Audit du <span class="display-italic">quotidien</span>
+                    </h3>
+                    <p class="mt-4 font-serif text-base lg:text-lg leading-[1.65] text-encre-soft max-w-2xl">
+                        On identifie ensemble les tâches répétitives, chronophages, à faible valeur ajoutée
+                        dans votre journée type. Pas un questionnaire générique : on regarde votre boîte mail,
+                        vos derniers courriers, vos derniers comptes-rendus.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">Durée typique</p>
+                    <p class="font-serif text-base text-encre-soft">≈ 30 min</p>
+                </div>
+            </li>
+
+            <!-- Step 02 -->
+            <li class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-10 lg:py-14 border-b border-encre/30 hover:bg-velin-soft transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-encre group-hover:text-bordeaux transition">02</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-2xl lg:text-[2rem] text-encre leading-[1.1]">
+                        Mise en place de <span class="display-italic">Claude Desktop</span>
+                    </h3>
+                    <p class="mt-4 font-serif text-base lg:text-lg leading-[1.65] text-encre-soft max-w-2xl">
+                        Installation, configuration, connexion à vos outils du quotidien
+                        — boîte mail, espaces de fichiers, agenda. Le tout sur votre poste,
+                        avec votre niveau de sensibilité comme cadre.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">Durée typique</p>
+                    <p class="font-serif text-base text-encre-soft">≈ 30 min</p>
+                </div>
+            </li>
+
+            <!-- Step 03 -->
+            <li class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-10 lg:py-14 border-b border-encre/30 hover:bg-velin-soft transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-encre group-hover:text-bordeaux transition">03</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-2xl lg:text-[2rem] text-encre leading-[1.1]">
+                        Création d'un assistant <span class="display-italic">sur-mesure</span>
+                    </h3>
+                    <p class="mt-4 font-serif text-base lg:text-lg leading-[1.65] text-encre-soft max-w-2xl">
+                        Un assistant pour la rédaction de courriers, un autre pour les synthèses, un autre
+                        pour la veille. Chacun nourri de vos documents de référence, votre ton,
+                        vos contraintes métier. Vous repartez avec, ils restent à vous.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">Durée typique</p>
+                    <p class="font-serif text-base text-encre-soft">≈ 30 min</p>
+                </div>
+            </li>
+
+            <!-- Step 04 -->
+            <li class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-10 lg:py-14 border-b border-encre/30 hover:bg-velin-soft transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-encre group-hover:text-bordeaux transition">04</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-2xl lg:text-[2rem] text-encre leading-[1.1]">
+                        Workflows <span class="display-italic">opérationnels</span>
+                    </h3>
+                    <p class="mt-4 font-serif text-base lg:text-lg leading-[1.65] text-encre-soft max-w-2xl">
+                        On rejoue ensemble vos tâches récurrentes avec Claude — vous repartez
+                        avec des recettes prêtes à l'emploi, validées en direct.
+                        Pas un PDF qu'on relit le mardi suivant : un savoir-faire en mains.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">Durée typique</p>
+                    <p class="font-serif text-base text-encre-soft">≈ 30 min</p>
+                </div>
+            </li>
+
+            <!-- Step 05 -->
+            <li class="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 py-10 lg:py-14 border-b border-encre/30 hover:bg-velin-soft transition">
+                <div class="lg:col-span-2">
+                    <div class="display text-5xl lg:text-6xl text-encre group-hover:text-bordeaux transition">05</div>
+                </div>
+                <div class="lg:col-span-7">
+                    <h3 class="display text-2xl lg:text-[2rem] text-encre leading-[1.1]">
+                        Mois d'<span class="display-italic">autonomie</span>
+                    </h3>
+                    <p class="mt-4 font-serif text-base lg:text-lg leading-[1.65] text-encre-soft max-w-2xl">
+                        Suivi par email pendant 30 jours pour ajuster, débloquer, étendre.
+                        L'objectif n'est pas que vous m'appeliez chaque semaine — c'est que
+                        vous puissiez ne plus le faire après le mois.
+                    </p>
+                </div>
+                <div class="lg:col-span-3 lg:text-right">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">Format</p>
+                    <p class="font-serif text-base text-encre-soft">Async&nbsp;·&nbsp;48&nbsp;h</p>
+                </div>
+            </li>
+
+        </ol>
+
+        <p class="mt-8 mono text-[11px] uppercase tracking-[0.2em] text-encre-faint max-w-3xl">
+            † Le mois d'autonomie (étape&nbsp;05) est inclus dès le forfait <span class="display-italic normal-case tracking-normal">Démarrage</span>.
+            Le forfait <span class="display-italic normal-case tracking-normal">Découverte</span> (Tarif Fondateurs) inclut un email de suivi à&nbsp;J+15.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- IV. POUR QUI — Secteurs en grille éditoriale                  -->
+<!-- ============================================================ -->
+<section id="pour-qui" class="bg-encre text-velin-soft py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
+            <div class="lg:col-span-3">
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux-light">IV.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-velin-soft/60">
+                    Pour qui
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-velin-soft leading-[1.02]">
+                    Pour les pros qui<br>
+                    <span class="display-italic">écrivent beaucoup</span><span class="text-bordeaux-light">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-serif text-lg lg:text-xl leading-[1.6] text-velin-soft/75">
+                    Ceux dont la journée se mesure en courriers, comptes-rendus, devis, synthèses.
+                    Aucun pré-requis technique au-delà de savoir utiliser un ordinateur.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sectors grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-velin-soft/20">
 
             <!-- 01 -->
-            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
-                <div class="flex items-baseline justify-between mb-8">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">01 / Formation</span>
-                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <path d="M3 9l9-5 9 5-9 5-9-5z"/>
-                        <path d="M7 11v5l5 3 5-3v-5"/>
-                    </svg>
-                </div>
-                <h3 class="display text-2xl text-ink leading-tight">
-                    PhD <span class="display-italic">École&nbsp;Polytechnique</span>
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">01 / Cabinet</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    Expertise comptable,<br>
+                    <span class="display-italic">juridique</span>, notariat
                 </h3>
-                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
-                    Vision par ordinateur &amp; morphologie mathématique. Doctorat soutenu sur les
-                    fondations algébriques du traitement d’image — bien avant que “IA” ne devienne un slogan.
-                </p>
-                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
-                    Agrégé de mathématiques
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Courriers types, synthèse de jurisprudence, préparation de RDV client.
+                    Forte charge rédactionnelle, sensibilité confidentialité élevée.
                 </p>
             </div>
 
             <!-- 02 -->
-            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
-                <div class="flex items-baseline justify-between mb-8">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">02 / Fondations</span>
-                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <path d="M5 21V7l8-4v18"/>
-                        <path d="M19 21V11l-6-4"/>
-                        <path d="M9 9h.01M9 13h.01M9 17h.01"/>
-                    </svg>
-                </div>
-                <h3 class="display text-2xl text-ink leading-tight">
-                    3× <span class="display-italic">fondateur</span>
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">02 / Conseil</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    Conseil indépendant,<br>
+                    <span class="display-italic">consulting</span>
                 </h3>
-                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
-                    Caméléon (langage de traitement d’image, référencé sur Wikipedia),
-                    AlphaNumeric&#8209;Vision (OCR industriel), CommeUnJeu (plateforme éducative).
-                    Trois entreprises, trois ruptures de marché.
-                </p>
-                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
-                    Recherche → produit → marché
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Notes de cadrage, propositions commerciales, comptes-rendus,
+                    recherche client. Beaucoup de production écrite, peu de répétition apparente.
                 </p>
             </div>
 
             <!-- 03 -->
-            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
-                <div class="flex items-baseline justify-between mb-8">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">03 / Pivots</span>
-                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <path d="M21 12a9 9 0 1 1-3-6.7"/>
-                        <path d="M21 4v5h-5"/>
-                    </svg>
-                </div>
-                <h3 class="display text-2xl text-ink leading-tight">
-                    2 <span class="display-italic">pivots</span> majeurs
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">03 / Immobilier</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    Agences <span class="display-italic">immobilières</span>,<br>
+                    professions immobilières
                 </h3>
-                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
-                    <span class="mono text-[11px] text-ink">2011 ·</span> Bascule deep&nbsp;learning.
-                    <span class="mono text-[11px] text-ink">2024 ·</span> Bascule LLM &amp; agents de code.
-                    Le pattern&nbsp;: détecter la rupture, pivoter sans nostalgie, livrer en production.
-                </p>
-                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
-                    Détecter · pivoter · livrer
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Annonces, descriptifs, courriers de relance, fiches clients.
+                    Volume hebdomadaire élevé, modèles récurrents.
                 </p>
             </div>
 
             <!-- 04 -->
-            <div class="card-edit bg-bone-100 p-8 lg:p-10 border border-transparent">
-                <div class="flex items-baseline justify-between mb-8">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-ink-faint">04 / Livraison</span>
-                    <svg class="w-8 h-8 text-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <path d="M12 2v20M2 12h20"/>
-                        <circle cx="12" cy="12" r="9"/>
-                    </svg>
-                </div>
-                <h3 class="display text-2xl text-ink leading-tight">
-                    Livré <span class="display-italic">avec</span> l’IA
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">04 / BTP</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    Dirigeants <span class="display-italic">artisans</span><br>
+                    et PME du BTP
                 </h3>
-                <p class="mt-4 font-sans text-sm leading-relaxed text-ink-mid">
-                    Une app mobile sur Play&nbsp;Store et iOS, un pipeline vidéo automatisé (30+ cours sur YouTube),
-                    une plateforme web full-stack. Seul. En production. Avec des agents de code.
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Devis, courriers administratifs, suivis de chantier.
+                    L'ennemi numéro un : la paperasse qui tient le dirigeant
+                    loin du terrain.
                 </p>
-                <p class="mt-4 mono text-[10px] uppercase tracking-[0.18em] text-cinabre">
-                    Solo · production · 2024–2026
+            </div>
+
+            <!-- 05 -->
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">05 / RH</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    <span class="display-italic">Ressources humaines</span><br>
+                    en PME
+                </h3>
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Fiches de poste, comptes-rendus d'entretien,
+                    notes de service, communication interne.
+                    Production protéiforme, ton à calibrer finement.
+                </p>
+            </div>
+
+            <!-- 06 -->
+            <div class="bg-encre p-7 lg:p-9 hover:bg-encre-soft transition">
+                <p class="mono text-[10px] uppercase tracking-[0.22em] text-velin-soft/70 mb-4">06 / Communication</p>
+                <h3 class="display text-2xl lg:text-[1.7rem] text-velin-soft leading-tight">
+                    Communication,<br>
+                    <span class="display-italic">marketing</span> de PME
+                </h3>
+                <p class="mt-4 font-serif text-[15px] leading-[1.6] text-velin-soft/70">
+                    Production de contenu hebdo : posts, newsletters, billets de blog.
+                    Le besoin n'est pas l'idée — c'est la mise en forme rapide.
                 </p>
             </div>
 
         </div>
+
+        <p class="mt-10 mono text-[11px] uppercase tracking-[0.22em] text-velin-soft/55 max-w-2xl">
+            † Cette liste n'est pas exhaustive. Un échange de 30 minutes suffit pour
+            voir si votre métier s'y prête.
+        </p>
 
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- SERVICES -->
-<!-- ============================================================ -->
-<section id="services" class="py-24 lg:py-32 relative">
 
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+<!-- ============================================================ -->
+<!-- V. À PROPOS DU FORMATEUR — Bio éditoriale pleine page         -->
+<!-- ============================================================ -->
+<section id="formateur" class="py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
             <div class="lg:col-span-3">
-                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">II.</div>
-                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
-                    Services
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">V.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
+                    Le formateur
                 </p>
             </div>
             <div class="lg:col-span-9">
-                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
-                    Comment je peux<br>
-                    <span class="display-italic">vous aider</span><span class="text-cinabre">.</span>
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Vincent <span class="display-italic">Tariel</span><span class="text-bordeaux">.</span>
                 </h2>
-                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
-                    Trois portes d’entrée, un seul fil rouge&nbsp;:
-                    transformer une intuition “on devrait faire de l’IA”
-                    en quelque chose qui tourne, mesurable, défendable.
+                <p class="mt-6 mono text-[12px] uppercase tracking-[0.22em] text-encre-mid">
+                    Docteur École&nbsp;Polytechnique · Coaching Claude&nbsp;Desktop · Nouméa
                 </p>
             </div>
         </div>
 
-        <!-- Service rows -->
-        <div class="border-t border-ink/30">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
-            <!-- Service 01 -->
-            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
-                <div class="lg:col-span-2">
-                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">01</div>
-                </div>
-                <div class="lg:col-span-7">
-                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
-                        Développement <span class="display-italic">produit IA</span>
-                    </h3>
-                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
-                        Fractional CTO ou Lead Engineer pour startups et scale-ups.
-                        J’architecture, je développe et je livre des produits IA de bout en bout.
-                        MVP, structuration technique pré-levée, accélération produit.
-                    </p>
-                </div>
-                <div class="lg:col-span-3 lg:text-right space-y-2">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
-                    <p class="font-sans text-sm text-ink-mid">Startups · Scale-ups<br>Fondateurs non-techs<br>CTOs sous l’eau</p>
-                </div>
-            </article>
-
-            <!-- Service 02 -->
-            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
-                <div class="lg:col-span-2">
-                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">02</div>
-                </div>
-                <div class="lg:col-span-7">
-                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
-                        Design de <span class="display-italic">workflows IA</span>
-                    </h3>
-                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
-                        Audit de vos processus actuels → conception de workflows augmentés
-                        (Claude Code, Codex, Copilot, orchestration multi-LLM) → implémentation →
-                        formation de l’équipe. Pas une démo de deux heures&nbsp;: un vrai accompagnement.
-                    </p>
-                </div>
-                <div class="lg:col-span-3 lg:text-right space-y-2">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
-                    <p class="font-sans text-sm text-ink-mid">Équipes tech<br>Cabinets d’ingénierie<br>Entreprises productisées</p>
-                </div>
-            </article>
-
-            <!-- Service 03 -->
-            <article class="group grid grid-cols-1 lg:grid-cols-12 gap-8 py-12 lg:py-16 border-b border-ink/30 hover:bg-bone-200/40 transition">
-                <div class="lg:col-span-2">
-                    <div class="display text-5xl lg:text-6xl text-ink group-hover:text-cinabre transition">03</div>
-                </div>
-                <div class="lg:col-span-7">
-                    <h3 class="display text-3xl lg:text-4xl text-ink leading-tight">
-                        Formation &amp; <span class="display-italic">acculturation</span>
-                    </h3>
-                    <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-ink-mid max-w-2xl">
-                        Ateliers pratiques pour équipes et organisations.
-                        Les participants livrent quelque chose de concret avant la fin de la session.
-                        Disponible en présentiel (Nouméa, métropole) ou en remote.
-                    </p>
-                </div>
-                <div class="lg:col-span-3 lg:text-right space-y-2">
-                    <p class="mono text-[10px] uppercase tracking-[0.2em] text-cinabre">Pour</p>
-                    <p class="font-sans text-sm text-ink-mid">Équipes mixtes<br>Comités de direction<br>Organisations en transition</p>
-                </div>
-            </article>
-
-        </div>
-
-        <!-- Footnote / pricing -->
-        <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mono text-[11px] uppercase tracking-[0.2em] text-ink-mid">
-            <span>† Tarification sur devis · Cadrage initial offert</span>
-            <a href="#contact" class="text-ink underline-grow">
-                Demander un cadrage&nbsp;→
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- TRAVAUX / PREUVES -->
-<!-- ============================================================ -->
-<section id="realisations" class="bg-ink text-bone-100 py-24 lg:py-32 relative overflow-hidden">
-
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
-            <div class="lg:col-span-3">
-                <div class="roman text-7xl lg:text-8xl text-cinabre-light leading-none">III.</div>
-                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-bone-100/60">
-                    Travaux
-                </p>
-            </div>
-            <div class="lg:col-span-9">
-                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-bone-100 leading-[1.02]">
-                    Ce que j’ai <span class="display-italic">livré</span><br>
-                    avec l’IA<span class="text-cinabre-light">.</span>
-                </h2>
-                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-bone-100/70">
-                    Pas des screenshots. Des produits en production, accessibles, vérifiables.
-                    Cliquez, téléchargez, jugez par vous-même.
-                </p>
-            </div>
-        </div>
-
-        <!-- Works grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-bone-100/15">
-
-            <!-- W1 -->
-            <a href="https://play.google.com/store/apps/details?id=org.commeunjeu.mobile"
-               target="_blank" rel="noopener"
-               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition lg:col-span-2">
-                <div class="flex items-baseline justify-between mb-10">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;01 · App mobile</span>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
-                        Play&nbsp;Store&nbsp;↗
-                    </span>
-                </div>
-                <h3 class="display text-3xl lg:text-5xl text-bone-100 leading-tight">
-                    CommeUnJeu — l’<span class="display-italic">app&nbsp;mobile</span>
-                </h3>
-                <p class="mt-5 font-sans text-base lg:text-lg leading-relaxed text-bone-100/70 max-w-2xl">
-                    Application cross-platform livrée seul avec des agents de code IA — zéro expérience
-                    mobile préalable. Disponible sur Play Store · version iOS en cours de publication.
-                </p>
-                <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 mono text-[10px] uppercase tracking-[0.18em] text-bone-100/40">
-                    <span>Play&nbsp;Store · live</span><span>·</span><span>iOS · in&nbsp;progress</span><span>·</span><span>Agents de code</span>
-                </div>
-            </a>
-
-            <!-- W2 -->
-            <a href="https://www.youtube.com/playlist?list=PL2j9TbGSjX0yb0JmLoAOeRtuvWOE6AVCc"
-               target="_blank" rel="noopener"
-               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
-                <div class="flex items-baseline justify-between mb-10">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;02 · Pipeline</span>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
-                        YouTube&nbsp;↗
-                    </span>
-                </div>
-                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
-                    Pipeline <span class="display-italic">vidéo</span>
-                </h3>
-                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
-                    Automatisé&nbsp;: LaTeX → storyboard → vidéo animée → YouTube.
-                    Plus de 30 cours produits.
-                </p>
-            </a>
-
-            <!-- W3 -->
-            <a href="https://commeunjeu.org/mobile"
-               target="_blank" rel="noopener"
-               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
-                <div class="flex items-baseline justify-between mb-10">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;03 · Web</span>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
-                        commeunjeu.org&nbsp;↗
-                    </span>
-                </div>
-                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
-                    Plateforme <span class="display-italic">éducative</span>
-                </h3>
-                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
-                    Full-stack Django. Curriculum structuré, exercices interactifs,
-                    contenus bilingues.
-                </p>
-            </a>
-
-            <!-- W4 -->
-            <a href="https://en.wikipedia.org/wiki/Cameleon_(programming_language)"
-               target="_blank" rel="noopener"
-               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
-                <div class="flex items-baseline justify-between mb-10">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;04 · Langage</span>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
-                        Wikipedia&nbsp;↗
-                    </span>
-                </div>
-                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
-                    <span class="display-italic">Caméléon</span>
-                </h3>
-                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
-                    Langage de programmation pour le traitement d’images en C++.
-                    Référencé sur Wikipedia.
-                </p>
-            </a>
-
-            <!-- W5 -->
-            <a href="https://www.linkedin.com/in/vincent-tariel/"
-               target="_blank" rel="noopener"
-               class="group bg-ink p-8 lg:p-10 border border-transparent hover:border-cinabre-light hover:bg-ink-soft transition">
-                <div class="flex items-baseline justify-between mb-10">
-                    <span class="mono text-[10px] uppercase tracking-[0.2em] text-bone-100/50">Pièce&nbsp;05 · Profil</span>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre-light group-hover:translate-x-1 transition-transform">
-                        LinkedIn&nbsp;↗
-                    </span>
-                </div>
-                <h3 class="display text-2xl lg:text-3xl text-bone-100 leading-tight">
-                    Le <span class="display-italic">parcours</span>
-                </h3>
-                <p class="mt-5 font-sans text-sm leading-relaxed text-bone-100/70">
-                    Vingt ans de carrière, vérifiables ligne à ligne.
-                    Recommandations, postes, publications.
-                </p>
-            </a>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- ============================================================ -->
-<!-- TÉMOIGNAGES -->
-<!-- ============================================================ -->
-<section id="temoignages" class="py-24 lg:py-32 relative">
-
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-24">
-            <div class="lg:col-span-3">
-                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">IV.</div>
-                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
-                    Voix
-                </p>
-            </div>
-            <div class="lg:col-span-9">
-                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
-                    Ils ont <span class="display-italic">essayé</span>.<br>
-                    Voici ce qu’ils en disent<span class="text-cinabre">.</span>
-                </h2>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-6xl">
-
-            <!-- Témoignage 1 -->
-            <figure class="border-t-2 border-ink pt-8">
-                <div class="display text-7xl text-cinabre leading-none mb-4" aria-hidden="true">“</div>
-                <blockquote class="display text-2xl lg:text-3xl text-ink leading-snug">
-                    Je pensais ne pas avoir 3 heures à consacrer à une formation.
-                    Mais dès le lendemain, mon nouvel “Assistant Communication” m’a rédigé tous mes posts
-                    de la semaine en 10 minutes, avec mon ton exact. <span class="display-italic">Le meilleur investissement de mon année.</span>
-                </blockquote>
-                <figcaption class="mt-8 flex items-baseline justify-between">
+            <!-- Side: nota bene + credentials -->
+            <aside class="lg:col-span-4">
+                <div class="border-t-2 border-encre pt-6 space-y-7">
                     <div>
-                        <p class="mono text-[12px] uppercase tracking-[0.2em] text-ink">Marc&nbsp;A.</p>
-                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mt-1">Entrepreneur · Nouméa</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Formation</p>
+                        <p class="font-serif text-base leading-[1.55] text-encre-soft">
+                            Docteur en informatique de l'<span class="display-italic">École Polytechnique</span>
+                            (vision par ordinateur, 2009).<br>
+                            Agrégé de mathématiques (Probabilités &amp; Statistiques, 2017).<br>
+                            Post-doctorat à l'Australian National University.
+                        </p>
                     </div>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre">Réf.&nbsp;01</span>
-                </figcaption>
-            </figure>
-
-            <!-- Témoignage 2 -->
-            <figure class="border-t-2 border-ink pt-8">
-                <div class="display text-7xl text-cinabre leading-none mb-4" aria-hidden="true">“</div>
-                <blockquote class="display text-2xl lg:text-3xl text-ink leading-snug">
-                    J’avais abandonné ChatGPT car je passais mon temps à lui réexpliquer mon métier.
-                    Avec la méthode du Document Maître, mon IA connaît parfaitement ma cible et mes offres.
-                    <span class="display-italic">J’appuie sur un bouton et elle pond un texte qui ressemble à 100% à mon entreprise.</span>
-                </blockquote>
-                <figcaption class="mt-8 flex items-baseline justify-between">
                     <div>
-                        <p class="mono text-[12px] uppercase tracking-[0.2em] text-ink">Sandra&nbsp;L.</p>
-                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint mt-1">Responsable marketing</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Parcours</p>
+                        <p class="font-serif text-base leading-[1.55] text-encre-soft">
+                            Fondateur de plusieurs startups en IA (Paris, 2010-2016).
+                            Enseignant-chercheur en école d'ingénieurs.
+                            Formateur d'enseignants à l'Université de la Nouvelle-Calédonie.
+                        </p>
                     </div>
-                    <span class="mono text-[10px] uppercase tracking-[0.18em] text-cinabre">Réf.&nbsp;02</span>
-                </figcaption>
-            </figure>
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Aujourd'hui</p>
+                        <p class="font-serif text-base leading-[1.55] text-encre-soft">
+                            Développe sa plateforme pédagogique
+                            <a href="https://commeunjeu.org" target="_blank" rel="noopener noreferrer" class="text-encre underline-grow">CommeUnJeu</a>
+                            en utilisant Claude au quotidien — et transmet ce qu'il apprend
+                            à des professionnels calédoniens en coaching individuel.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Lieu</p>
+                        <p class="font-serif text-base leading-[1.55] text-encre-soft">
+                            Nouméa, Nouvelle-Calédonie. Installé depuis 2020.
+                        </p>
+                    </div>
+                </div>
+            </aside>
 
+            <!-- Body: editorial bio -->
+            <div class="lg:col-span-8">
+                <div class="border-t-2 border-encre pt-6">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-6">
+                        Pourquoi cette activité
+                    </p>
+                    <div class="font-serif text-lg lg:text-[1.2rem] leading-[1.7] text-encre-soft drop-cap max-w-reading">
+                        Je développe depuis 2024 ma propre plateforme pédagogique de mathématiques —
+                        application mobile, plateforme web, vidéos. Tout, je le construis seul,
+                        en utilisant Claude tous les jours comme cowork(er) de développement,
+                        de production de contenu et de gestion.
+                    </div>
+                    <p class="mt-7 font-serif text-lg lg:text-[1.2rem] leading-[1.7] text-encre-soft max-w-reading">
+                        Cette pratique quotidienne nourrit directement le coaching que je propose
+                        à Nouméa. Je ne transmets pas une théorie de l'IA : je transmets
+                        <span class="display-italic">ce qui marche</span> et
+                        <span class="display-italic">ce qui fait perdre du temps</span>,
+                        sur la base de cas réels — les miens, et les vôtres.
+                    </p>
+                    <p class="mt-7 font-serif text-lg lg:text-[1.2rem] leading-[1.7] text-encre-soft max-w-reading">
+                        Avant la Nouvelle-Calédonie et CommeUnJeu, j'ai fondé deux startups en
+                        traitement d'images puis en deep learning à Paris, enseigné l'IA en école
+                        d'ingénieurs, et formé des enseignants à l'université de Nouvelle-Calédonie.
+                        Vingt ans à manipuler ces outils, du laboratoire au terrain.
+                    </p>
+
+                    <!-- Pull quote -->
+                    <blockquote class="mt-12 pl-6 border-l-2 border-bordeaux">
+                        <p class="pull-quote text-3xl lg:text-[2.4rem] text-encre">
+                            « Je ne vous vends pas l'avenir.<br>
+                            Je vous vends un<span class="display-italic"> outil de plus</span>,
+                            que je sais faire fonctionner. »
+                        </p>
+                    </blockquote>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- VI. TARIFS — Trois colonnes éditoriales                       -->
+<!-- ============================================================ -->
+<section id="tarifs" class="bg-velin-deep border-y border-encre/15 py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
+            <div class="lg:col-span-3">
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">VI.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
+                    Tarifs
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Tarifs <span class="display-italic">clairs</span>,<br>
+                    sans surprise<span class="text-bordeaux">.</span>
+                </h2>
+                <p class="mt-8 max-w-2xl font-serif text-lg lg:text-xl leading-[1.6] text-encre-soft">
+                    Atelier&nbsp;IA est en phase de lancement. Les <span class="display-italic">dix premiers
+                    clients fondateurs</span> bénéficient d'un tarif réduit, en échange d'un retour
+                    d'expérience anonyme par secteur — sans citation nominative.
+                </p>
+            </div>
+        </div>
+
+        <!-- Pricing - 3 columns editorial -->
+        <div class="grid grid-cols-1 md:grid-cols-3 border-t-2 border-encre">
+
+            <!-- Tier 1 — Fondateurs -->
+            <div class="relative md:border-r border-encre/30 border-b md:border-b-0">
+
+                <!-- Banderole "Fondateurs" -->
+                <div class="absolute -top-px left-0 right-0 -translate-y-full">
+                    <div class="bg-bordeaux text-velin px-4 py-1.5 inline-block">
+                        <p class="mono text-[10px] uppercase tracking-[0.22em]">
+                            §&nbsp;Tarif Fondateurs · 10 places
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-7 lg:p-9 h-full flex flex-col">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-encre-faint mb-3">
+                        Forfait 01 / Découverte
+                    </p>
+                    <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-tight">
+                        Coaching <span class="display-italic">Découverte</span>
+                    </h3>
+
+                    <div class="my-7 flex items-baseline gap-2">
+                        <span class="display text-6xl lg:text-7xl text-bordeaux">50&nbsp;000</span>
+                        <span class="mono text-sm uppercase tracking-[0.18em] text-encre-mid">XPF</span>
+                    </div>
+
+                    <ul class="space-y-3 font-serif text-[15px] leading-[1.55] text-encre-soft flex-grow">
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Échange email préalable (≈ 30&nbsp;min cumulées)</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span><span class="display-italic">2&nbsp;heures</span> en présentiel à Nouméa</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Un assistant Claude sur-mesure paramétré pendant la séance</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Le guide PDF « 10 façons d'utiliser Claude » remis en fin de séance</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Email de suivi à J+15</span></li>
+                    </ul>
+
+                    <p class="mt-7 mono text-[10px] uppercase tracking-[0.2em] text-encre-faint border-t border-encre/20 pt-4">
+                        Contrepartie : un retour d'expérience anonyme — secteur uniquement, sans nom.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tier 2 — Démarrage -->
+            <div class="md:border-r border-encre/30 border-b md:border-b-0">
+                <div class="p-7 lg:p-9 h-full flex flex-col">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-encre-faint mb-3">
+                        Forfait 02 / Standard
+                    </p>
+                    <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-tight">
+                        Coaching <span class="display-italic">Démarrage</span>
+                    </h3>
+
+                    <div class="my-7 flex items-baseline gap-2">
+                        <span class="display text-6xl lg:text-7xl text-encre">100&nbsp;000</span>
+                        <span class="mono text-sm uppercase tracking-[0.18em] text-encre-mid">XPF</span>
+                    </div>
+
+                    <ul class="space-y-3 font-serif text-[15px] leading-[1.55] text-encre-soft flex-grow">
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Échange email préalable</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span><span class="display-italic">2&nbsp;heures</span> en présentiel à Nouméa</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Un assistant Claude sur-mesure</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Le guide PDF</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span><span class="display-italic">Un mois</span> de suivi par email (réponses sous 48&nbsp;h)</span></li>
+                    </ul>
+
+                    <p class="mt-7 mono text-[10px] uppercase tracking-[0.2em] text-encre-faint border-t border-encre/20 pt-4">
+                        Tarif standard, à partir du onzième client.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tier 3 — Suivi mensuel -->
+            <div>
+                <div class="p-7 lg:p-9 h-full flex flex-col">
+                    <p class="mono text-[10px] uppercase tracking-[0.22em] text-encre-faint mb-3">
+                        Forfait 03 / Rétention
+                    </p>
+                    <h3 class="display text-3xl lg:text-[2.4rem] text-encre leading-tight">
+                        Suivi <span class="display-italic">mensuel</span>
+                    </h3>
+
+                    <div class="my-7 flex items-baseline gap-2">
+                        <span class="display text-6xl lg:text-7xl text-encre">40&nbsp;000</span>
+                        <span class="mono text-sm uppercase tracking-[0.18em] text-encre-mid">XPF&nbsp;/ mois</span>
+                    </div>
+
+                    <ul class="space-y-3 font-serif text-[15px] leading-[1.55] text-encre-soft flex-grow">
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Une séance de <span class="display-italic">1h30</span> par mois (présentiel ou visio)</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Emails illimités entre les séances</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Veille sur les nouveautés Claude</span></li>
+                        <li class="flex gap-3"><span class="text-bordeaux mono">·</span><span>Nouveaux assistants ciblés selon vos besoins</span></li>
+                    </ul>
+
+                    <p class="mt-7 mono text-[10px] uppercase tracking-[0.2em] text-encre-faint border-t border-encre/20 pt-4">
+                        Engagement minimum trois mois. Proposé après le Démarrage.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer note -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 mono text-[11px] uppercase tracking-[0.2em] text-encre-mid">
+            <p>† Entretien découverte de 30&nbsp;min · gratuit · sans engagement</p>
+            <p class="md:text-right">‡ Garantie satisfait/remboursé sur la première séance</p>
         </div>
 
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- CONTACT -->
-<!-- ============================================================ -->
-<section id="contact" class="bg-bone-200/60 border-t border-ink/15 py-24 lg:py-32 relative">
 
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+<!-- ============================================================ -->
+<!-- VII. QUESTIONS — FAQ éditoriale                               -->
+<!-- ============================================================ -->
+<section id="questions" class="py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
             <div class="lg:col-span-3">
-                <div class="roman text-7xl lg:text-8xl text-cinabre leading-none">V.</div>
-                <p class="mt-2 mono text-[11px] uppercase tracking-[0.22em] text-ink-mid">
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">VII.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
+                    Questions
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Les questions<br>
+                    qu'on me pose <span class="display-italic">toujours</span><span class="text-bordeaux">.</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-3"></div>
+            <div class="lg:col-span-9 max-w-3xl">
+
+                <ol class="border-t border-encre/30">
+
+                    <!-- Q1 -->
+                    <li class="py-9 border-b border-encre/30">
+                        <div class="flex items-baseline gap-4 mb-4">
+                            <span class="roman text-2xl text-bordeaux italic">i.</span>
+                            <h3 class="display-italic text-2xl lg:text-[1.7rem] text-encre leading-snug flex-1">
+                                « Mes dossiers sont confidentiels —
+                                je ne peux pas les mettre dans une&nbsp;IA. »
+                            </h3>
+                        </div>
+                        <p class="font-serif text-base lg:text-[17px] leading-[1.65] text-encre-soft pl-9">
+                            Claude Desktop n'est pas l'outil grand public que vous avez peut-être essayé.
+                            Les conversations Claude ne sont pas utilisées pour entraîner les modèles.
+                            Pour les données les plus sensibles, on peut même travailler en local —
+                            vos fichiers ne sortent pas de votre machine.
+                            On en discute au cas par cas selon votre niveau de sensibilité.
+                        </p>
+                    </li>
+
+                    <!-- Q2 -->
+                    <li class="py-9 border-b border-encre/30">
+                        <div class="flex items-baseline gap-4 mb-4">
+                            <span class="roman text-2xl text-bordeaux italic">ii.</span>
+                            <h3 class="display-italic text-2xl lg:text-[1.7rem] text-encre leading-snug flex-1">
+                                « Je n'ai pas le temps d'apprendre un nouvel outil. »
+                            </h3>
+                        </div>
+                        <p class="font-serif text-base lg:text-[17px] leading-[1.65] text-encre-soft pl-9">
+                            Justement — c'est pour ça qu'on fait du un-à-un sur vos vrais dossiers,
+                            pas une formation théorique. Au bout de la première séance de deux heures,
+                            vous avez déjà un assistant qui tourne. Le retour sur investissement temps
+                            se fait en moyenne en deux à trois semaines.
+                        </p>
+                    </li>
+
+                    <!-- Q3 -->
+                    <li class="py-9 border-b border-encre/30">
+                        <div class="flex items-baseline gap-4 mb-4">
+                            <span class="roman text-2xl text-bordeaux italic">iii.</span>
+                            <h3 class="display-italic text-2xl lg:text-[1.7rem] text-encre leading-snug flex-1">
+                                « J'ai déjà essayé. Ça ne donne rien d'utilisable. »
+                            </h3>
+                        </div>
+                        <p class="font-serif text-base lg:text-[17px] leading-[1.65] text-encre-soft pl-9">
+                            C'est l'objection la plus fréquente — et c'est précisément la raison du coaching.
+                            La différence entre <span class="display-italic">« ça ne sert à rien »</span> et
+                            <span class="display-italic">« j'ai gagné une heure par jour »</span>, ce sont
+                            quatre ou cinq réflexes simples qu'on transmet en quelques heures. On peut
+                            en faire un test sur l'un de vos cas réels en entretien découverte.
+                        </p>
+                    </li>
+
+                    <!-- Q4 -->
+                    <li class="py-9 border-b border-encre/30">
+                        <div class="flex items-baseline gap-4 mb-4">
+                            <span class="roman text-2xl text-bordeaux italic">iv.</span>
+                            <h3 class="display-italic text-2xl lg:text-[1.7rem] text-encre leading-snug flex-1">
+                                « C'est cher pour quelques heures. »
+                            </h3>
+                        </div>
+                        <p class="font-serif text-base lg:text-[17px] leading-[1.65] text-encre-soft pl-9">
+                            Ce que vous payez n'est pas les heures de séance, c'est un système qui vous
+                            fait gagner du temps tous les jours, pendant des années. Comparé au coût
+                            horaire de votre propre temps ou à celui d'un assistant, le calcul se fait
+                            vite. La garantie satisfait/remboursé couvre la première séance.
+                        </p>
+                    </li>
+
+                    <!-- Q5 -->
+                    <li class="py-9">
+                        <div class="flex items-baseline gap-4 mb-4">
+                            <span class="roman text-2xl text-bordeaux italic">v.</span>
+                            <h3 class="display-italic text-2xl lg:text-[1.7rem] text-encre leading-snug flex-1">
+                                « Pourquoi ne pas regarder des vidéos YouTube gratuites ? »
+                            </h3>
+                        </div>
+                        <p class="font-serif text-base lg:text-[17px] leading-[1.65] text-encre-soft pl-9">
+                            Parce que YouTube vous montre des cas d'usage génériques, souvent américains.
+                            Le coaching, c'est votre métier, vos dossiers, vos contraintes calédoniennes.
+                            La différence entre lire un livre de cuisine et avoir un chef qui passe
+                            deux heures dans <span class="display-italic">votre cuisine</span> avec
+                            <span class="display-italic">vos ingrédients</span>.
+                        </p>
+                    </li>
+
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- VIII. NOTE ÉDITORIALE — placeholder pour témoignages          -->
+<!-- ============================================================ -->
+<section class="bg-velin-deep border-y border-encre/15 py-20 lg:py-28 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-3">
+                <p class="mono text-[10px] uppercase tracking-[0.24em] text-bordeaux mb-2">
+                    Note éditoriale · 01
+                </p>
+            </div>
+            <div class="lg:col-span-9">
+                <p class="font-serif text-lg lg:text-xl leading-[1.7] text-encre-soft max-w-3xl">
+                    <span class="display-italic">Vous remarquerez l'absence de témoignages sur cette page.</span>
+                    C'est volontaire. Atelier&nbsp;IA est en phase de lancement — les premiers clients
+                    fondateurs n'ont pas encore terminé leur accompagnement.
+                </p>
+                <p class="mt-5 font-serif text-lg lg:text-xl leading-[1.7] text-encre-soft max-w-3xl">
+                    Cette section accueillera bientôt leurs retours d'expérience, par secteur d'activité
+                    et sans citation nominative. La confidentialité des clients prime sur le marketing.
+                </p>
+                <p class="mt-7 mono text-[11px] uppercase tracking-[0.22em] text-encre-faint">
+                    À paraître — édition&nbsp;{% now "Y" %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- IX. CONTACT — Formulaire éditorial                            -->
+<!-- ============================================================ -->
+<section id="contact" class="py-24 lg:py-36 relative">
+    <div class="max-w-page mx-auto px-6 lg:px-10">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 lg:mb-20">
+            <div class="lg:col-span-3">
+                <div class="roman text-[6rem] lg:text-[7.5rem] text-bordeaux">IX.</div>
+                <p class="mt-2 mono text-[11px] uppercase tracking-[0.24em] text-encre-mid">
                     Contact
                 </p>
             </div>
             <div class="lg:col-span-9">
-                <h2 class="display text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.02]">
-                    Discutons de<br>
-                    <span class="display-italic">votre projet</span><span class="text-cinabre">.</span>
+                <h2 class="display text-4xl sm:text-5xl lg:text-[4.2rem] text-encre leading-[1.02]">
+                    Réservons un<br>
+                    <span class="display-italic">entretien découverte</span><span class="text-bordeaux">.</span>
                 </h2>
-                <p class="mt-8 max-w-2xl font-sans text-lg leading-relaxed text-ink-mid">
-                    Décrivez votre besoin et je vous recontacte sous 24&nbsp;heures.
-                    Ou écrivez-moi directement à
-                    <a href="mailto:tariel.vincent@gmail.com" class="text-ink underline-grow font-medium">
-                        tariel.vincent@gmail.com
-                    </a>.
+                <p class="mt-8 max-w-2xl font-serif text-lg lg:text-xl leading-[1.6] text-encre-soft">
+                    Trente minutes, gratuit, sans engagement — pour voir si le coaching vous parle,
+                    et sur quels cas commencer. Réponse sous 24&nbsp;heures, par email
+                    ou par téléphone selon votre préférence.
                 </p>
             </div>
         </div>
@@ -545,27 +855,30 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
             <!-- Side: contact details -->
-            <aside class="lg:col-span-4 lg:pt-4">
-                <div class="border-t-2 border-ink pt-6 space-y-8">
+            <aside class="lg:col-span-4">
+                <div class="border-t-2 border-encre pt-6 space-y-7">
                     <div>
-                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Email</p>
-                        <a href="mailto:tariel.vincent@gmail.com" class="display text-xl text-ink underline-grow break-all">
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Email</p>
+                        <a href="mailto:tariel.vincent@gmail.com" class="display text-xl lg:text-2xl text-encre underline-grow break-all">
                             tariel.vincent@gmail.com
                         </a>
                     </div>
                     <div>
-                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Téléphone</p>
-                        <p class="display text-xl text-ink">+687&nbsp;95&nbsp;07&nbsp;86</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Téléphone</p>
+                        <p class="display text-xl lg:text-2xl text-encre">+687&nbsp;95&nbsp;07&nbsp;86</p>
                     </div>
                     <div>
-                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Fuseau</p>
-                        <p class="display text-xl text-ink">Nouméa <span class="display-italic">·</span> UTC+11</p>
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Localisation</p>
+                        <p class="font-serif text-base text-encre-soft leading-relaxed">
+                            Nouméa <span class="display-italic">·</span> Nouvelle-Calédonie<br>
+                            Présentiel et déplacements Grand Nouméa.
+                        </p>
                     </div>
                     <div>
-                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-2">Mode</p>
-                        <p class="font-sans text-sm text-ink-mid leading-relaxed">
-                            Remote pour l’international.<br>
-                            Présentiel à Nouméa et déplacements ponctuels en métropole.
+                        <p class="mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-2">Confidentialité</p>
+                        <p class="font-serif text-[15px] text-encre-soft leading-relaxed">
+                            Vos données restent strictement confidentielles.
+                            Aucun partage à des tiers, jamais.
                         </p>
                     </div>
                 </div>
@@ -574,14 +887,15 @@
             <!-- Form -->
             <div class="lg:col-span-8">
                 <form id="contact-form" action="{% url 'landing_page' %}" method="POST"
-                      class="border-t-2 border-ink pt-8 space-y-10">
+                      class="border-t-2 border-encre pt-8 space-y-10">
                     {% csrf_token %}
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
 
+                        <!-- Prénom -->
                         <div>
                             <label for="{{ form.prenom.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
                                 01 &nbsp;Prénom *
                             </label>
                             {{ form.prenom }}
@@ -590,9 +904,10 @@
                             {% endif %}
                         </div>
 
+                        <!-- Nom -->
                         <div>
                             <label for="{{ form.nom.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
                                 02 &nbsp;Nom *
                             </label>
                             {{ form.nom }}
@@ -601,9 +916,10 @@
                             {% endif %}
                         </div>
 
+                        <!-- Email -->
                         <div class="sm:col-span-2">
                             <label for="{{ form.email.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
                                 03 &nbsp;Email *
                             </label>
                             {{ form.email }}
@@ -612,25 +928,28 @@
                             {% endif %}
                         </div>
 
+                        <!-- Entreprise -->
                         <div class="sm:col-span-2">
                             <label for="{{ form.entreprise.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
-                                04 &nbsp;Entreprise
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
+                                04 &nbsp;Entreprise / cabinet
                             </label>
                             {{ form.entreprise }}
                         </div>
 
+                        <!-- Téléphone -->
                         <div>
                             <label for="{{ form.telephone.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
                                 05 &nbsp;Téléphone
                             </label>
                             {{ form.telephone }}
                         </div>
 
+                        <!-- Sujet -->
                         <div>
                             <label for="{{ form.formation_interessee.id_for_label }}"
-                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-cinabre mb-1">
+                                   class="block mono text-[10px] uppercase tracking-[0.22em] text-bordeaux mb-1">
                                 06 &nbsp;Sujet *
                             </label>
                             {{ form.formation_interessee }}
@@ -641,14 +960,13 @@
 
                     </div>
 
-                    <div class="pt-6 border-t border-ink/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-ink-faint max-w-xs">
+                    <div class="pt-6 border-t border-encre/30 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+                        <p class="mono text-[10px] uppercase tracking-[0.18em] text-encre-faint max-w-xs leading-relaxed">
                             Vos données restent confidentielles · Réponse sous 24&nbsp;h
                         </p>
-                        <button type="submit"
-                                class="group inline-flex items-center justify-center gap-3 bg-ink text-bone-100 px-10 py-5 mono text-[12px] uppercase tracking-[0.18em] hover:bg-cinabre transition">
+                        <button type="submit" class="btn-primary">
                             Envoyer ma demande
-                            <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+                            <span class="arrow">→</span>
                         </button>
                     </div>
 
@@ -656,7 +974,6 @@
             </div>
 
         </div>
-
     </div>
 </section>
 
