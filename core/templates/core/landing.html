@@ -890,6 +890,15 @@
                       class="border-t-2 border-encre pt-8 space-y-10">
                     {% csrf_token %}
 
+                    {# Honeypot — invisible pour les humains via .visually-hidden, rempli par les bots #}
+                    <div class="visually-hidden" aria-hidden="true">
+                        <label for="{{ form.website.id_for_label }}">Site web (laisser vide)</label>
+                        {{ form.website }}
+                    </div>
+
+                    {# Time-trap — timestamp Unix injecté au render, vérifié au submit #}
+                    {{ form.loaded_at }}
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
 
                         <!-- Prénom -->

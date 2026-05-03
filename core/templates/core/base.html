@@ -198,6 +198,18 @@
         }
         .underline-reveal:hover { background-size: 100% 1.5px; }
 
+        /* --------- Honeypot anti-bot (invisible humains, visible bots) --------- */
+        .visually-hidden {
+            position: absolute !important;
+            left: -10000px !important;
+            top: auto !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
         /* --------- Form (editorial / hairline only) --------- */
         #contact-form input[type="text"],
         #contact-form input[type="email"],
