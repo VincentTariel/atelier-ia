@@ -153,8 +153,8 @@ def _send_lead_magnet(lead):
             reply_to=['tariel.vincent@gmail.com'],
         )
 
-        # Attache le PDF s'il existe (en attendant le nouveau lead-magnet)
-        pdf_path = settings.BASE_DIR / 'core' / 'templates' / 'pdf' / 'Atelier_IA_Niveau_1.pdf'
+        # Attache le PDF lead-magnet « Claude Desktop au quotidien »
+        pdf_path = settings.BASE_DIR / 'core' / 'templates' / 'pdf' / 'Atelier_IA_Claude_Desktop.pdf'
         if pdf_path.exists():
             email.attach_file(str(pdf_path))
         else:

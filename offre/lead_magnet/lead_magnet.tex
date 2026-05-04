@@ -1,0 +1,564 @@
+% =========================================================================
+% Atelier IA — Lead-magnet PDF
+% « Claude Desktop au quotidien »
+%
+% Compile : pdflatex -output-directory=build lead_magnet.tex (deux passes)
+% =========================================================================
+
+\documentclass[11pt,a4paper]{article}
+
+% --- Encoding & language --------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\frenchsetup{ItemLabeli=\textendash, ItemLabelii=\textendash}
+
+% --- Typography -----------------------------------------------------------
+\usepackage{ebgaramond}              % corps : Garamond ouvert et lisible
+\usepackage[scale=0.85]{inconsolata} % mono pour datelines / labels
+\usepackage{microtype}               % protrusion + expansion typo
+
+% Pour les titres : reprend le family Cormorant via fontspec ? Non — on reste
+% en EB Garamond italique pour les italiques de titre (cohérent avec le rendu
+% du site qui utilise Instrument Serif italic).
+
+% --- Geometry -------------------------------------------------------------
+\usepackage[
+  a4paper,
+  top=3cm, bottom=3cm,
+  left=3cm, right=3cm,
+  headsep=1cm, footskip=1.5cm
+]{geometry}
+
+% --- Colors (matchent la landing : vélin, encre, bordeaux) ---------------
+\usepackage{xcolor}
+\definecolor{velin}{HTML}{F5EFE2}
+\definecolor{encre}{HTML}{1A1614}
+\definecolor{encredoux}{HTML}{3D362F}
+\definecolor{encrefaint}{HTML}{8A8077}
+\definecolor{bordeaux}{HTML}{7A2E2A}
+
+% Application : texte body en encre douce
+\AtBeginDocument{\color{encredoux}}
+
+% --- Section formatting ---------------------------------------------------
+\usepackage{titlesec}
+
+% Suppress section numbering (we use our own roman numerals editorially)
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}[block]
+  {\color{encre}\normalfont\Huge\itshape}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{2em}{1em}
+
+\titleformat{\subsection}[block]
+  {\color{encre}\normalfont\Large\bfseries}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{1.5em}{0.5em}
+
+\titleformat{\subsubsection}[block]
+  {\color{bordeaux}\normalfont\small\sffamily\MakeUppercase}
+  {}{0em}{}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.3em}
+
+% --- Lists ---------------------------------------------------------------
+\usepackage{enumitem}
+\setlist{leftmargin=1.5em, itemsep=0.3em, parsep=0pt, topsep=0.4em}
+
+% --- Headers / footers ---------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\footnotesize\ttfamily\color{encrefaint}Atelier IA}
+\fancyfoot[C]{\footnotesize\ttfamily\color{encrefaint}Claude Desktop au quotidien}
+\fancyfoot[R]{\footnotesize\ttfamily\color{encrefaint}\thepage}
+
+% Cover page : no header/footer
+\fancypagestyle{cover}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% --- Custom commands -----------------------------------------------------
+\newcommand{\dateline}[1]{{\footnotesize\ttfamily\color{encrefaint}\MakeUppercase{#1}}}
+\newcommand{\bordot}{\textcolor{bordeaux}{$\bullet$}}
+\newcommand{\bordsec}[1]{\subsubsection*{\textcolor{bordeaux}{#1}}}
+
+% Pull-quote / aside
+\newcommand{\pullquote}[1]{%
+  \begin{quote}\itshape\color{encre}\large #1\end{quote}%
+}
+
+% Skill block — formatted like a code listing
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\newtcolorbox{skillbox}[1]{
+  enhanced,
+  colback=velin,
+  colframe=encre,
+  boxrule=0.4pt,
+  arc=0pt,
+  outer arc=0pt,
+  fonttitle=\ttfamily\small\color{encre},
+  title={\MakeUppercase{Skill — #1}},
+  attach boxed title to top left={xshift=0pt, yshift=-3pt},
+  boxed title style={colback=velin, colframe=velin, boxrule=0pt, arc=0pt},
+  left=1em, right=1em, top=1.2em, bottom=1em,
+  fontupper=\small\color{encredoux}
+}
+
+% Workspace block
+\newtcolorbox{workspacebox}{
+  enhanced,
+  colback=velin,
+  colframe=bordeaux,
+  boxrule=0pt,
+  leftrule=2pt,
+  arc=0pt,
+  outer arc=0pt,
+  left=1em, right=0.5em, top=0.8em, bottom=0.8em,
+  fontupper=\small\color{encredoux}
+}
+
+% Hyperlinks
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+\hypersetup{
+  pdfauthor={Vincent Tariel},
+  pdftitle={Atelier IA — Claude Desktop au quotidien},
+  pdfsubject={Guide pratique pour intégrer Claude Desktop dans son métier},
+  pdfkeywords={Claude, Desktop, Coaching, IA, Nouméa, Calédonie}
+}
+
+% Tighten paragraphs
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% =========================================================================
+\begin{document}
+% =========================================================================
+
+% -------------------------------------------------------------------------
+% COVER
+% -------------------------------------------------------------------------
+\thispagestyle{cover}
+
+\vspace*{2cm}
+
+\dateline{Atelier IA \quad\textbar\quad Numéro 01 \quad\textbar\quad Édition 2026}
+
+\vspace{0.3cm}
+{\color{encre}\rule{\linewidth}{1pt}}
+\vspace{1.5cm}
+
+\begin{flushleft}
+{\color{encre}\fontsize{52pt}{56pt}\selectfont\itshape Claude Desktop\par}
+\vspace{0.4cm}
+{\color{encre}\fontsize{52pt}{56pt}\selectfont au quotidien\textcolor{bordeaux}{.}\par}
+\end{flushleft}
+
+\vspace{1.5cm}
+
+\begin{minipage}{0.65\textwidth}
+{\large\color{encredoux}
+Le guide pratique pour les professionnels qui veulent
+faire travailler l'\textit{intelligence artificielle d'Anthropic}
+sur leurs vrais dossiers — sans coder.
+}
+\end{minipage}
+
+\vfill
+
+{\color{encre}\rule{\linewidth}{0.4pt}}
+
+\vspace{0.3cm}
+
+\begin{minipage}{0.6\textwidth}
+\dateline{Vincent Tariel}\\[0.2em]
+{\footnotesize\itshape Docteur de l'École Polytechnique\\
+Coaching Claude Desktop, en présentiel à Nouméa\\
+\texttt{atelier-ia.ovh}}
+\end{minipage}\hfill
+\begin{minipage}{0.35\textwidth}\raggedleft
+\dateline{À lire en 12 minutes}\\[0.2em]
+{\footnotesize\itshape Premier guide d'une série en cours.}
+\end{minipage}
+
+\newpage
+
+% -------------------------------------------------------------------------
+% I. PRÉFACE
+% -------------------------------------------------------------------------
+
+\dateline{I. \quad Préface}
+
+\vspace{0.4cm}
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{1cm}
+
+\section*{Pourquoi ce guide existe}
+
+Vous avez peut-être déjà essayé une intelligence artificielle. Vous avez ouvert
+ChatGPT ou Claude, posé une question — et obtenu une réponse polie, générique,
+\textit{à côté} du sujet. Vous avez refermé l'onglet en pensant
+\textit{« ce n'est pas pour moi »}.
+
+C'est l'objection la plus fréquente que j'entends à Nouméa. Et c'est presque
+toujours la même cause~: l'outil utilisé brut, sans contexte, ne vaut pas
+grand-chose pour un professionnel. Bien encadré, le même outil vous rend
+des heures par jour.
+
+\textbf{Ce guide n'est pas un manuel.} C'est un récit en deux histoires —
+celle d'un professeur de mathématiques au lycée, celle d'un avocat débordé
+par sa rédaction. Vous y verrez comment chacun~:
+
+\begin{itemize}
+  \item construit son \textit{espace de travail} dans Claude Desktop,
+  \item définit un \textit{skill} appelable à la demande,
+  \item s'épargne, semaine après semaine, des heures de travail sans valeur
+        ajoutée.
+\end{itemize}
+
+À la fin du guide, vous aurez compris la méthode. Vous saurez si elle peut
+s'appliquer à votre métier. Si oui, mes coordonnées sont en dernière page.
+
+\pullquote{« Claude ne remplace pas votre travail. Il augmente votre productivité
+pour que vous restiez focus sur votre vraie valeur ajoutée. »}
+
+\newpage
+
+% -------------------------------------------------------------------------
+% II. LA MÉTHODE
+% -------------------------------------------------------------------------
+
+\dateline{II. \quad La méthode}
+
+\vspace{0.4cm}
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{1cm}
+
+\section*{Deux temps, et c'est tout}
+
+Toute la méthode tient en deux mouvements. C'est rare dans la sphère IA, où
+les guides s'épaississent à mesure qu'ils s'éloignent du métier de leurs
+lecteurs. Ici, deux pages suffiront.
+
+\bordsec{Temps 1 — L'espace de travail}
+
+Claude Desktop fonctionne avec ce qu'on appelle des \textit{Projects}.
+Un Project, c'est un dossier dans lequel vous déposez les documents de
+référence d'un domaine précis~: vos modèles de courriers, vos textes officiels,
+vos derniers rapports, votre glossaire interne. Une fois ces documents
+en place, Claude les a en permanence sous les yeux quand vous lui parlez
+dans ce Project.
+
+Le travail consiste à choisir \textit{quoi} mettre dans cet espace.
+C'est moins évident qu'il n'y paraît. Mettre trop de documents noie le
+contexte~; trop peu produit des réponses creuses. Le bon dosage demande
+une heure de travail au début — et tient ensuite des mois.
+
+\bordsec{Temps 2 — Le skill appelable}
+
+Une fois l'espace de travail prêt, on définit un \textit{skill}~: une
+consigne précise et permanente qui décrit \textbf{le rôle} que Claude doit
+tenir dans ce Project. Le skill répond à trois questions~:
+
+\begin{itemize}
+  \item Qui es-tu~? (\textit{« Tu es l'assistant de rédaction d'un cabinet d'avocats à Nouméa »})
+  \item Comment travailles-tu~? (\textit{« Tu reproduis le style des modèles fournis, tu numérotes les pièces, tu poses une question si une information manque »})
+  \item Qu'est-ce que tu refuses de faire~? (\textit{« Tu n'inventes jamais de jurisprudence sans source explicite »})
+\end{itemize}
+
+Ce skill, une fois enregistré, devient appelable à toute heure du jour
+sans rien réexpliquer. Vous lancez le Project, vous donnez votre tâche
+brute (\textit{« voici les notes de mon RDV de ce matin, rédige
+l'attestation »}), et vous récupérez un brouillon en trente secondes.
+
+\vspace{1cm}
+
+\pullquote{Espace de travail bien rempli, skill bien rédigé, patience
+au début~: ce sont les trois investissements qui transforment Claude
+en collaborateur — et non en jouet.}
+
+\newpage
+
+% -------------------------------------------------------------------------
+% III. HISTOIRE 1 — LE PROFESSEUR
+% -------------------------------------------------------------------------
+
+\dateline{III. \quad Histoire 1}
+
+\vspace{0.4cm}
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{1cm}
+
+\section*{Le professeur de mathématiques}
+
+\subsubsection*{Le contexte}
+
+Marc enseigne les mathématiques en seconde générale au lycée Jules Garnier
+à Nouméa. Trente-deux élèves par classe, deux classes en parallèle, un
+programme officiel chargé. Chaque dimanche soir, il prépare ses cours pour
+la semaine~: structure, exercices, évaluations formatives, différenciation
+pour les élèves en difficulté. Trois heures de préparation pour cinq heures
+de cours hebdomadaires. Multiplié par les semaines, c'est une nuit complète
+qu'il aimerait récupérer.
+
+\bordsec{Temps 1 — Son espace de travail}
+
+Marc crée un Project Claude Desktop nommé \textit{« Maths · Seconde
+générale »}. Il y dépose~:
+
+\begin{workspacebox}
+\begin{itemize}[leftmargin=1.2em]
+  \item Le \textbf{Bulletin Officiel} 2024 du programme de seconde générale
+        (PDF récupéré sur le site du Ministère).
+  \item Les \textbf{progressions annuelles} de deux collègues plus expérimentés
+        — récupérées en salle des profs, avec leur accord.
+  \item Trois \textbf{manuels scolaires} de référence (versions PDF
+        légalement obtenues via le portail enseignant).
+  \item Ses \textbf{cours de l'an dernier}, dans leur état brut.
+  \item Un fichier \textbf{« Mes 32 élèves »} anonymisé~: prénoms remplacés
+        par des codes, niveau estimé, points à surveiller.
+\end{itemize}
+\end{workspacebox}
+
+Ce travail de mise en place lui prend une heure et demie un samedi matin.
+Il ne le refera plus de l'année.
+
+\bordsec{Temps 2 — Son skill}
+
+Marc rédige ensuite l'instruction permanente du Project~:
+
+\begin{skillbox}{Professeur de mathématiques}
+Tu es professeur de mathématiques en seconde générale au lycée Jules Garnier
+à Nouméa. Tu maîtrises le Bulletin Officiel 2024 du programme de seconde
+générale (déposé dans ce Project) et tu t'y réfères systématiquement.
+
+\medskip
+
+Quand je te demande de générer un cours, tu structures ainsi~:
+\begin{enumerate}[leftmargin=1.5em, label=\Roman*.]
+  \item Objectifs notionnels (cite l'attendu de fin de programme correspondant).
+  \item Pré-requis vérifiés.
+  \item Activité d'introduction de 10 minutes.
+  \item Cours formel structuré (définitions, propriétés, démonstrations adaptées).
+  \item Trois exercices d'application gradués.
+  \item Évaluation formative finale de 5 minutes.
+\end{enumerate}
+
+\medskip
+
+Tu indiques toujours~: la durée totale estimée, les compétences travaillées
+(modéliser, calculer, raisonner, communiquer), les écueils prévisibles pour
+les élèves en difficulté.
+
+\medskip
+
+Ton ton est direct, pédagogique, sans jargon mathématique inutile. Tu
+n'inventes jamais de référence à une page de manuel sans avoir vérifié
+qu'elle existe dans les manuels déposés ici.
+\end{skillbox}
+
+\bordsec{L'usage au quotidien}
+
+Le dimanche soir, Marc lance Claude Desktop, ouvre son Project, et écrit
+simplement~:
+
+\begin{quote}\itshape
+« Génère un cours sur les fonctions affines. Durée 2~heures. Classe
+hétérogène, sept élèves en grande difficulté. Cours du mardi à 8 heures —
+ils seront fatigués. »
+\end{quote}
+
+Trente secondes plus tard, il a un plan de cours complet, structuré selon
+le format qu'il a défini, ancré dans le Bulletin Officiel, avec des
+exercices adaptés. Il relit, ajuste deux passages, ajoute son grain de sel
+pédagogique sur l'introduction. Il a divisé par trois son temps de
+préparation. La nuit récupérée, il l'utilise pour le suivi individuel
+des élèves en difficulté — \textit{sa vraie valeur ajoutée}.
+
+\pullquote{« L'IA me prépare le brouillon~; moi je fais la pédagogie.
+C'est la première fois que la technologie me rend du temps au lieu de
+m'en prendre. » \footnotesize\rmfamily\color{encrefaint} — Enseignant à Nouméa, retour anonyme~; secteur Éducation.}
+
+\newpage
+
+% -------------------------------------------------------------------------
+% IV. HISTOIRE 2 — L'AVOCAT
+% -------------------------------------------------------------------------
+
+\dateline{IV. \quad Histoire 2}
+
+\vspace{0.4cm}
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{1cm}
+
+\section*{L'avocat débordé}
+
+\subsubsection*{Le contexte}
+
+Maître Calonne tient un cabinet généraliste à Nouméa~: contentieux civil,
+droit de la famille, baux commerciaux. Une secrétaire deux jours par semaine,
+le reste du temps c'est lui qui rédige, signe et expédie. Chaque dossier
+demande~: une attestation à reformuler depuis les notes manuscrites du
+client, un courrier de transmission, l'inventaire des pièces jointes
+numérotées et indexées. Quatre à cinq heures par jour passées dans Word,
+au lieu d'être avec ses clients.
+
+\bordsec{Temps 1 — Son espace de travail}
+
+Maître Calonne crée un Project nommé \textit{« Cabinet — Rédaction »}~:
+
+\begin{workspacebox}
+\begin{itemize}[leftmargin=1.2em]
+  \item Vingt \textbf{modèles de courriers} types du cabinet, sélectionnés
+        comme étant \textit{ceux qui sonnent juste} (transmission de pièces,
+        mise en demeure, demande de pièces, attestation, etc.).
+  \item Un \textbf{glossaire interne} listant les formules de politesse,
+        d'introduction, de conclusion qu'il utilise habituellement.
+  \item Une \textbf{nomenclature des pièces} par type de dossier (en
+        contentieux civil~: pièce~1 = exploit d'huissier, pièce~2 = courrier
+        adverse, etc.).
+  \item Le \textbf{Code civil} et le \textbf{Code de procédure civile} en
+        version PDF officielle (Légifrance).
+  \item Une note de cadrage~: \textit{« Ce que mon cabinet ne fait jamais »}
+        — pour éviter les hallucinations de jurisprudence ou les renvois
+        à des articles inexistants.
+\end{itemize}
+\end{workspacebox}
+
+\bordsec{Temps 2 — Son skill}
+
+\begin{skillbox}{Assistant de rédaction du cabinet}
+Tu es l'assistant de rédaction du cabinet Calonne à Nouméa. Ton rôle est
+de produire des brouillons de documents juridiques (attestations, courriers,
+inventaires de pièces) à partir des éléments bruts que je te donne — notes
+manuscrites transcrites, audio dicté, e-mails du client.
+
+\medskip
+
+Pour chaque tâche~:
+
+\begin{enumerate}[leftmargin=1.5em]
+  \item Tu identifies le \textbf{type de document} attendu et tu reprends
+        \textit{exactement} le style du modèle correspondant déposé dans
+        ce Project.
+  \item Tu reformules les éléments bruts dans le \textbf{registre juridique}
+        approprié — sans jamais inventer de fait nouveau, ni d'article de
+        loi, ni de date.
+  \item En fin de document, tu listes les \textbf{pièces à joindre}
+        numérotées selon notre nomenclature, et tu vérifies que chacune
+        est référencée dans le corps du texte (indexation).
+  \item Si une information manque (date, identité, montant, référence
+        d'article), tu \textbf{poses la question avant de continuer}.
+\end{enumerate}
+
+\medskip
+
+Tu ne cites jamais une jurisprudence ou un article du Code sans que je
+te l'aie explicitement transmis. Tu n'utilises jamais d'emoji.
+\end{skillbox}
+
+\bordsec{L'usage au quotidien}
+
+Lundi matin, Maître Calonne sort de RDV avec une cliente. Elle a témoigné
+oralement, il a pris des notes manuscrites pendant l'entretien. De retour
+au cabinet, il dicte ses notes à voix haute dans son téléphone (cinq
+minutes), récupère la transcription textuelle, la colle dans Claude
+Desktop dans le Project \textit{Rédaction}, et écrit~:
+
+\begin{quote}\itshape
+« Voici le verbatim de l'entretien de ce matin avec Madame X. Rédige
+l'attestation en bonne et due forme, dans le format des modèles déposés.
+Liste les pièces à joindre selon notre nomenclature. »
+\end{quote}
+
+Une minute plus tard, il a~: une attestation propre, déjà mise en forme,
+avec l'inventaire des pièces numérotées et chaque pièce référencée dans
+le texte. Il relit, corrige une formulation, ajoute sa signature
+électronique. La tâche qui prenait quarante minutes en prend dix.
+Multiplié par trois ou quatre dossiers par jour, il récupère deux heures.
+Deux heures qu'il consacre à ce qui ne peut pas être délégué — la
+stratégie de défense, l'écoute du client, l'audience.
+
+\pullquote{« Ce n'est pas un robot avocat. C'est un secrétariat ultra-rapide
+et discipliné, qui me rend mes deux meilleures heures de la journée. »
+\footnotesize\rmfamily\color{encrefaint} — Avocat à Nouméa, retour anonyme~;
+secteur Profession libérale.}
+
+\newpage
+
+% -------------------------------------------------------------------------
+% V. CONCLUSION
+% -------------------------------------------------------------------------
+
+\dateline{V. \quad Pour conclure}
+
+\vspace{0.4cm}
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{1cm}
+
+\section*{Et pour vous~?}
+
+Les deux histoires que vous venez de lire ne sont pas des cas exceptionnels.
+Ce sont des configurations \textit{standards}, accessibles à n'importe quel
+professionnel calédonien qui sait utiliser un ordinateur.
+
+Le seul travail que demande Claude Desktop, c'est~:
+
+\begin{itemize}
+  \item \textbf{Une heure} pour bien construire l'espace de travail
+        (choisir les bons documents, les déposer dans un Project).
+  \item \textbf{Trente minutes} pour rédiger un skill propre, qui couvre
+        votre métier et vos garde-fous.
+  \item \textbf{Trois ou quatre semaines} de pratique quotidienne pour
+        affiner — et sentir, vraiment, le temps revenir.
+\end{itemize}
+
+Ces trois investissements, vous pouvez les faire seul. Le guide est là
+pour ça.
+
+\bordsec{Si vous préférez le faire à deux}
+
+Mon coaching individuel à Nouméa existe pour les professionnels qui veulent
+\textit{compresser} ces trois étapes en une matinée. On regarde votre
+métier, on construit votre espace de travail sur vos vrais dossiers, on
+rédige votre skill ensemble. À midi, vous repartez avec quelque chose qui
+tourne. Le mois suivant, je suis joignable par e-mail pour ajuster.
+
+\vspace{0.7cm}
+
+\subsubsection*{\textcolor{bordeaux}{Réservez un entretien découverte (gratuit, 30 minutes)}}
+
+\vspace{0.3cm}
+
+\begin{tabular}{@{}p{4cm}p{8cm}@{}}
+\dateline{En ligne}     & \texttt{atelier-ia.ovh}\\[0.4em]
+\dateline{Email}        & \texttt{tariel.vincent@gmail.com}\\[0.4em]
+\dateline{Téléphone}    & \texttt{+687 95 07 86}\\[0.4em]
+\dateline{Localisation} & Nouméa et Grand Nouméa, présentiel\\
+\end{tabular}
+
+\vfill
+
+{\color{encre}\rule{\linewidth}{0.4pt}}
+\vspace{0.3cm}
+
+{\footnotesize\itshape\color{encrefaint}
+Vincent Tariel — Docteur en informatique de l'École Polytechnique
+(vision par ordinateur, 2009), agrégé de mathématiques, fondateur
+de plusieurs startups en intelligence artificielle. Installé en
+Nouvelle-Calédonie depuis 2020. Développe parallèlement la plateforme
+pédagogique CommeUnJeu en utilisant Claude au quotidien — et transmet
+ce qu'il apprend en coaching individuel.
+}
+
+\vspace{0.3cm}
+
+\dateline{Fin du guide \quad\textbar\quad Atelier IA \quad\textbar\quad Édition 2026}
+
+\end{document}
