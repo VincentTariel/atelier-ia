@@ -126,6 +126,74 @@ Toujours :
 
 ---
 
+## Rotation du mot de passe Gmail (app password)
+
+**Symptôme** : dans les logs Django, on voit
+`534, b'5.7.9 Application-specific password required'`. Les emails (notification
+à Vincent + lead-magnet au prospect) ne partent plus.
+
+**Cause** : Google a invalidé l'app password (rotation de sécurité, changement
+de compte 2FA, etc.). Cela arrive ~1× par an, ou suite à une alerte sécurité.
+
+**Procédure de rotation** (≈ 5 minutes) :
+
+1. **Générer un nouveau password** :
+   - Se connecter à Gmail avec **`commeunjeu.ad@gmail.com`** (compte expéditeur actuel).
+   - Aller sur https://myaccount.google.com/apppasswords (la 2FA doit être activée).
+   - Créer un app password nommé `Atelier IA - OVH`.
+   - Copier les **16 caractères** sans les espaces.
+
+2. **Mettre à jour le `.env` serveur** :
+   ```bash
+   ssh ubuntu@51.161.32.145 "
+     cd ~/atelier-ia
+     cp .env .env.backup-\$(date +%Y%m%d-%H%M%S)
+     sed -i 's|^EMAIL_HOST_PASSWORD=.*|EMAIL_HOST_PASSWORD=NOUVEAU_PASSWORD|' .env
+     sudo systemctl restart atelier-ia
+     sudo systemctl is-active atelier-ia
+   "
+   ```
+
+3. **Tester en bout-en-bout** :
+   ```bash
+   # Récupère un CSRF + timestamp valide depuis la prod
+   curl -s -c /tmp/c.txt https://atelier-ia.ovh/ -o /tmp/f.html
+   CSRF=$(grep csrfmiddlewaretoken /tmp/f.html | grep -o 'value="[^"]*"' | head -1 | cut -d'"' -f2)
+   TS=$(grep 'name="loaded_at"' /tmp/f.html | grep -o 'value="[0-9]*"' | head -1 | cut -d'"' -f2)
+   sleep 6  # passe le time-trap
+   curl -s -b /tmp/c.txt -X POST https://atelier-ia.ovh/ \
+     -H "Referer: https://atelier-ia.ovh/" \
+     --data-urlencode "csrfmiddlewaretoken=$CSRF" \
+     --data-urlencode "prenom=Test" --data-urlencode "nom=Rotation" \
+     --data-urlencode "email=tariel.vincent@gmail.com" \
+     --data-urlencode "entreprise=Atelier IA" --data-urlencode "telephone=" \
+     --data-urlencode "formation_interessee=decouverte" \
+     --data-urlencode "loaded_at=$TS" --data-urlencode "website=" \
+     -o /dev/null -w "POST %{http_code}\n"
+   sleep 2
+   ssh ubuntu@51.161.32.145 "sudo journalctl -u atelier-ia --since '30 seconds ago' --no-pager | grep -iE 'echec|error' || echo 'Aucune erreur — envois OK'"
+   ```
+
+4. **Vérifier l'inbox `tariel.vincent@gmail.com`** : doit contenir 2 mails
+   (notification interne + PDF lead-magnet). Si seul un arrive, l'autre est
+   probablement en `Spam` ou `Promotions` — marquer "Pas spam" pour whitelister.
+
+5. **Nettoyer le Lead test** créé pour la vérification :
+   - Aller sur https://atelier-ia.ovh/admin/core/lead/
+   - Supprimer le Lead "Test Rotation".
+
+## Limites Gmail SMTP à connaître
+
+- **500 emails par jour** pour un compte gratuit Gmail (largement suffisant pour
+  la phase d'acquisition outbound où Vincent envoie 10 cold-emails/jour max).
+- **Pièces jointes** : 25 MB max. Le PDF lead-magnet actuel pèse 2.1 MB → OK.
+- **Rate limit** : Gmail peut imposer un délai si trop d'envois en peu de temps
+  (>20 emails / minute). Pas de risque avec le trafic landing actuel (quelques
+  soumissions par jour max).
+- **Spam scoring** : les emails avec pièce jointe PDF peuvent atterrir en
+  Spam/Promotions chez le destinataire au début, jusqu'à ce qu'il marque
+  "Pas spam". C'est normal pour un nouvel expéditeur — pas un bug.
+
 ## Sécurité — règles en vigueur
 
 - `DEBUG=False` en prod (forcé par `DJANGO_DEBUG=False` dans `.env`).
