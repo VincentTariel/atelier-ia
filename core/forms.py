@@ -50,15 +50,15 @@ class LeadForm(forms.ModelForm):
 
         widgets = {
             'prenom': forms.TextInput(attrs={
-                'placeholder': 'Anjelai',
+                'placeholder': 'Vincent',
                 'autocomplete': 'given-name',
             }),
             'nom': forms.TextInput(attrs={
-                'placeholder': 'Calonne',
+                'placeholder': 'Tariel',
                 'autocomplete': 'family-name',
             }),
             'email': forms.EmailInput(attrs={
-                'placeholder': 'anjelai.calonne@cabinet.nc',
+                'placeholder': 'vincent.tariel@cabinet.nc',
                 'autocomplete': 'email',
             }),
             'entreprise': forms.TextInput(attrs={
