@@ -3,6 +3,8 @@
 > Mise à jour manuelle. Source de vérité de l'état commercial. À relire en début de chaque revue hebdo.
 >
 > **Format** : pour chaque lead → `[Statut depuis JJ/MM] Nom (Entreprise) — Source — Prochaine action`
+>
+> **Secteur actif (batch 01)** : Communication / marketing en PME (cf. `acquisition/strategie_secteur_01.md`).
 
 ---
 
