@@ -78,28 +78,51 @@ URL : https://www.cci.nc/annuaire-entreprises
 
 ---
 
-## Plan d'attaque sur 4 semaines
+## Canal principal : LinkedIn (et non cold email)
 
-### Semaine 1 — Sourcing (4-6h)
-- Constituer une liste de **30 prospects qualifiés** dans `acquisition/prospects.csv`
-- Pour chaque ligne : prenom, nom, fonction, entreprise, secteur, email, linkedin, source, statut (`À contacter`)
-- **Critère de qualité** : pour chaque prospect, je dois pouvoir écrire UNE phrase qui prouve que j'ai regardé son entreprise (pas un modèle)
+**Décision** révisée après le sourcing : on attaque par **LinkedIn**, pas par
+cold email. Justification :
 
-### Semaine 2 — Préparation + envoi batch 1 (4h sur 3 jours)
-- Pour chaque prospect : générer la version personnalisée du template `acquisition/email_templates/01_cold_intro.md`
-- Stocker le batch dans `acquisition/sends/AAAA-MM-JJ_batch_01.md` (gitignored)
-- **Cadence** : 10 emails/jour, mardi-jeudi, 8h-9h ou 17h-18h NC
-- Tracker les ouvertures via Mailtrack ou équivalent (extension Chrome)
-- Mettre à jour le statut dans `prospects.csv` après chaque envoi
+- Cible com/marketing = profils LinkedIn-actifs par essence
+- Taux d'ouverture LinkedIn (80-90%) >> cold email (20-40% après filtres)
+- Profil de Vincent (Polytechnique, fondateur, etc.) visible immédiatement = crédibilité instant
+- Pas de friction "trouver l'email" (canal natif)
+- Pas de risque spam (pas de filtres Gmail à passer)
+- Volume de 7 prospects = très loin des limites LinkedIn (~100/semaine)
 
-### Semaine 3 — Relances (2h)
-- J+7 : relance courte (`02_relance_J7.md`) en réponse au premier mail
-- Premiers RDV qui se calent : utiliser la trame `acquisition/call_scripts/decouverte.md`
+**Cold email = fallback** uniquement si la demande de connexion est refusée
+ou ignorée 21 jours.
 
-### Semaine 4 — Bilan + relance finale (2h)
-- J+21 : dernière relance pour les non-répondants (`03_relance_J21.md`)
-- **Bilan chiffré** dans `crm/revues/AAAA-MM-JJ.md` (gabarit dans `crm/revues/_gabarit_revue_hebdo.md`)
-- Décider : continuer sur ce secteur, ou pivoter sur le secteur 02
+Templates LinkedIn dans `acquisition/linkedin_templates/` :
+- `01_demande_connexion.md` — demande courte (≤ 300 caractères) avec accroche personnalisée
+- `02_message_post_connexion.md` — pitch complet une fois connecté (24-48h après acceptation)
+- `03_relance_LI_J7.md` — relance courte si pas de réponse au message post-connexion
+
+## Plan d'attaque sur 4 semaines (révisé)
+
+### Semaine 1 — Sourcing (4-6h)  ✅ FAIT
+- 11 prospects sourcés via Claude for Chrome → `acquisition/prospects.csv`
+- 7 Tier 1 / 3 Tier 2 (watch) / 1 exclusion (Skazy NC)
+- Détails du sourcing : `acquisition/prompts/claude_chrome_sourcing_secteur_01.md`
+
+### Semaine 2 — Demandes de connexion LinkedIn (1h)
+- 7 demandes de connexion personnalisées (~280 caractères chacune)
+- Cadence : ~3-4 par jour mardi-jeudi pour ne pas paraître automatisé
+- Mettre à jour le statut dans `prospects.csv` (`Connexion demandée` + date)
+
+### Semaine 2-3 — Messages post-connexion
+- Dès qu'une connexion est acceptée (notification LinkedIn) → message complet
+  sous 24-48h via `02_message_post_connexion.md` (avec 3 créneaux concrets)
+- Statut → `Message envoyé` + date
+
+### Semaine 3-4 — Relances + premiers RDV
+- J+7 sans réponse : `03_relance_LI_J7.md`
+- Premiers RDV qui se calent → trame `acquisition/call_scripts/decouverte.md`
+
+### Semaine 4 — Bilan + décision
+- J+21 sans réponse : passage en `Sans suite` (pas de 3e relance)
+- Bilan chiffré dans `crm/revues/AAAA-MM-JJ.md`
+- Décider : continuer sur ce secteur, élargir, ou pivoter vers secteur 02
 
 ---
 
