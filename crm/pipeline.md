@@ -4,7 +4,8 @@
 >
 > **Format** : pour chaque lead → `[Statut depuis JJ/MM] Nom (Entreprise) — Source — Prochaine action`
 >
-> **Secteur actif (batch 01)** : Communication / marketing en PME (cf. `acquisition/strategie_secteur_01.md`).
+> **Secteur actif (batch 01)** : **Avocats à Nouméa** (cf. `acquisition/strategies/avocats.md`).
+> Pivot 2026-05-04 — secteur Communication/marketing reporté (cf. `acquisition/strategies/communication.md`).
 
 ---
 

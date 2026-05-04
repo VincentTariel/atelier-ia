@@ -33,6 +33,11 @@ crm/revues/*
 # Vidéo — exclure les rushes et exports lourds
 video/assets/*
 !video/assets/.gitkeep
+# Vidéos de référence/inspiration laissées à la racine (gros fichiers binaires)
+/Présentation_Claude.mp4
+/Présentation_Claude.srt
+*.mp4
+*.srt
 
 # Acquisition — fichiers d'envoi datés (logs de campagnes)
 acquisition/sends/
