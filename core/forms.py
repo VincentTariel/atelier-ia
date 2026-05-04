@@ -54,11 +54,11 @@ class LeadForm(forms.ModelForm):
                 'autocomplete': 'given-name',
             }),
             'nom': forms.TextInput(attrs={
-                'placeholder': 'Tariel',
+                'placeholder': 'Adam',
                 'autocomplete': 'family-name',
             }),
             'email': forms.EmailInput(attrs={
-                'placeholder': 'vincent.tariel@cabinet.nc',
+                'placeholder': 'vincent.adam@cabinet.nc',
                 'autocomplete': 'email',
             }),
             'entreprise': forms.TextInput(attrs={
