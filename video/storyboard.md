@@ -1,82 +1,96 @@
-# Storyboard vidéo — Atelier IA (~3 min)
+# Storyboard slides — Atelier IA · Avocats (~3:30)
 
-> Format plan-par-plan. Voir `video/script.md` pour le texte intégral.
-> Légende : **TH** = talking head | **SR** = screen recording | **CUT** = cutaway B-roll | **GFX** = motion graphic / lower-third
-
----
-
-| # | Durée | Type | Visuel | Voix off / dialogue | Notes tournage |
-|---|---|---|---|---|---|
-| **HOOK** ||||||
-| 1 | 0:00 – 0:05 | TH | Vincent face caméra, fond sobre, plan poitrine | « Si vous êtes avocat à Nouméa, » | Lumière douce, regard caméra |
-| 2 | 0:05 – 0:10 | TH | Vincent, même plan | « vous utilisez sans doute déjà ChatGPT ou Claude — dans un onglet, de temps en temps. » | Pause naturelle |
-| 3 | 0:10 – 0:15 | TH | Vincent, plan plus serré (ou même plan, recadrage post-prod) | « Voici ce qui change. » | Insister sur "change" |
-| **ACTE 1 — Chat vs Cowork** ||||||
-| 4 | 0:15 – 0:25 | TH + GFX | Vincent en bas, à droite : insert ChatGPT dans un navigateur (capture statique) | « Le chat web fonctionne bien pour les questions ponctuelles. Mais pour intégrer l'IA dans votre quotidien — pour de vrai — il y a un mur. » | Insert apparaît en fade-in à 0:18 |
-| 5 | 0:25 – 0:40 | SR | Plein écran : capture séquence "redéposer fichier dans ChatGPT" (3-4 fichiers en upload) | « À chaque session, il faut redéposer vos documents, réécrire le contexte, retaper le rôle. Cinq à dix minutes pour deux minutes de réponse utile. C'est ce qui fait que tout le monde lâche. » | Speed-up x1.5 sur la séquence d'upload |
-| 6 | 0:40 – 0:55 | SR | Plein écran : Claude Desktop ouvert, sidebar avec Project "Cabinet — Rédaction" + fichiers visibles | « Avec Claude Desktop installé sur votre ordinateur, ce mur tombe : vos fichiers restent à leur place, votre cabinet est connu par défaut, vos modèles sont là tout le temps. » | Curseur souligne sidebar fichiers |
-| 7 | 0:50 – 0:55 | TH | Retour Vincent | « C'est la différence entre un outil de dépannage et un véritable coworker. » | |
-| **ACTE 2 — Projects** ||||||
-| 8 | 0:55 – 1:10 | SR | Plein écran : Vincent crée un Project, le nomme « Cabinet — Rédaction » | « La première brique s'appelle un Project. C'est simplement un dossier dans lequel vous déposez les documents de référence de votre cabinet : » | Action en temps réel |
-| 9 | 1:10 – 1:25 | SR | Plein écran : drag-and-drop de 4-5 fichiers dans le Project (modèles courriers, Code civil PDF, etc.) | « vos modèles de courriers, vos formules habituelles, le Code civil annoté, votre nomenclature de pièces. » | Speed-up x2 sur les uploads, slow-down sur l'apparition de chaque fichier dans la liste |
-| 10 | 1:25 – 1:35 | SR + TH | Picture-in-picture : SR en grand + Vincent en petit en bas à droite | « Une heure et demie de travail au début, c'est tout. Ces documents, Claude les a en permanence sous les yeux. » | Le PIP rappelle qu'on est avec Vincent même quand on regarde l'écran |
-| **ACTE 3 — Skills** ||||||
-| 11 | 1:35 – 1:50 | SR | Plein écran : ouverture de la fenêtre "Project instructions" dans Claude Desktop | « La deuxième brique s'appelle un skill. C'est une consigne permanente qui décrit le rôle exact que Claude doit tenir dans ce Project. » | Curseur mets en évidence le menu Project instructions |
-| 12 | 1:50 – 2:10 | SR | Plein écran : le texte d'un skill se tape à l'écran (3-4 lignes du genre "Tu es l'assistant de rédaction du cabinet Adam à Nouméa. Tu reproduis le style des modèles. Tu n'inventes jamais de jurisprudence.") | « Trois lignes : qui tu es, comment tu travailles, ce que tu refuses de faire. » | Animation "frappe au clavier" — le texte apparaît caractère par caractère, au rythme de la voix |
-| 13 | 2:10 – 2:15 | TH | Vincent retour caméra | « Une fois rédigé, ce skill devient appelable à toute heure, sans rien réexpliquer. » | Court, insister sur "à toute heure" |
-| **DÉMO — Maître Adam** ||||||
-| 14 | 2:15 – 2:25 | SR | Plein écran : un long bloc de texte (verbatim manuscrit transcrit) est collé dans la zone de saisie Claude | « Lundi matin, Maître Adam sort de RDV avec une cliente. Il a dicté le verbatim dans son téléphone, cinq minutes. Il colle la transcription dans Claude, » | Le verbatim peut être un faux text type "Cliente Mme X dit qu'elle a constaté…" — flouter les noms si vrai exemple |
-| 15 | 2:25 – 2:35 | SR | Plein écran : la consigne se tape dans la zone "Rédige l'attestation, liste les pièces à joindre selon notre nomenclature." | « et il écrit simplement : "Rédige l'attestation, liste les pièces à joindre selon notre nomenclature." » | Texte en frappe live (ou speed-up) |
-| 16 | 2:35 – 2:50 | SR | Plein écran : la réponse de Claude apparaît en streaming (paragraphes d'attestation + liste pièces numérotées) | « Trente secondes plus tard, il a un brouillon propre, structuré, avec l'inventaire des pièces numérotées. Il relit, ajuste, signe. La tâche qui prenait quarante minutes en prend dix. » | Speed-up x3 sur la génération de la réponse, slow-down x1 sur le scroll de la sortie |
-| **CTA** ||||||
-| 17 | 2:50 – 2:55 | TH | Vincent retour caméra, sourire léger | « Atelier IA — coaching individuel à Nouméa, pour intégrer Claude Desktop dans votre cabinet. » | Apparition lower-third "Vincent Tariel — Atelier IA" |
-| 18 | 2:55 – 3:00 | TH + GFX | Vincent + lower-third agrandi | « Les dix premiers clients bénéficient d'un tarif réduit. Réservez un entretien découverte gratuit en bas de la description. » | |
-| 19 | 3:00 – 3:03 | GFX | End-card statique : « atelier-ia.ovh — Réserver un entretien découverte gratuit » + coordonnées Vincent | (silence ou très discret jingle) | Hold 3 secondes, fade out |
+> Format : slides animées style PowerPoint / GDCP whiteboard. Pas de talking head.
+> Voix off seule. Sous-titres FR brûlés en post pour LinkedIn (80% des vues sans son).
+> Voir `video/script.md` pour le texte intégral et `video/pipeline_production.md` pour la production technique.
 
 ---
 
-## Plans à tourner — checklist
+## Direction visuelle (cohérence Atelier IA)
 
-### Talking head Vincent
-- [ ] **TH-01** : Hook complet (3 prises, garder la meilleure)
-- [ ] **TH-02** : Conclusion Acte 1 ("...véritable coworker")
-- [ ] **TH-03** : Conclusion Acte 3 ("...à toute heure")
-- [ ] **TH-04** : CTA complet (2 prises)
+**Palette** (alignée site éditorial, pas la magenta GDCP) :
+- Fond : papier vélin `#f5efe2`
+- Encre : noir brunâtre `#1a1614`
+- Accent principal : bordeaux notarial `#7a2e2a`
+- Highlight mots-clés : ocre/sable doré `#d4a843` (équivalent jaune fluo GDCP en plus sobre cabinet)
+- Ombres de cards : bordeaux atténué
 
-### Screen recordings (à faire en condition vraie)
-- [ ] **SR-01** : Démo "redéposer fichier dans ChatGPT" (~10s)
-- [ ] **SR-02** : Claude Desktop ouvert avec Project "Cabinet — Rédaction" (~15s)
-- [ ] **SR-03** : Création d'un Project + ajout de fichiers (~30s)
-- [ ] **SR-04** : Création/édition d'un skill (~20s)
-- [ ] **SR-05** : Démo Maître Adam complète (verbatim → consigne → réponse) (~30s, à accélérer en montage)
+**Typographie** :
+- Titres : **Instrument Serif** (cohérent site) en gras
+- Body et exemples : **Newsreader** Regular ou **Inter** Regular
+- Citations utilisateur (bulles dialogue) : **Newsreader Italic**
+- Datelines / micro-typo : **JetBrains Mono**
 
-### Cutaway optionnels
-- [ ] **CUT-01** : Mains de Vincent qui tapent (insert pour rythmer)
-- [ ] **CUT-02** : Plan extérieur Nouméa (skyline, port, ou bâtiment cabinet d'avocat) — optionnel, pour ouvrir si besoin
+**Composition** :
+- Cards rectangulaires angles à 4px max (proche carré, sobre)
+- Hairlines 1px noires partout
+- Illustrations sketch crayon **monochromes** (encre noire + un trait bordeaux occasionnel) — pas la palette colorée GDCP
+- Animations : fade-in + scale 0.95→1.0 (300-500 ms), pas de bounce/wow excessif
 
-### Éléments graphiques
-- [ ] **GFX-01** : Lower-third "Vincent Tariel — Atelier IA — Nouméa"
-- [ ] **GFX-02** : End-card final
-- [ ] **GFX-03** : Sous-titres FR brûlés (générés par DaVinci ou Whisper, corrigés à la main)
-
----
-
-## Préparation Claude Desktop avant tournage
-
-Avant de démarrer les screen recordings, configurer un compte Claude Desktop **dédié à la démo** :
-
-1. Compte propre, sans historique perso visible.
-2. Un Project déjà nommé « Cabinet — Rédaction » avec les fichiers (faux modèles, Code civil PDF récupéré sur Légifrance, faux glossaire).
-3. Le skill « Assistant de rédaction du cabinet Adam » déjà rédigé dans Project instructions (à retaper à l'écran pour la démo, mais déjà testé qu'il marche).
-4. Un verbatim type prêt à coller (faux client, faux nom : "Mme Y. relate avoir constaté…").
-
-→ Si tu utilises ton compte perso : **flouter** les noms d'éléments perso visibles (chats récents, fichiers, etc.) au montage. Plus simple = compte de démo séparé.
+→ **Esprit "PowerPoint cabinet d'avocat" plutôt que "PowerPoint startup growth"**.
 
 ---
 
-## Décision encore à arbitrer
+## Storyboard plan-par-plan
 
-- [ ] **Lieu de tournage** : bureau ? espace coworking ? extérieur lumière naturelle ? — recommandation : **bureau sobre fond mural plein**, lumière douce.
-- [ ] **Tenue** : chemise sans cravate, ton uni, pas de motif chargé.
-- [ ] **Compte Claude Desktop** : perso (avec floutage) ou démo dédié (recommandé).
-- [ ] **Fond sonore** : aucun (ma reco) ou très très discret (acceptable).
+| # | Durée | Visuel slide | Voix off | Animation |
+|---|---|---|---|---|
+| **HOOK** ||||
+| 1 | 0:00–0:08 | Plein écran : titre serif "Vous êtes avocat à Nouméa." sur fond vélin, dateline "Atelier IA · Édition 2026" en haut | « Vous êtes avocat à Nouméa. Vous avez trente dossiers en cours. » | Fade-in titre, puis "trente dossiers" qui s'affiche en plus gros |
+| 2 | 0:08–0:18 | Liste à puces en hairlines : "créer un dossier · classer les pièces · retranscrire les attestations manuscrites · vérifier l'indexation · mettre en page selon les conventions" | « Pour chaque nouveau client, c'est la même routine : créer un dossier, classer les pièces, retranscrire les attestations manuscrites, vérifier l'indexation, mettre en page. » | Chaque ligne apparaît en cascade, surlignée en ocre fugace |
+| 3 | 0:18–0:25 | Card centrée bordeaux : "3 h ? 5 h ? 10 h par semaine ?" + petit chrono dessiné | « Combien d'heures par semaine passées sur cette plomberie ? Voici comment Claude Desktop peut vous en rendre la moitié. » | Card scale-in, chiffres "3 h ? 5 h ? 10 h ?" qui s'incrémentent rapidement |
+| **ACTE 1 — Chat vs Cowork** ||||
+| 4 | 0:25–0:40 | Split-screen : à gauche capture sketch d'un onglet ChatGPT avec icône upload + flèches "fichier 1 fichier 2 fichier 3", à droite capture sketch de Claude Desktop avec dossier ouvert et fichiers déjà dedans | « Vous utilisez peut-être déjà Claude — ou ChatGPT — dans un onglet de votre navigateur. Le chat web fonctionne bien pour les questions ponctuelles. Mais pour intégrer l'IA dans votre quotidien de cabinet, il y a un mur. » | Apparition côté gauche d'abord, puis côté droit (3s plus tard) |
+| 5 | 0:40–0:55 | Plein écran : capture stylisée de Claude Desktop avec dans la sidebar le label "📁 Dossier Madame X — divorce" + 8 fichiers visibles | « À chaque session, il faut redéposer les fichiers, réexpliquer le contexte, retaper le rôle. Avec Claude Desktop installé sur votre Mac ou votre PC, ce mur tombe : l'application travaille directement sur votre disque. » | Curseur souligne la sidebar, mise en évidence des fichiers présents |
+| 6 | 0:55–1:00 | Card titre "Pas un onglet de plus." + sous-titre "Un véritable cowork sur votre poste." | « Pas un onglet de plus dans le navigateur. Un véritable cowork sur votre poste de travail. » | Card centrale, fade-in lent |
+| **ACTE 2 — Le Project = dossier client** ||||
+| 7 | 1:00–1:10 | Grand titre serif "ÉTAPE 1." sur fond ocre léger, sous-titre "Le Project = le dossier client" | « La première brique s'appelle un Project. Concrètement, c'est le dossier de votre client. » | Numéro romain "I." qui apparaît en bordeaux, puis le titre |
+| 8 | 1:10–1:30 | Capture animée : un dossier sketch s'ouvre, on dépose dedans 5 documents (icônes : assignation, courrier, attestation manuscrite, code civil, modèle Word) avec leurs étiquettes | « Vous le nommez "Dossier Madame X — divorce". Et vous y déposez tout ce qui concerne ce dossier : l'assignation, les courriers de la partie adverse, les attestations scannées, le code civil annoté, et — élément clé — votre modèle Word de mise en page. » | Chaque document tombe dans le dossier en cascade, son nom apparaît à droite |
+| 9 | 1:30–1:45 | Schéma : un Project = un dossier client. Petit graphique "30 dossiers en cours = 30 Projects" avec mini-icônes en grille | « À partir de ce moment, Claude a tous ces documents sous les yeux en permanence. Trente dossiers en cours = trente Projects. » | Multiplication visuelle des Projects en bas de l'écran |
+| **ACTE 3 — Le Skill = conventions cabinet** ||||
+| 10 | 1:45–1:55 | Grand titre "ÉTAPE 2." + sous-titre "Le Skill = vos conventions cabinet" | « La deuxième brique s'appelle un Skill. C'est l'endroit où vous écrivez, une fois pour toutes, les conventions de votre cabinet. » | Même apparition que l'étape 1 |
+| 11 | 1:55–2:25 | Card type "fichier de skill" qui se remplit ligne par ligne : <br>↳ "Tu rédiges au format Word du cabinet" <br>↳ "Tu numérotes les pièces selon ma nomenclature" <br>↳ "Tu vérifies l'indexation" <br>↳ "Tu poses des questions si manque info" <br>↳ "Tu n'inventes jamais de jurisprudence" | Voix off lit chaque ligne au rythme | Apparition ligne par ligne (typewriter effect), highlight ocre sur les mots-clés ("format Word", "nomenclature", "indexation", "questions", "jurisprudence") |
+| 12 | 2:25–2:30 | Card centrale "Vos conventions cabinet, en mémoire permanente." | « Une fois ce Skill enregistré, Claude le respecte sans qu'on ait besoin de le lui rappeler. » | Card emphasis bordeaux |
+| **DÉMO — retranscription + indexation** ||||
+| 13 | 2:30–2:40 | Image : un scan d'attestation manuscrite (cursive bleu, illisible volontairement par flou) | « Lundi matin, votre cliente vous remet une attestation manuscrite. Trois pages au stylo bleu, écriture serrée. » | Léger zoom-in sur le scan |
+| 14 | 2:40–2:55 | Capture Claude Desktop : prompt qui se tape "Voici l'attestation manuscrite scannée. Retranscris-la au format de notre modèle Word. Indexe-la comme Pièce 7. Mets à jour la liste des pièces du dossier." | « Vous l'ajoutez au Project, et vous écrivez à Claude... » | Texte tapé en temps réel à l'écran |
+| 15 | 2:55–3:05 | Capture Claude Desktop : la réponse apparaît en streaming — un beau document propre + une liste numérotée de pièces (1, 2, 3, 4, 5, 6, **7 (nouveau)**) | « Trente secondes plus tard : un texte propre, dans votre format cabinet, indexé Pièce 7, prêt à être imprimé. » | Speed-up x3 sur la génération |
+| 16 | 3:05–3:10 | Card finale "40 minutes ➜ 5 minutes" en gros chiffres bordeaux | « La tâche qui prenait quarante minutes en prend désormais cinq, dont quatre à relire le brouillon. » | Animation chiffre "40" → "5" qui décompte |
+| **CTA** ||||
+| 17 | 3:10–3:25 | Plein écran : logo Atelier IA en haut, "Coaching individuel à Nouméa" en serif gras, encadré bordeaux "Tarif Fondateurs : 50 000 XPF (au lieu de 100 000)" + "10 places réservées" | « Atelier IA — coaching individuel à Nouméa, en présentiel, pour intégrer Claude Desktop dans votre cabinet. Les dix premiers clients fondateurs bénéficient d'un tarif réduit. » | Apparition par cascade |
+| 18 | 3:25–3:30 | End-card statique : "atelier-ia.ovh" en gros, sous-titre "Réservez un entretien découverte gratuit", coordonnées "Vincent Tariel · +687 95 07 86 · tariel.vincent@gmail.com" | « Atelier IA. Atelier-ia.ovh. » | Hold 4 secondes, fade out |
+
+---
+
+## Slides à produire (= 18 slides)
+
+| # | Slide title (interne) | Contenu visuel principal |
+|---|---|---|
+| 01 | Hook · Vous êtes avocat | Titre serif + dateline |
+| 02 | Hook · La routine | Liste 5 puces en cascade |
+| 03 | Hook · Combien d'heures | Card "3h? 5h? 10h?" |
+| 04 | Acte 1 · Chat vs Cowork (split) | Split-screen sketch |
+| 05 | Acte 1 · Desktop = sidebar fichiers | Capture stylisée Claude Desktop |
+| 06 | Acte 1 · Pas un onglet de plus | Card titre |
+| 07 | Étape 1 · Titre Project | "I. Le Project = le dossier client" |
+| 08 | Étape 1 · Dossier qui se remplit | Animation 5 docs déposés |
+| 09 | Étape 1 · 30 dossiers = 30 Projects | Grille multiplicative |
+| 10 | Étape 2 · Titre Skill | "II. Le Skill = vos conventions" |
+| 11 | Étape 2 · Skill qui se remplit | Typewriter ligne par ligne |
+| 12 | Étape 2 · Mémoire permanente | Card emphasis |
+| 13 | Démo · L'attestation scannée | Scan manuscrit floué |
+| 14 | Démo · Le prompt | Capture prompt qui se tape |
+| 15 | Démo · La réponse Claude | Capture réponse + liste pièces |
+| 16 | Démo · 40 min → 5 min | Card chiffres |
+| 17 | CTA · Tarif Fondateurs | Slide structurée |
+| 18 | CTA · End-card | atelier-ia.ovh + coordonnées |
+
+---
+
+## Décisions à arbitrer par Vincent
+
+- [ ] **Outil de slides** (Keynote / Google Slides / Canva / PowerPoint / autre) — voir `video/pipeline_production.md`
+- [ ] **Voix off** : Vincent lui-même (vrai mais moins pro pour format slides), ou ElevenLabs Charlotte/Elliot (recommandé pour ce format)
+- [ ] **Cas démo** : on garde "attestation manuscrite + Pièce 7" ou on change ?
+- [ ] **Logo Atelier IA** : on en a un ? Sinon, juste typographique "Atelier IA." en serif suffit ?
+- [ ] **Fond sonore** : aucun (recommandé) ou très très discret ?

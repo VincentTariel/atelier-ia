@@ -1,161 +1,98 @@
-# Script vidéo — Atelier IA (~3 minutes)
+# Script vidéo — Atelier IA · Avocats (~3:30)
 
-> **Public cible** : avocats à Nouméa (cible du batch 01).
-> **Format** : talking head + screen recording, voix off Vincent, sous-titres FR brûlés.
-> **Diffusion** : landing page atelier-ia.ovh + LinkedIn + signature email + en pièce jointe lors d'un échange post-RDV.
-> **Durée cible** : 2:30 à 3:00 (au-delà, perte d'attention sur LinkedIn).
+> **Cible** : avocats à Nouméa (batch outbound 01).
+> **Format** : slides animées (style PowerPoint / GDCP whiteboard) + voix off seule, sans talking head.
+> **Voix** : prototype gTTS (gratuit, validation rapide) → final ElevenLabs (voix FR pro).
+> **Diffusion** : landing atelier-ia.ovh + LinkedIn + signature email + post-RDV.
+> **Durée cible** : 3:00–3:30.
 
 ---
 
-## Structure narrative
+## Structure narrative — 6 séquences
 
-| Acte | Durée | Contenu | Format |
+| # | Section | Durée | Idée |
 |---|---|---|---|
-| 0. **Hook** | 0:00 – 0:15 | "Tous les avocats utilisent déjà le chat. Voici ce qui change." | Talking head Vincent |
-| 1. **Chat vs Cowork** | 0:15 – 0:55 | Pourquoi Claude Desktop ≠ ChatGPT en onglet | TH + insert capture |
-| 2. **Projects** | 0:55 – 1:35 | L'espace de travail | Screen recording |
-| 3. **Skills** | 1:35 – 2:15 | La commande appelable | Screen recording |
-| 4. **Démo : Maître Adam** | 2:15 – 2:50 | Un cas concret — rédaction d'attestation | Screen recording + voix off |
-| 5. **CTA** | 2:50 – 3:00 | Réservez un entretien découverte | Talking head + end-card |
+| 0 | Hook : la plomberie quotidienne | 0:00–0:25 | Reconnaître la routine pénible |
+| 1 | Chat vs Cowork | 0:25–1:00 | Pourquoi Desktop ≠ chat web |
+| 2 | Étape 1 — Le Project = le dossier client | 1:00–1:45 | Créer l'espace, déposer les pièces |
+| 3 | Étape 2 — Le Skill = vos conventions cabinet | 1:45–2:30 | Rédiger les règles permanentes |
+| 4 | Démo — retranscription d'attestation + indexation | 2:30–3:10 | Le moment "wow" |
+| 5 | CTA | 3:10–3:30 | Tarif Fondateurs + entretien découverte |
 
 ---
 
-## Texte intégral (à dire à voix off ou face caméra)
+## TEXTE INTÉGRAL — voix off
 
-### [0:00 – 0:15] HOOK
+### [0:00 – 0:25] HOOK
 
-> *« Si vous êtes avocat à Nouméa, vous utilisez sans doute déjà ChatGPT
-> ou Claude — dans un onglet de votre navigateur, de temps en temps.
+> *« Vous êtes avocat à Nouméa. Vous avez trente dossiers en cours. Pour chaque nouveau client, c'est la même routine : créer un dossier, classer les pièces, retranscrire les attestations manuscrites, vérifier que chaque pièce citée est bien jointe, mettre en page selon les conventions du cabinet.*
 >
-> Voici ce qui change. »*
-
-**Visuel** : Vincent face caméra. Plan poitrine. Fond sobre.
-
----
-
-### [0:15 – 0:55] ACTE 1 — Claude Chat vs Claude "Cowork"
-
-> *« Le chat web fonctionne bien pour les questions ponctuelles.
-> Mais pour intégrer l'IA dans votre quotidien — pour de vrai —
-> il y a un mur : à chaque session, il faut redéposer vos
-> documents, réécrire le contexte, retaper le rôle attendu.
-> Cinq à dix minutes pour deux minutes de réponse utile. C'est
-> ce qui fait que tout le monde lâche.
+> *Combien d'heures par semaine passées sur cette plomberie ? Trois ? Cinq ? Dix ?*
 >
-> Avec Claude Desktop installé sur votre ordinateur, ce mur
-> tombe : vos fichiers restent à leur place, votre cabinet est
-> connu par défaut, vos modèles sont là tout le temps. C'est
-> la différence entre un outil de dépannage et un véritable
-> coworker. »*
-
-**Visuel** :
-- 0:15-0:30 : insert side-by-side ChatGPT / Claude Desktop, pour montrer la différence d'interface
-- 0:30-0:55 : screen recording Claude Desktop ouvert, fichiers visibles dans la barre latérale
+> *Voici comment Claude Desktop peut vous en rendre la moitié. »*
 
 ---
 
-### [0:55 – 1:35] ACTE 2 — Projects (l'espace de travail)
+### [0:25 – 1:00] ACTE 1 — Claude Chat vs Claude Cowork
 
-> *« La première brique s'appelle un Project. C'est simplement
-> un dossier dans lequel vous déposez les documents de référence
-> de votre cabinet : vos modèles de courriers, vos formules
-> habituelles, le Code civil annoté que vous utilisez, votre
-> nomenclature de pièces. Une heure et demie de travail au début,
-> c'est tout. Ces documents, Claude les a en permanence sous
-> les yeux quand vous lui parlez dans ce Project. »*
-
-**Visuel** : screen recording — Vincent crée un Project « Cabinet — Rédaction », y dépose 4-5 fichiers (modèles courriers, Code civil PDF, etc.). Fast-forward x2 sur les uploads.
-
----
-
-### [1:35 – 2:15] ACTE 3 — Skills (la commande appelable)
-
-> *« La deuxième brique s'appelle un skill. C'est une consigne
-> permanente qui décrit le rôle exact que Claude doit tenir
-> dans ce Project. Trois lignes : qui tu es, comment tu travailles,
-> ce que tu refuses de faire. Une fois rédigé, ce skill devient
-> appelable à toute heure du jour, sans rien réexpliquer. Vous
-> ouvrez votre Project, vous donnez votre tâche, c'est parti. »*
-
-**Visuel** : screen recording — Vincent ouvre la fenêtre "Project instructions" et tape un skill court (3-4 lignes visibles à l'écran). Le texte s'affiche au rythme de la voix off (pas trop vite).
-
----
-
-### [2:15 – 2:50] DÉMO — Maître Adam au travail
-
-> *« Concrètement : c'est lundi matin, Maître Adam sort d'un RDV
-> avec une cliente. Il a pris des notes manuscrites, il dicte le
-> verbatim dans son téléphone — cinq minutes. De retour au cabinet,
-> il colle la transcription dans Claude, et il écrit simplement :
-> "Rédige l'attestation, liste les pièces à joindre selon notre
-> nomenclature."
+> *« Vous utilisez peut-être déjà Claude — ou ChatGPT — dans un onglet de votre navigateur. Le chat web fonctionne bien pour les questions ponctuelles. Mais pour intégrer l'IA dans votre quotidien de cabinet, il y a un mur : à chaque session, il faut redéposer les fichiers, réexpliquer le contexte, retaper le rôle attendu.*
 >
-> Trente secondes plus tard, il a un brouillon propre, structuré,
-> avec l'inventaire des pièces numérotées. Il relit, ajuste, signe.
-> La tâche qui prenait quarante minutes en prend dix. »*
-
-**Visuel** : screen recording — démo en condition réelle (vraie capture, pas reconstitution scriptée) :
-1. Coller un verbatim (texte) dans Claude Desktop
-2. Taper la consigne "Rédige l'attestation..."
-3. Réponse de Claude qui apparaît en streaming (accéléré x2 au montage)
-4. Plan rapide sur la sortie : attestation + liste pièces numérotées
+> *Avec Claude Desktop installé sur votre Mac ou votre PC, ce mur tombe. L'application travaille directement sur votre disque dur. Vos dossiers restent à leur place, vos modèles de courrier sont là tout le temps, votre nomenclature de pièces est connue par défaut. Pas un onglet de plus dans le navigateur — un véritable cowork sur votre poste de travail. »*
 
 ---
 
-### [2:50 – 3:00] CTA
+### [1:00 – 1:45] ACTE 2 — Étape 1 : Le Project = le dossier client
 
-> *« Atelier IA — coaching individuel à Nouméa, pour intégrer
-> Claude Desktop dans votre cabinet. Les dix premiers clients
-> bénéficient d'un tarif réduit. Réservez un entretien découverte
-> gratuit en bas de la description. »*
+> *« La première brique s'appelle un Project. Concrètement, c'est le dossier de votre client.*
+>
+> *Vous le nommez "Dossier Madame X — divorce". Et vous y déposez tout ce qui concerne ce dossier : l'assignation, les courriers reçus de la partie adverse, les attestations manuscrites scannées, le code civil annoté que vous utilisez, et — élément clé — votre modèle Word de mise en page du cabinet.*
+>
+> *À partir de ce moment, Claude a tous ces documents en permanence sous les yeux quand vous lui parlez dans ce Project. Pas besoin de les redéposer à chaque demande. Un dossier client = un Project. Trente dossiers en cours = trente Projects. »*
 
-**Visuel** : retour talking head Vincent, puis end-card statique 3 secondes :
+---
 
-```
-   atelier-ia.ovh
+### [1:45 – 2:30] ACTE 3 — Étape 2 : Le Skill = vos conventions cabinet
 
-   Réserver un entretien découverte (gratuit, 30 min)
+> *« La deuxième brique s'appelle un Skill. C'est l'endroit où vous écrivez, une fois pour toutes, les conventions de votre cabinet.*
+>
+> *Quelques exemples : "Tu rédiges toujours dans le format de mon modèle Word — colonnes, polices, marges. Tu numérotes les pièces selon ma nomenclature : Pièce 1 = exploit d'huissier, Pièce 2 = courrier adverse, et ainsi de suite. À la fin de chaque document, tu listes les pièces référencées dans le texte et tu vérifies qu'elles sont bien dans le dossier. Si une information manque, tu poses la question avant de continuer. Tu n'inventes jamais une jurisprudence sans source explicite."*
+>
+> *Une fois ce Skill enregistré, Claude le respecte sans qu'on ait besoin de le lui rappeler. Vos conventions cabinet, en mémoire permanente. »*
 
-   Vincent Tariel — Docteur École Polytechnique
-   Nouméa · +687 95 07 86
-```
+---
+
+### [2:30 – 3:10] DÉMO — retranscription d'attestation + indexation
+
+> *« Concrètement : lundi matin, votre cliente vous remet une attestation manuscrite de témoin. Trois pages au stylo bleu, écriture serrée. Vous la scannez, vous l'ajoutez au Project du dossier, et vous écrivez à Claude :*
+>
+> *"Voici l'attestation manuscrite scannée. Retranscris-la au format de notre modèle Word. Indexe-la comme Pièce 7. Mets à jour la liste des pièces du dossier."*
+>
+> *Trente secondes plus tard : un texte propre, dans votre format cabinet, indexé Pièce 7, ajouté à la liste des pièces, prêt à être imprimé.*
+>
+> *La tâche qui prenait quarante minutes — relecture, frappe, mise en page, vérification de l'indexation — en prend désormais cinq, dont quatre passés à relire le brouillon. »*
+
+---
+
+### [3:10 – 3:30] CTA
+
+> *« Atelier IA — coaching individuel à Nouméa, en présentiel, pour intégrer Claude Desktop dans votre cabinet. Trois heures de coaching, on construit votre premier Project, votre premier Skill, sur votre vrai dossier en cours.*
+>
+> *Les dix premiers clients fondateurs bénéficient d'un tarif de 50 000 francs au lieu de 100 000. Réservez votre entretien découverte gratuit en bas de la description.*
+>
+> *Atelier IA. Atelier-ia.ovh. »*
 
 ---
 
 ## Notes de production
 
-### Outils minimums (~ tout faire seul)
-- **Caméra** : smartphone récent (iPhone ou Android haut de gamme) en 4K, micro lavalier filaire.
-- **Lumière** : softbox ou lumière naturelle face à toi (pas de contre-jour).
-- **Screen recording** : QuickTime (Mac) ou OBS (Windows/Linux) — gratuit.
-- **Montage** : DaVinci Resolve (gratuit, pro) ou CapCut (gratuit, plus simple).
-- **Sous-titres** : auto-générés via DaVinci ou via outil externe (Whisper local), corrigés à la main.
+### Le ton de la voix off
+- **Posé**, pas pressé. Articulé.
+- **Légères pauses** entre chaque section (1-2 secondes) — le silence laisse le cerveau enregistrer.
+- **Ton sérieux** mais pas grave. C'est de la pédagogie, pas un sermon.
+- Insister légèrement sur les chiffres ("trente", "trente dossiers", "trente secondes") et les mots-clés ("dossier client", "Project", "Skill", "conventions").
 
-### Ce qu'il faut tourner
-- 4 prises talking head (Hook + une par acte si besoin de cutaway)
-- 1 prise du CTA final
-- 4-5 screen recordings (Claude Desktop en condition réelle)
-- 1 plan d'ouverture extérieur Nouméa (optionnel, pour ouverture)
-
-### Ce qu'il faut PAS faire
-- Pas de musique de fond (sauf très très discrète)
-- Pas de motion design "AI sphere" / cerveau-réseau
-- Pas d'emojis dans les sous-titres
-- Pas de zooms agressifs
-- Pas de fond vert / set virtuel (paraît cheap)
-
-### Estimation temps
-- Préparation : 2h (relire script, préparer démo Claude Desktop)
-- Tournage talking head : 1h (3 prises par séquence, garder la meilleure)
-- Screen recordings : 1h (faire en conditions vraies, pas scriptées)
-- Montage : 4-6h (premier montage), puis 2h (passes correction)
-- **Total** : 1 jour de production sur 2 jours ouvrés.
-
-### Si tu vises un rendu plus pro (ex: référence vidéo YT)
-- Ajouter un narrateur pro (voix off externe) : +200-400 €
-- Motion design (After Effects pour les transitions Acte 1/2/3) : +1-2 jours de monteur
-- Études de cas illustrées (pas seulement screen recording) : +1 jour de tournage
-- → coût total ~5-10× plus élevé, mais rendu équivalent à de bonnes vidéos B2B SaaS
-
-Pour le batch 01 (15 avocats, 1-2 RDV cibles), **la version solo suffit largement**.
-On peut investir dans le pro après les 5 premiers clients signés.
+### Décisions à arbitrer par Vincent
+- [ ] **Cas démo** : on reste sur "attestation manuscrite + indexation pièce 7" (cohérent PDF Maître Adam) ou on prend un autre cas (assignation, conclusions, etc.) ?
+- [ ] **Voix gTTS prototype** : française "fr" standard suffit, ou on prend "fr-fr" ?
+- [ ] **Voix ElevenLabs final** : je recommande **Charlotte** (féminine, claire, pro) ou **Elliot** (masculine, sobre). Vincent voix off lui-même = ⚠️ moins pro pour ce format slides (sans son visage à l'écran, la voix doit être très calibrée).
+- [ ] **Outil de slides** : Keynote, Google Slides, PowerPoint, Canva ? Voir `video/pipeline_production.md`.
