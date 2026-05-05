@@ -109,7 +109,7 @@
 
 > *« Je suis Vincent Tariel, docteur en mathématiques de l'École Polytechnique, installé en Nouvelle-Calédonie depuis 2020. Avec Atelier IA, j'aide les professionnels du droit à intégrer Claude dans leur pratique quotidienne, de façon concrète et cadrée.*
 >
-> *Le premier pas : un entretien découverte gratuit de quinze minutes, sans engagement, sur https://atelier-ia.ovh. »*
+> *Le premier pas : un entretien découverte gratuit de quinze minutes, sans engagement. Appelez-moi au +687 95 07 86. »*
 
 ---
 

@@ -173,7 +173,7 @@ SEGMENTS = {
         "Claude dans leur pratique quotidienne, de façon concrète et "
         "cadrée. "
         "Le premier pas : un entretien découverte gratuit de quinze "
-        "minutes, sans engagement, sur https://atelier-ia.ovh"
+        "minutes, sans engagement. Appelez-moi au plus 687, 95 07 86."
     ),
 }
 
