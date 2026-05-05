@@ -41,3 +41,6 @@ video/assets/*
 
 # Acquisition — fichiers d'envoi datés (logs de campagnes)
 acquisition/sends/
+
+# Vidéo — fichiers de travail intermédiaires + outputs binaires lourds
+video/output/
