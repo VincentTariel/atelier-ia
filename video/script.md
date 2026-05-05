@@ -1,110 +1,125 @@
-# Script vidéo — Atelier IA · Avocats (~2:55)
+# Script vidéo — Atelier IA · Avocats (~3:00) — V3
 
-> **Cible** : avocats à Nouméa (batch outbound 01).
-> **Format** : slides animées style PowerPoint sobre + voix off seule, sans talking head.
-> **Voix** : prototype gTTS (gratuit) → final ElevenLabs (voix FR pro).
-> **Durée cible** : 2:45–3:00 (sweet spot LinkedIn / cold-email mobile).
+> **V3 après audit ChatGPT du 2026-05-05** — refonte profonde alignée sur la promesse :
+> **« Claude prépare. Vous décidez. »**
 >
-> Cette version est la V2, après audit subagent du 2026-05-05. Corrections majeures :
-> - Cas démo : assignation PDF (au lieu d'attestation manuscrite — OCR cursif peu fiable, risque crédibilité)
-> - "ChatGPT" retiré, remplacé par "un autre assistant"
-> - Slide confidentialité ajoutée (objection #1 des avocats)
-> - CTA inversé (entretien découverte d'abord, coaching ensuite)
-> - "15-20 dossiers" (réaliste pour solo NC, au lieu de "30")
-> - 5s preuve sociale Vincent ajoutée
+> Corrections clés vs V2 :
+> - Slide promesse centrale ajoutée juste après le hook
+> - Confidentialité : reformulée en "cadre d'usage" (pas "vos données restent sur votre poste" — trop absolu, factuellement contestable)
+> - "Plomberie" → "travail invisible mais nécessaire"
+> - "3h/5h/10h, vous en rendre la moitié" → message non-promesse
+> - "Skill" et "Project" en voix off → "vos consignes cabinet" et "un dossier client organisé" (termes Anthropic gardés en sous-texte écran)
+> - Démo : "points de vigilance à contrôler" ajouté pour responsabiliser l'avocat
+> - Slide "40 min → 5 min" supprimée (trop publicitaire)
+> - 16 slides → 14 slides (resserré)
+> - Bio Vincent corrigée : "docteur **de** l'École Polytechnique **en informatique**"
 
 ---
 
-## Structure narrative — 8 séquences
+## Structure narrative — 8 séquences voix off
 
 | # | Section | Durée | Idée |
 |---|---|---|---|
-| 0 | Hook : la plomberie quotidienne | 0:00–0:20 | Reconnaître la routine pénible |
-| 1 | Chat vs Cowork (court) | 0:20–0:35 | Pourquoi Desktop, pas chat web |
-| 2 | Étape 1 — Le Project = dossier client | 0:35–1:10 | Espace de travail |
-| 3 | Confidentialité — sans alourdir | 1:10–1:20 | Objection #1 désamorcée |
-| 4 | Étape 2 — Le Skill = vos conventions | 1:20–1:50 | Consignes permanentes |
-| 5 | Démo — assignation reçue → réponse | 1:50–2:30 | Le moment "wow" |
-| 6 | Auteur — qui parle | 2:30–2:35 | Crédibilité Vincent |
-| 7 | CTA — entretien gratuit puis coaching | 2:35–2:55 | Friction zéro pour réserver |
+| 0 | Hook : la douleur du cabinet | 0:00–0:25 | Reconnaître le travail invisible |
+| 1 | Promesse centrale | 0:25–0:40 | "Claude prépare. Vous décidez." |
+| 2 | Différence d'usage | 0:40–0:55 | Chat ponctuel vs espace de travail |
+| 3 | Brique 1 — dossier client organisé | 0:55–1:25 | (en sous-texte : "Project") |
+| 4 | Confidentialité — cadre d'usage | 1:25–1:40 | Désamorcer sans sur-promettre |
+| 5 | Brique 2 — consignes cabinet | 1:40–2:10 | (en sous-texte : "Skill") + section "à contrôler" |
+| 6 | Démo — assignation reçue | 2:10–2:45 | Brouillon relisable + points de vigilance |
+| 7 | Auteur + CTA | 2:45–3:05 | Entretien découverte gratuit |
 
 ---
 
 ## TEXTE INTÉGRAL — voix off
 
-### [0:00 – 0:20] HOOK
+### [0:00 – 0:25] HOOK — la douleur du cabinet
 
-> *« Vous êtes avocat à Nouméa. Vous avez quinze, vingt dossiers en cours. Pour chaque nouveau client, c'est la même routine : créer un dossier, classer les pièces, vérifier l'indexation, mettre en page selon les conventions du cabinet.*
+> *« Vous êtes avocat à Nouméa. Vous suivez quinze, vingt dossiers, parfois plus, avec peu de temps pour le travail de fond.*
 >
-> *Combien d'heures par semaine sur cette plomberie ? Voici comment Claude Desktop peut vous en rendre la moitié. »*
+> *À chaque nouveau dossier, il faut classer les pièces, retrouver les courriers, extraire les dates, vérifier les délais, puis produire un document propre.*
+>
+> *La question n'est pas de remplacer votre analyse. Elle est simple : combien d'heures partez-vous dans le travail préparatoire avant même d'exercer votre vraie valeur ajoutée ? »*
 
 ---
 
-### [0:20 – 0:35] ACTE 1 — Chat vs Cowork (court)
+### [0:25 – 0:40] PROMESSE CENTRALE
 
-> *« Vous avez peut-être essayé Claude — ou un autre assistant — dans un onglet de votre navigateur. Ça marche pour des questions ponctuelles. Pour intégrer l'intelligence artificielle dans votre cabinet, il faut autre chose : Claude Desktop, installé sur votre Mac ou votre PC, qui travaille directement sur vos dossiers locaux. »*
+> *« Claude ne remplace pas votre travail. Il prépare ce qui doit l'être, pour que vous restiez concentré sur l'analyse, la stratégie et la relation client.*
+>
+> *Claude prépare. Vous décidez. »*
 
 ---
 
-### [0:35 – 1:10] ACTE 2 — Étape 1 : Le Project = le dossier client
+### [0:40 – 0:55] DIFFÉRENCE D'USAGE
 
-> *« La première brique s'appelle un Project. Concrètement, c'est le dossier de votre client.*
+> *« Dans un navigateur, on pose une question ponctuelle.*
 >
-> *Vous le nommez « Dossier Madame X — divorce ». Et vous y déposez tout : l'assignation, les courriers reçus de la partie adverse, les pièces, le code civil annoté que vous utilisez, et — élément clé — votre modèle Word de mise en page du cabinet.*
->
-> *À partir de ce moment, Claude a tous ces documents en permanence sous les yeux quand vous lui parlez dans ce Project. Un dossier client, un Project. »*
+> *Avec Claude Desktop, on peut construire un espace de travail : documents sélectionnés, consignes du cabinet, et — si le cadre est adapté — accès contrôlé à certains fichiers locaux. »*
 
 ---
 
-### [1:10 – 1:20] CONFIDENTIALITÉ
+### [0:55 – 1:25] BRIQUE 1 — Un dossier client organisé
 
-> *« Vos données restent sur votre poste. Elles ne servent pas à entraîner les modèles. Pour les dossiers les plus sensibles, on en reparle en détail au coaching. »*
+> *« Première brique : un espace par dossier client. Pour l'avocat, l'idée est simple — un dossier, son contexte, ses pièces, ses consignes.*
+>
+> *Vous le nommez « Dossier Madame X — divorce ». Et vous y déposez tout : l'assignation, les courriers reçus de la partie adverse, les pièces, le code civil annoté, et — élément clé — votre modèle Word de mise en page du cabinet.*
+>
+> *Vous n'avez plus à tout réexpliquer : le contexte du dossier est déjà organisé. Claude retrouve le bon élément au bon moment quand vous lui posez une question. »*
 
 ---
 
-### [1:20 – 1:50] ACTE 3 — Étape 2 : Le Skill = vos conventions cabinet
+### [1:25 – 1:40] CONFIDENTIALITÉ — le cadre d'usage
 
-> *« La deuxième brique s'appelle un Skill — vos consignes permanentes. Vous y écrivez une fois pour toutes :*
+> *« Avant de parler productivité, on définit le cadre : quels documents peuvent être utilisés, quels dossiers restent exclus, quels réglages doivent être vérifiés, et comment préserver le secret professionnel dans votre pratique.*
 >
-> *« Tu rédiges toujours au format de mon modèle Word. Tu numérotes les pièces selon ma nomenclature. À la fin de chaque document, tu listes les pièces référencées et tu vérifies qu'elles sont jointes. Si une information manque, tu poses la question avant de continuer. Tu n'inventes jamais une jurisprudence sans source explicite. »*
->
-> *Une fois ce Skill enregistré, Claude le respecte sans qu'on ait à le rappeler. Vos conventions cabinet, en mémoire permanente. »*
+> *Le coaching inclut une mise au point spécifique sur les dossiers sensibles. »*
 
 ---
 
-### [1:50 – 2:30] DÉMO — assignation reçue par email
+### [1:40 – 2:10] BRIQUE 2 — Vos consignes cabinet
 
-> *« Concrètement : ce matin, vous recevez une assignation par email — vingt pages au format PDF, dactylographiée. Vous l'ajoutez au Project du dossier, et vous écrivez à Claude :*
+> *« Deuxième brique : vos consignes permanentes. Pas besoin de tout répéter à chaque fois — on formalise une fois pour toutes vos règles de travail.*
 >
-> *« Résume cette assignation. Extrais les dates clés et les délais à respecter. Propose-moi un plan de conclusions au format de mon cabinet. »*
+> *« Tu respectes le modèle Word du cabinet. Tu reprends la nomenclature des pièces. Tu signales les informations manquantes. Tu distingues faits, demandes et points à vérifier. Tu ne cites aucune jurisprudence sans source vérifiable. Et tu ajoutes systématiquement une section "À contrôler par l'avocat". »*
 >
-> *Trente secondes plus tard : un résumé structuré, un tableau des dates d'audience et des délais de procédure, un plan de conclusions déjà mis en forme.*
->
-> *La tâche qui prenait quarante minutes en prend cinq, dont quatre passés à relire le brouillon. »*
+> *Vos conventions cabinet, en mémoire permanente — avec un garde-fou explicite : la décision finale reste vôtre. »*
 
 ---
 
-### [2:30 – 2:35] L'AUTEUR
+### [2:10 – 2:45] DÉMO — assignation reçue par email
 
-> *« Je suis Vincent Tariel, docteur de l'École Polytechnique en informatique, installé en Nouvelle-Calédonie depuis 2020. »*
+> *« Concrètement : ce matin, vous recevez une assignation par email — vingt pages au format PDF, dactylographiée. Vous l'ajoutez au dossier client, et vous écrivez à Claude :*
+>
+> *« Résume cette assignation. Extrais les dates, demandes et pièces citées. Signale les délais à vérifier. Propose un plan de conclusions selon le modèle du cabinet. »*
+>
+> *Trente secondes plus tard : un résumé structuré, un tableau des dates et délais à vérifier, un plan de conclusions au format Word de votre cabinet — et, à la fin, une section « Points de vigilance à contrôler » : références juridiques à sourcer, pièces manquantes, délais à confirmer.*
+>
+> *Le gain n'est pas de supprimer votre relecture. C'est d'arriver plus vite à un brouillon structuré, contrôlable, conforme à vos habitudes. »*
 
 ---
 
-### [2:35 – 2:55] CTA — entretien gratuit, puis coaching
+### [2:45 – 3:05] AUTEUR + CTA
 
-> *« Premier pas : un entretien découverte gratuit de trente minutes, en présentiel à Nouméa ou en visio. Si on est alignés, trois heures de coaching à cinquante mille francs Pacifique — au lieu de cent mille — pendant les dix places fondateurs.*
+> *« Je suis Vincent Tariel, docteur de l'École Polytechnique en informatique, installé en Nouvelle-Calédonie depuis 2020. Je propose un coaching individuel, en présentiel à Nouméa, pour mettre en place Claude Desktop dans votre pratique quotidienne.*
 >
-> *atelier tiret i a point o v h. »*
+> *Le premier pas : un entretien découverte gratuit de trente minutes, sans engagement. atelier tiret i a point o v h. »*
 
 ---
 
 ## Notes de production
 
 ### Le ton de la voix off
-- **Posé**, pas pressé. Articulé.
+- **Posé**, articulé.
 - **Légères pauses** entre chaque section (1-2 secondes).
-- **Ton sérieux** mais pas grave. Pédagogie, pas sermon.
-- Insister sur les chiffres ("quinze, vingt", "trente secondes", "quarante minutes", "cinquante mille") et les mots-clés ("dossier client", "Project", "Skill", "conventions", "confidentialité").
+- **Ton sérieux** mais pas grave.
+- **Mantra à marteler** : "Claude prépare. Vous décidez." — apparaît en voix + à l'écran.
+- **Les nombres** prononcés en lettres ("quinze, vingt", "trente", "trente secondes").
+
+### Le tarif (50 000 XPF / 10 places fondateurs)
+- **À l'écran** sur la slide finale : oui, lisiblement.
+- **En voix off** : non. La voix off vend le RDV gratuit, pas le tarif.
+- Cohérent avec la recommandation ChatGPT : "Le prix à l'écran, mais pas forcément en voix off."
 
 ### Décisions toujours à arbitrer
 - [ ] **Outil de slides** (Google Slides recommandé V1)
