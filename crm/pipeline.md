@@ -37,7 +37,7 @@
 
 > Relance J+5 puis J+15 si pas de réponse.
 
-- _Aucun pour l'instant._
+- **[2026-05-06]** Maître Casies (Cabinet Casies — Nouméa, droit de la famille) — Réseau personnel — Vidéo + tarif Fondateurs 50K XPF/2h envoyés. Angle : secrétariat (frappe courriers, transcription manuscrites, indexation pièces). Relance prévue 2026-05-16. → fiche `crm/leads/casies-maitre.md`
 
 ---
 
