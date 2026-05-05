@@ -425,7 +425,47 @@ html,body{height:100%;background:#1a1614;overflow:hidden;font-family:var(--serif
 }
 .s13-vigilance .h{color:var(--bordeaux)}
 
-/* SLIDE 14 — CTA */
+/* SLIDE 14 — LETTRE MANUSCRITE → TRANSCRIPTION */
+.s14m-zone{padding:50px 70px;display:grid;grid-template-columns:1fr 60px 1fr;grid-template-rows:1fr auto;gap:30px;align-items:center;height:100%}
+.manuscrit{
+  background:#fbfaf5;
+  border:1px solid var(--encre);
+  padding:28px 30px;
+  position:relative;transform:rotate(-2.5deg);
+  box-shadow:4px 6px 14px rgba(0,0,0,.12);
+  font-family:var(--hand);font-size:24px;color:var(--encre-douce);line-height:1.7;
+}
+.manuscrit .m-label{
+  position:absolute;top:-12px;left:24px;background:var(--papier);
+  padding:0 10px;font-family:var(--mono);font-size:10px;letter-spacing:.25em;
+  color:var(--encre-faible);text-transform:uppercase;
+}
+.manuscrit .m-line{margin-bottom:4px;letter-spacing:.01em}
+.manuscrit .m-sign{margin-top:18px;text-align:right;font-size:26px;color:var(--bordeaux)}
+
+.m-arrow{
+  font-family:var(--serif);font-size:60px;color:var(--bordeaux);
+  text-align:center;font-weight:300;
+}
+
+.dactylo{
+  background:#fff;
+  border:1.5px solid var(--encre);
+  padding:24px 28px;position:relative;transform:rotate(1.5deg);
+  box-shadow:4px 6px 14px rgba(0,0,0,.12);
+  font-family:var(--typed);font-size:14px;color:var(--encre);line-height:1.8;
+}
+.dactylo .d-label{
+  position:absolute;top:-12px;left:20px;background:var(--papier);
+  padding:0 10px;font-family:var(--mono);font-size:10px;letter-spacing:.25em;
+  color:var(--bordeaux);text-transform:uppercase;font-weight:bold;
+}
+.m-note{
+  grid-column:1 / 4;font-family:var(--hand);font-size:24px;color:var(--encre-douce);
+  text-align:center;line-height:1.4;padding-top:16px;border-top:1px solid var(--encre);
+}
+
+/* SLIDE 15 — CTA */
 .s14-zone{padding:50px 80px;display:flex;flex-direction:column;justify-content:space-between;height:100%}
 .s14-bio{font-family:var(--serif);font-size:22px;color:var(--encre);line-height:1.4;max-width:780px}
 .s14-bio strong{color:var(--bordeaux);font-weight:600;font-style:italic}
@@ -754,15 +794,50 @@ html,body{height:100%;background:#1a1614;overflow:hidden;font-family:var(--serif
     </div>
   </section>
 
-  <!-- ─────────── SLIDE 14 — CTA ─────────── -->
+  <!-- ─────────── SLIDE 14 — LETTRE MANUSCRITE → TRANSCRIPTION ─────────── -->
   <section class="slide" data-page="14">
     <div class="dateline">
+      <span><strong>III.</strong> quater</span>
+      <span>Autre cas typique — la lettre manuscrite</span>
+    </div>
+    <div class="zone s14m-zone">
+      <div class="manuscrit reveal r-1">
+        <span class="m-label">~ scan ~</span>
+        <p class="m-line">Je soussignée Marie&nbsp;X.,</p>
+        <p class="m-line">demeurant à Nouméa, atteste</p>
+        <p class="m-line">avoir vu Monsieur Y. le matin</p>
+        <p class="m-line">du 12 mars 2026, vers 9h, dans</p>
+        <p class="m-line">les locaux de la société Z.</p>
+        <p class="m-line m-sign">— Marie X.</p>
+      </div>
+
+      <div class="m-arrow reveal r-2">→</div>
+
+      <div class="dactylo reveal r-3">
+        <span class="d-label">ATTESTATION — Pièce 7</span>
+        <p>Je soussignée, Marie X., demeurant à Nouméa,</p>
+        <p>atteste avoir vu Monsieur Y. le matin du 12 mars 2026,</p>
+        <p>vers 9 heures, dans les locaux de la société Z.</p>
+        <p style="margin-top:14px">Fait pour servir et valoir ce que de droit.</p>
+        <p style="margin-top:8px">Marie X.</p>
+      </div>
+
+      <p class="m-note reveal r-4">
+        Vous <span class="surligne">relisez ligne à ligne</span> en croisant avec l'original.<br>
+        Le gain : la frappe et la mise en forme — pas l'analyse juridique.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─────────── SLIDE 15 — CTA ─────────── -->
+  <section class="slide" data-page="15">
+    <div class="dateline">
       <span><strong>Atelier IA</strong> · Coaching individuel</span>
-      <span>atelier-ia.ovh</span>
+      <span>https://atelier-ia.ovh</span>
     </div>
     <div class="zone s14-zone">
       <p class="s14-bio reveal r-1">
-        Je suis <strong>Vincent Tariel</strong> — docteur de l'École Polytechnique en informatique,
+        Je suis <strong>Vincent Tariel</strong> — docteur en mathématiques de l'École Polytechnique,
         installé en Nouvelle-Calédonie depuis 2020. <br><br>
         Avec Atelier IA, j'aide les professionnels du droit à intégrer Claude
         dans leur pratique quotidienne, de façon <em>concrète et cadrée</em>.
@@ -770,7 +845,7 @@ html,body{height:100%;background:#1a1614;overflow:hidden;font-family:var(--serif
 
       <div class="s14-cta reveal r-3">
         <h2>Entretien découverte gratuit</h2>
-        <p>30 minutes — sans engagement</p>
+        <p>15 minutes — sans engagement</p>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end">
@@ -780,7 +855,7 @@ html,body{height:100%;background:#1a1614;overflow:hidden;font-family:var(--serif
           <span>Tarif ensuite : 100 000 XPF</span>
         </div>
         <div class="s14-coords reveal r-5">
-          atelier-ia.ovh<br>
+          https://atelier-ia.ovh<br>
           +687 95 07 86
         </div>
       </div>
@@ -792,7 +867,7 @@ html,body{height:100%;background:#1a1614;overflow:hidden;font-family:var(--serif
 <!-- Navigation -->
 <div class="nav">
   <button id="prev">‹ Préc.</button>
-  <span class="pos"><span id="cur">1</span> / <span id="tot">14</span></span>
+  <span class="pos"><span id="cur">1</span> / <span id="tot">15</span></span>
   <button id="next">Suiv. ›</button>
 </div>
 
@@ -825,7 +900,23 @@ document.addEventListener('click', e => {
   if (e.clientX > r) next(); else prev();
 });
 
-show(0);
+// Mode capture : ?slide=N affiche directement la slide N et masque la nav
+const params = new URLSearchParams(location.search);
+const slideParam = params.get('slide');
+if (slideParam !== null) {
+  const idx = Math.max(0, Math.min(total - 1, parseInt(slideParam, 10) - 1));
+  show(idx);
+  document.querySelector('.nav').style.display = 'none';
+  document.querySelector('.help').style.display = 'none';
+  // Désactive les animations pour figer la slide finale
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.style.animation = 'none';
+    el.style.opacity = '1';
+    el.style.transform = 'none';
+  });
+} else {
+  show(0);
+}
 </script>
 
 </body>

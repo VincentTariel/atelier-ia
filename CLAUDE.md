@@ -20,21 +20,21 @@
 >
 > Avant CommeUnJeu, Vincent a fondé deux startups (Shinoe Software et AlphaNumeric-Vision, à Paris, 2010-2016) en traitement d'images puis en deep learning, et a enseigné l'IA en école d'ingénieurs (ISEN Nantes), formé des enseignants à l'université de Nouvelle-Calédonie (INSPE), et enseigné les maths et l'informatique en lycée international à Nouméa.
 >
-> Il est **docteur en informatique de l'École Polytechnique** (vision par ordinateur, 2009), agrégé de mathématiques (option Probabilités & Statistiques, 2017), et a effectué un post-doctorat à l'Australian National University.
+> Il est **docteur en mathématiques de l'École Polytechnique** (morphologie mathématique appliquée à la vision par ordinateur, 2009), agrégé de mathématiques (option Probabilités & Statistiques, 2017), et a effectué un post-doctorat à l'Australian National University.
 >
 > Installé en Nouvelle-Calédonie depuis 2020.
 
 ### Version courte (3-4 phrases — landing site / cold-email)
 
-> Vincent Tariel — docteur en informatique de l'École Polytechnique, fondateur de plusieurs startups en IA, ancien enseignant-chercheur. Installé à Nouméa depuis 2020. Il développe aujourd'hui sa plateforme pédagogique CommeUnJeu (mobile, web, vidéos) en utilisant Claude au quotidien — et transmet ce qu'il apprend, sur le terrain, à des professionnels calédoniens en coaching individuel.
+> Vincent Tariel — docteur en mathématiques de l'École Polytechnique, fondateur de plusieurs startups en IA, ancien enseignant-chercheur. Installé à Nouméa depuis 2020. Il développe aujourd'hui sa plateforme pédagogique CommeUnJeu (mobile, web, vidéos) en utilisant Claude au quotidien — et transmet ce qu'il apprend, sur le terrain, à des professionnels calédoniens en coaching individuel.
 
 ### Version une ligne (signature email / lower-third vidéo)
 
-> Vincent Tariel — Docteur École Polytechnique · Coaching Claude Desktop · Nouméa
+> Vincent Tariel — Docteur en mathématiques de l'École Polytechnique · Coaching Claude Desktop · Nouméa
 
 ### Règles d'usage de la bio
 
-- **Polytechnique** : toujours préciser **"docteur de l'École Polytechnique"** ou **"thèse à l'École Polytechnique"**. Ne JAMAIS écrire "diplômé de l'École Polytechnique" tout court (ambigu — confusion possible avec polytechnicien). Ne jamais écrire "polytechnicien".
+- **Polytechnique** : toujours préciser **"docteur en mathématiques de l'École Polytechnique"** (formulation officielle V5 du 2026-05-05). Sa thèse — morphologie mathématique appliquée à la vision par ordinateur — est en mathématiques appliquées, ce qui justifie pleinement la formulation. **Pourquoi pas "informatique"** : en France, "docteur en informatique" évoque pour beaucoup le réparateur d'ordinateurs, pas le chercheur — formulation à éviter pour la cible avocats/cabinets. Ne JAMAIS écrire "diplômé de l'École Polytechnique" tout court (ambigu, confusion polytechnicien). Ne jamais écrire "polytechnicien".
 - **CommeUnJeu** : présenter comme une activité **parallèle et complémentaire** au coaching, pas comme un projet "en attente de PMF". L'angle = *"je pratique ce que j'enseigne tous les jours"*.
 - **NC depuis 2020** : à mentionner systématiquement, c'est un signal d'ancrage fort.
 - **Startups** : on peut citer Shinoe Software / AlphaNumeric-Vision si la longueur le permet, sinon dire "fondateur de plusieurs startups en IA".

@@ -107,14 +107,21 @@ SEGMENTS = {
         "plus vite à un brouillon structuré, contrôlable, conforme à vos "
         "habitudes."
     ),
+    "07b_manuscrit.mp3": (
+        "Autre cas typique : la transcription d'une attestation "
+        "manuscrite courte. Claude propose le texte propre, dans le "
+        "format du cabinet — vous relisez ligne à ligne en croisant "
+        "avec l'original. Le gain reste le même : la frappe et la mise "
+        "en forme automatisées, pas l'analyse juridique."
+    ),
     "08_cta.mp3": (
-        "Je suis Vincent Tariel, docteur de l'École Polytechnique en "
-        "informatique, installé en Nouvelle-Calédonie depuis 2020. Avec "
-        "Atelier IA, j'aide les professionnels du droit à intégrer "
+        "Je suis Vincent Tariel, docteur en mathématiques de l'École "
+        "Polytechnique, installé en Nouvelle-Calédonie depuis 2020. "
+        "Avec Atelier IA, j'aide les professionnels du droit à intégrer "
         "Claude dans leur pratique quotidienne, de façon concrète et "
         "cadrée. "
-        "Le premier pas : un entretien découverte gratuit de trente "
-        "minutes, sans engagement, sur atelier-ia point ovh."
+        "Le premier pas : un entretien découverte gratuit de quinze "
+        "minutes, sans engagement, sur https://atelier-ia.ovh"
     ),
 }
 
